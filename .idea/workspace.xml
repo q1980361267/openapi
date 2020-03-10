@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be0a31b9-6b19-478e-b63e-3941a918747b" name="Default Changelist" comment="" />
+    <list default="true" id="be0a31b9-6b19-478e-b63e-3941a918747b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/case/test_26_create_twice.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/test_25_create_node_dev_associate.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +38,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Issue.Navigation" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -41,8 +46,8 @@
       <recent name="E:\工作项目\OES\V3.3.0\openapi\lib" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in test_25_create_node_dev_associate.py">
-    <configuration name="Unittests for test_20_create_edge_device_second.Test_CreateEdgeTerminalDevice.test_00" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Unittests in test_26_create_twice.py">
+    <configuration name="Unittests for test_22_remove_devices_from_group.Test_RemoveDevicesFromGroup.test_00" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="openapi" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -52,36 +57,22 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_20_create_edge_device_second.Test_CreateEdgeTerminalDevice.test_00&quot;" />
+      <option name="_new_target" value="&quot;test_22_remove_devices_from_group.Test_RemoveDevicesFromGroup.test_00&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for test_25_create_node_dev_associate.Test_RemoveDevicesFromGroup.test_00" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for test.Test_case.test_00" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="openapi" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/result" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_25_create_node_dev_associate.Test_RemoveDevicesFromGroup.test_00&quot;" />
+      <option name="_new_target" value="&quot;test.Test_case.test_00&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests in test_18_modify_group.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="openapi" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/case/test_18_modify_group.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Unittests in test_24_get_device_list_from_group_unrelated.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -112,13 +103,35 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests in test_26_create_twice.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="openapi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="D:\Python_workspace\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_pattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/case/test_26_create_twice.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python tests.Unittests for test.Test_case.test_00" />
+      <item itemvalue="Python tests.Unittests for test_22_remove_devices_from_group.Test_RemoveDevicesFromGroup.test_00" />
+      <item itemvalue="Python tests.Unittests in test_24_get_device_list_from_group_unrelated.py" />
+      <item itemvalue="Python tests.Unittests in test_25_create_node_dev_associate.py" />
+      <item itemvalue="Python tests.Unittests in test_26_create_twice.py" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests in test_25_create_node_dev_associate.py" />
-        <item itemvalue="Python tests.Unittests in test_18_modify_group.py" />
-        <item itemvalue="Python tests.Unittests for test_25_create_node_dev_associate.Test_RemoveDevicesFromGroup.test_00" />
-        <item itemvalue="Python tests.Unittests for test_20_create_edge_device_second.Test_CreateEdgeTerminalDevice.test_00" />
+        <item itemvalue="Python tests.Unittests in test_26_create_twice.py" />
         <item itemvalue="Python tests.Unittests in test_24_get_device_list_from_group_unrelated.py" />
+        <item itemvalue="Python tests.Unittests for test.Test_case.test_00" />
+        <item itemvalue="Python tests.Unittests for test_22_remove_devices_from_group.Test_RemoveDevicesFromGroup.test_00" />
+        <item itemvalue="Python tests.Unittests in test_25_create_node_dev_associate.py" />
       </list>
     </recent_temporary>
   </component>
@@ -149,6 +162,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="创建边缘设备关联" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583832364948">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1583832364948" />
     <state x="413" y="114" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583479191670">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -157,22 +174,22 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1583830622692" />
-    <state width="1328" height="214" key="GridCell.Tab.0.bottom" timestamp="1583831478917">
+    <state width="1328" height="252" key="GridCell.Tab.0.bottom" timestamp="1583832411720">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1328" height="214" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1583831478917" />
-    <state width="1328" height="214" key="GridCell.Tab.0.center" timestamp="1583831478917">
+    <state width="1328" height="252" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1583832411720" />
+    <state width="1328" height="252" key="GridCell.Tab.0.center" timestamp="1583832411720">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1328" height="214" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1583831478917" />
-    <state width="1328" height="214" key="GridCell.Tab.0.left" timestamp="1583831478917">
+    <state width="1328" height="252" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1583832411720" />
+    <state width="1328" height="252" key="GridCell.Tab.0.left" timestamp="1583832411720">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1328" height="214" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1583831478917" />
-    <state width="1328" height="214" key="GridCell.Tab.0.right" timestamp="1583831478917">
+    <state width="1328" height="252" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1583832411720" />
+    <state width="1328" height="252" key="GridCell.Tab.0.right" timestamp="1583832411720">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1328" height="214" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1583831478917" />
+    <state width="1328" height="252" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1583832411720" />
     <state width="1328" height="214" key="GridCell.Tab.1.bottom" timestamp="1583831478917">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -189,18 +206,18 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1328" height="214" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1583831478917" />
-    <state x="184" y="0" key="SettingsEditor" timestamp="1583830981899">
+    <state x="184" y="0" key="SettingsEditor" timestamp="1583832343902">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="184" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1583830981899" />
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1583832343902" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1583123058272">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.738@0.0.1366.738" timestamp="1583123058272" />
-    <state x="363" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1583831502930">
+    <state x="363" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1583831634629">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="363" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1583831502930" />
+    <state x="363" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1583831634629" />
     <state x="247" y="103" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1582803167983">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
