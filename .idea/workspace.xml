@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="be0a31b9-6b19-478e-b63e-3941a918747b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1YNZkuluI8gMSUavEsvP01cGCke" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="2" id="Remove" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Issue.Navigation" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\工作项目\OES\V3.3.0\openapi" />
+      <recent name="E:\工作项目\OES\V3.3.0\openapi\lib" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.Unittests in test_25_create_node_dev_associate.py">
+    <configuration name="Unittests for test_20_create_edge_device_second.Test_CreateEdgeTerminalDevice.test_00" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="openapi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_20_create_edge_device_second.Test_CreateEdgeTerminalDevice.test_00&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_25_create_node_dev_associate.Test_RemoveDevicesFromGroup.test_00" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="openapi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_25_create_node_dev_associate.Test_RemoveDevicesFromGroup.test_00&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in test_18_modify_group.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="openapi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/case/test_18_modify_group.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in test_24_get_device_list_from_group_unrelated.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="openapi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/case/test_24_get_device_list_from_group_unrelated.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in test_25_create_node_dev_associate.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="openapi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/case/test_25_create_node_dev_associate.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Unittests in test_25_create_node_dev_associate.py" />
+        <item itemvalue="Python tests.Unittests in test_18_modify_group.py" />
+        <item itemvalue="Python tests.Unittests for test_25_create_node_dev_associate.Test_RemoveDevicesFromGroup.test_00" />
+        <item itemvalue="Python tests.Unittests for test_20_create_edge_device_second.Test_CreateEdgeTerminalDevice.test_00" />
+        <item itemvalue="Python tests.Unittests in test_24_get_device_list_from_group_unrelated.py" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="be0a31b9-6b19-478e-b63e-3941a918747b" name="Default Changelist" comment="" />
+      <created>1582785163507</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582785163507</updated>
+    </task>
+    <task id="LOCAL-00001" summary="创建边缘设备关联">
+      <created>1583830624201</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583830624201</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <confirmRemoveEmptyChangelist value="2" />
+    <MESSAGE value="创建边缘设备关联" />
+    <option name="LAST_COMMIT_MESSAGE" value="创建边缘设备关联" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="413" y="114" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583479191670">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="413" y="114" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1583479191670" />
+    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1583830622692">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1583830622692" />
+    <state width="1328" height="214" key="GridCell.Tab.0.bottom" timestamp="1583831478917">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1328" height="214" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1583831478917" />
+    <state width="1328" height="214" key="GridCell.Tab.0.center" timestamp="1583831478917">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1328" height="214" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1583831478917" />
+    <state width="1328" height="214" key="GridCell.Tab.0.left" timestamp="1583831478917">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1328" height="214" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1583831478917" />
+    <state width="1328" height="214" key="GridCell.Tab.0.right" timestamp="1583831478917">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1328" height="214" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1583831478917" />
+    <state width="1328" height="214" key="GridCell.Tab.1.bottom" timestamp="1583831478917">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1328" height="214" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1583831478917" />
+    <state width="1328" height="214" key="GridCell.Tab.1.center" timestamp="1583831478917">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1328" height="214" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1583831478917" />
+    <state width="1328" height="214" key="GridCell.Tab.1.left" timestamp="1583831478917">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1328" height="214" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1583831478917" />
+    <state width="1328" height="214" key="GridCell.Tab.1.right" timestamp="1583831478917">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1328" height="214" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1583831478917" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1583830981899">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1583830981899" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1583123058272">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1366.738@0.0.1366.738" timestamp="1583123058272" />
+    <state x="363" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1583831502930">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="363" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1583831502930" />
+    <state x="247" y="103" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1582803167983">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="247" y="103" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.738@0.0.1366.738" timestamp="1582803167983" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1583830574452">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1583830574452" />
+  </component>
+</project>
