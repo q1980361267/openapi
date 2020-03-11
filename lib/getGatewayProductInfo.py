@@ -51,3 +51,5 @@ def getGatewayProductMasterkey():
     content = data['content']
     pro_mk = content[0].get('masterKey')
     return pro_mk
+# getGatewayProductId()
+# getGatewayProductIdSecond()

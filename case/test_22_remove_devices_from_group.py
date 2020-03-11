@@ -6,7 +6,7 @@ import logging
 import urllib3
 import json
 
-from lib import getOpenApiPramsTemplate, getSignature, getGatewayDeviceInfo,getGatewayProductInfo,getGroupInfo
+from lib import getOpenApiPramsTemplate, getSignature, getDeviceInfo,getGatewayProductInfo,getGroupInfo
 
 
 class Test_RemoveDevicesFromGroup(unittest.TestCase):
@@ -24,8 +24,8 @@ class Test_RemoveDevicesFromGroup(unittest.TestCase):
 
     # 方法前初始
     def setUp(self):
-        self.id_dev_once = getGatewayDeviceInfo.getGatewayDevicesId()
-        self.id_dev_second = getGatewayDeviceInfo.getGatewayDevicesIdSecond()
+        self.id_dev_once = getDeviceInfo.getGatewayDevicesId()
+        self.id_dev_second = getDeviceInfo.getGatewayDevicesIdSecond()
         self.id_pro = getGatewayProductInfo.getGatewayProductId()
         self.id_group = getGroupInfo.getGroupId()
         self.url = getOpenApiPramsTemplate.get_url() + '/label/remove/devices'

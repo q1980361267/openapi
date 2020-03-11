@@ -6,7 +6,7 @@ import logging
 import urllib3
 import json
 
-from lib import getOpenApiPramsTemplate, getSignature, getGatewayDeviceInfo
+from lib import getOpenApiPramsTemplate, getSignature, getDeviceInfo
 
 
 class Test_ModifyEdgeTerminalDevice(unittest.TestCase):
@@ -24,7 +24,7 @@ class Test_ModifyEdgeTerminalDevice(unittest.TestCase):
 
     # 方法前初始
     def setUp(self):
-        self.id_dev = getGatewayDeviceInfo.getGatewayDevicesId()
+        self.id_dev = getDeviceInfo.getGatewayDevicesId()
         self.url = getOpenApiPramsTemplate.get_url() + '/devices'+ '/'+str(self.id_dev)
         self.accessKey = getOpenApiPramsTemplate.getAccesskey()
         self.accessKeySecret = getOpenApiPramsTemplate.getAccessKeySecret()

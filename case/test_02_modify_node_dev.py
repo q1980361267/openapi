@@ -6,7 +6,7 @@ import logging
 import urllib3
 import json
 
-from lib import getOpenApiPramsTemplate,getSignature,getGatewayProductInfo,getGatewayDeviceInfo
+from lib import getOpenApiPramsTemplate,getSignature,getGatewayProductInfo,getDeviceInfo
 
 
 class Test_modifyNodeDev(unittest.TestCase):
@@ -22,7 +22,7 @@ class Test_modifyNodeDev(unittest.TestCase):
 
     #方法前初始
     def setUp(self):
-        self.gid = getGatewayDeviceInfo.getGatewayDevicesId()
+        self.gid = getDeviceInfo.getGatewayDevicesId()
         self.url = getOpenApiPramsTemplate.get_url()+'/devices/'+str(self.gid)
         self.accessKey = getOpenApiPramsTemplate.getAccesskey()
         self.accessKeySecret = getOpenApiPramsTemplate.getAccessKeySecret()

@@ -6,7 +6,7 @@ import logging
 import urllib3
 import json
 
-from lib import getOpenApiPramsTemplate,getSignature,getGatewayProductInfo,getGatewayDeviceInfo
+from lib import getOpenApiPramsTemplate,getSignature,getGatewayProductInfo,getDeviceInfo
 
 
 class Test_modifyNodeDevFeature(unittest.TestCase):

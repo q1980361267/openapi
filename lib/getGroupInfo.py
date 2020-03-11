@@ -28,6 +28,7 @@ def getGroupInfo():
     signature = getSignature.get_signature(params, body, accessKeySecret, 'GET')
     params['signature'] = signature
     r = requests.get(url=url, params=params, headers=headers)
+    # print(r.json())
     return r
 
 def getGroupId():

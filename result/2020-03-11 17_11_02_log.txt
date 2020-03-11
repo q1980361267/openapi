@@ -1,0 +1,322 @@
+2020-03-11 17:11:02,980 - root - INFO - case:创建网关产品-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/products/mqtt?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917862&signature=fqz91T8qzhW2hqFRlMs%252FRLyy4zY%253D	请求方式:POST
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '53'}
+请求正文：{"name": "edge_node_product01", "description": "des"}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:10:59 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":{"id":100534,"masterKey":"OWFmNDkwNjNmZTM3MDNlMWVkOTQ="},"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:03,356 - root - INFO - case:创建网关设备-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/devices/gateway?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917862&productId=100534&signature=s%252B8nAjJt1ZDHLYNWDDXqNWVERI8%253D	请求方式:POST
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '58'}
+请求正文：{"name": "edge_node_dev01", "cpuType": 0, "systemType": 0}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:10:59 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":{"id":10111824,"apiKey":"ZmU3YmZkNTVjNDMzNGI2MzE4MTM="},"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:03,930 - root - INFO - case:修改网关设备-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/devices/10111824?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917863&signature=vkyN0Z6hXYl4zyMdRvOk3DcP2K0%253D	请求方式:PUT
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '2'}
+请求正文：{}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:00 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":"","success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:04,521 - root - INFO - case:查看网关设备-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/devices/10111824?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917864&signature=3JmcHoGOuM6YoyObIfEiWYVB754%253D	请求方式:GET
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '2'}
+请求正文：{}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:00 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":{"id":10111824,"name":"edge_node_dev01","userId":null,"productId":100534,"created":1583917859443,"modified":1583917860018,"description":"","adminState":1,"operatingState":0,"labels":null,"lastConnected":0,"lastReported":0,"location":null,"apiKey":"ZmU3YmZkNTVjNDMzNGI2MzE4MTM=","protocolType":1,"connectGatewayId":"0","encrypt":false,"parentid":0},"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:04,998 - root - INFO - case:修改网关设备特征属性-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/devices/gateway/10111824?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917864&signature=PwIfGEXN2itxHegPzjKm2KTytsI%253D	请求方式:PUT
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '68'}
+请求正文：{"logEnable": 1, "logDay": 12, "logLevel": 1, "dataSavePeriod": 123}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:01 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":1,"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:05,480 - root - INFO - case:查看网关设备特征属性-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/devices/gateway/10111824?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917865&signature=EWbnzRySpNzxPGbtPKOVzgMf%252FT4%253D	请求方式:GET
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '2'}
+请求正文：{}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:01 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":{"id":10111824,"logLevel":1,"logEnable":1,"logDay":12,"cpuType":0,"systemType":0,"systemInfo":"","version":"","dockerVersion":"","hostName":"","netCard":"","ip":"","dataSavePeriod":123},"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:05,613 - root - INFO - case:创建边缘终端产品(mqtt)-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/products?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917865&signature=JZnUeTklUDl8rFVDSFrfOuU3CRQ%253D	请求方式:POST
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '98'}
+请求正文：{"name": "edge_terminal_product01", "protocolType": 1, "model": 1, "dataFormat": 1, "nodeType": 1}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:01 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":{"id":100535,"masterKey":"ZGY0ZTZjYjI4ZWMwZmQ0ODc4MzY="},"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:05,855 - root - INFO - case:修改边缘终端产品(mqtt)-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/products/100535?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917865&signature=51hj1WOp0heYNSqYmFp5C5g3Qg0%253D	请求方式:PUT
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '2'}
+请求正文：{}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:01 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":null,"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:06,093 - root - INFO - case:查询边缘终端产品(mqtt)-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/products/100535?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917865&signature=EWbnzRySpNzxPGbtPKOVzgMf%252FT4%253D	请求方式:GET
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '2'}
+请求正文：{}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:02 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":{"userId":"150051","name":"edge_terminal_product01","created":1583917861700,"modified":1583917861942,"description":"","manufacturer":"","category":0,"netType":0,"model":1,"dataFormat":1,"nodeType":1,"protocolType":1,"masterKey":"ZGY0ZTZjYjI4ZWMwZmQ0ODc4MzY=","userName":null,"platform":2,"deviceCount":0,"onlineDeviceCount":0,"enableDeviceCount":0,"id":100535},"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:06,330 - root - INFO - case:查询边缘终端产品列表(mqtt)-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/products?accessKeyId=jCTA6cduvIYINMs5&currentPage=1&pageSize=10&signatureNonce=1583917866&signature=THoO%252B4kqok9eeNQ2%252FXw3f33nrgk%253D	请求方式:GET
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '2'}
+请求正文：{}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:02 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":{"currentPage":1,"pageSize":10,"totalCount":2,"totalPage":1,"content":[{"userId":"150051","name":"edge_terminal_product01","created":1583917861700,"modified":1583917861942,"description":"","manufacturer":"","category":0,"netType":0,"model":1,"dataFormat":1,"nodeType":1,"protocolType":1,"masterKey":"ZGY0ZTZjYjI4ZWMwZmQ0ODc4MzY=","userName":null,"platform":2,"deviceCount":0,"onlineDeviceCount":0,"enableDeviceCount":0,"id":100535},{"userId":"150051","name":"edge_node_product01","created":1583917859067,"modified":1583917859067,"description":"des","manufacturer":"","category":0,"netType":0,"model":0,"dataFormat":1,"nodeType":2,"protocolType":1,"masterKey":"OWFmNDkwNjNmZTM3MDNlMWVkOTQ=","userName":null,"platform":2,"deviceCount":1,"onlineDeviceCount":0,"enableDeviceCount":1,"id":100534}]},"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:06,666 - root - INFO - case:创建边缘终端产品功能(mqtt)-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/products/100535/properties?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917866&signature=K0NzgFnZZ1%252B5dkp%252FahODKNgXO9k%253D	请求方式:POST
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '117'}
+请求正文：{"name": "someInteger", "identifier": "someInteger", "accessMode": 1, "type": 7, "maximum": 12345, "minimum": -12345}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:02 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":{"id":5393,"userId":null,"productId":100535,"name":"someInteger","nodeName":"","identifier":"someInteger","accessMode":1,"type":7,"unit":"","minimum":-12345,"maximum":12345,"minString":null,"maxString":null},"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:07,147 - root - INFO - case:修改边缘终端产品功能(mqtt)-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/products/100535/properties/5393?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917867&signature=bsaYgCScZy6goeTm207PoP%252F4L7U%253D	请求方式:PUT
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '2'}
+请求正文：{}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:03 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":1,"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:07,630 - root - INFO - case:查询边缘终端产品功能(mqtt)-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/products/100535/properties/5393?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917867&signature=N6N%252FbMmiiG%252FqOC0Ch23Am3CbsWQ%253D	请求方式:GET
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '2'}
+请求正文：{}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:03 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":{"id":5393,"userId":null,"productId":100535,"name":"someInteger","nodeName":"","identifier":"someInteger","accessMode":1,"type":7,"unit":"","minimum":-12345,"maximum":12345,"minString":null,"maxString":null},"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:08,105 - root - INFO - case:删除边缘终端产品功能(mqtt)-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/products/100535/properties/5393?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917867&signature=N6N%252FbMmiiG%252FqOC0Ch23Am3CbsWQ%253D	请求方式:DELETE
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '2'}
+请求正文：{}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:04 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":1,"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:08,380 - root - INFO - case:创建边缘终端设备(mqtt)-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/devices?accessKeyId=jCTA6cduvIYINMs5&productId=100535&signatureNonce=1583917868&signature=hp200iopGR1X8j2nFI9UYrNt4HI%253D	请求方式:POST
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '31'}
+请求正文：{"name": "edge_terminal_dev01"}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:04 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":{"id":10111825,"apiKey":"MTRlNmNjNjBhYTdjNzZlNmE4ZWU="},"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:08,742 - root - INFO - case:修改边缘终端设备(mqtt)-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/devices/10111825?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917868&signature=3%252BkI%252BDQV72E%252Fd6OG5u51xdaJo64%253D	请求方式:PUT
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '2'}
+请求正文：{}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:04 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":"","success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:09,095 - root - INFO - case:修改边缘终端设备(mqtt)-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/devices/10111825?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917868&signature=f9kcRQe439knxGdHwB6MBlgSlYg%253D	请求方式:GET
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '2'}
+请求正文：{}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:05 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":{"id":10111825,"name":"edge_terminal_dev01","userId":null,"productId":100535,"created":1583917864468,"modified":1583917864829,"description":"","adminState":1,"operatingState":0,"labels":null,"lastConnected":0,"lastReported":0,"location":null,"apiKey":"MTRlNmNjNjBhYTdjNzZlNmE4ZWU=","protocolType":1,"connectGatewayId":"0","encrypt":false,"parentid":0},"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:09,338 - root - INFO - case:修改边缘终端设备(mqtt)-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/label?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917869&signature=6KGeRPRGBK5hzdLbyfaTs41oC0s%253D	请求方式:POST
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '40'}
+请求正文：{"productId": 100535, "name": "group01"}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:05 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":{"id":232,"productId":100535,"name":"group01","created":1583917865425,"description":""},"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:09,809 - root - INFO - case:修改边缘终端设备(mqtt)-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/label?accessKeyId=jCTA6cduvIYINMs5&productId=100535&signatureNonce=1583917869&signature=t0hW3qumpjFgVMo%252F7%252Fs3bUzODZc%253D	请求方式:PUT
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '11'}
+请求正文：{"id": 232}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:05 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":null,"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:10,295 - root - INFO - case:修改边缘终端设备(mqtt)-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/label/id/232?accessKeyId=jCTA6cduvIYINMs5&productId=100535&signatureNonce=1583917870&signature=VK64dawopvGsC7LQlFhmeJh0Q7U%253D	请求方式:GET
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '11'}
+请求正文：{"id": 232}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:06 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":{"id":232,"productId":100535,"name":"group01","created":1583917865425,"description":"","deviceCount":0,"onlineDeviceCount":0,"enableDeviceCount":0},"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:10,572 - root - INFO - case:创建边缘终端设备(mqtt)-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/devices?accessKeyId=jCTA6cduvIYINMs5&productId=100535&signatureNonce=1583917870&signature=PE4fGiO%252FcbnWnTvYkC4on7gRmj8%253D	请求方式:POST
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '31'}
+请求正文：{"name": "edge_terminal_dev02"}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:06 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":{"id":10111826,"apiKey":"NzlkYjhhMzE2MWIwZjI2YmM5YmY="},"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:11,583 - root - INFO - case:创建边缘终端设备(mqtt)-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/label/add/devices?accessKeyId=jCTA6cduvIYINMs5&productId=100535&signatureNonce=1583917871&signature=FUPygtnGMzMSRQa8tMer7PHXYds%253D	请求方式:PUT
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '51'}
+请求正文：{"deviceIds": [10111826, 10111825], "labelId": 232}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:07 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":null,"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:12,651 - root - INFO - case:创建边缘终端设备(mqtt)-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/label/remove/devices?accessKeyId=jCTA6cduvIYINMs5&productId=100535&signatureNonce=1583917872&signature=uPNKZPCs202RrD0OC%252FyTm2l%252Ftso%253D	请求方式:PUT
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '51'}
+请求正文：{"deviceIds": [10111826, 10111825], "labelId": 232}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:08 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":null,"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:13,012 - root - INFO - case:创建边缘终端设备(mqtt)-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/label/group/IN/page?accessKeyId=jCTA6cduvIYINMs5&currentPage=1&label=232&pageSize=10&signatureNonce=1583917872&signature=LdlyMj2aVgWJKxMvDQyWb7Ji44E%253D	请求方式:GET
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '2'}
+请求正文：{}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:09 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":{"currentPage":1,"pageSize":10,"totalCount":0,"totalPage":0,"content":[]},"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:13,370 - root - INFO - case:创建边缘终端设备(mqtt)-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/label/group/NIN/page?accessKeyId=jCTA6cduvIYINMs5&currentPage=1&label=232&pageSize=10&signatureNonce=1583917873&signature=a8akv75H8%252FIbG4HhNBsg2TVeuYA%253D	请求方式:GET
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '2'}
+请求正文：{}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:09 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":{"currentPage":1,"pageSize":10,"totalCount":2,"totalPage":1,"content":[{"id":10111826,"name":"edge_terminal_dev02","userId":null,"productId":100535,"created":1583917866659,"modified":1583917866659,"description":"","adminState":1,"operatingState":0,"labels":null,"lastConnected":0,"lastReported":0,"location":null,"apiKey":"NzlkYjhhMzE2MWIwZjI2YmM5YmY=","protocolType":1,"connectGatewayId":"0","encrypt":false,"parentid":null},{"id":10111825,"name":"edge_terminal_dev01","userId":null,"productId":100535,"created":1583917864468,"modified":1583917864829,"description":"","adminState":1,"operatingState":0,"labels":null,"lastConnected":0,"lastReported":0,"location":null,"apiKey":"MTRlNmNjNjBhYTdjNzZlNmE4ZWU=","protocolType":1,"connectGatewayId":"0","encrypt":false,"parentid":null}]},"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:14,752 - root - INFO - case:创建网关设备关联-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/devices/gateway/associations?accessKeyId=jCTA6cduvIYINMs5&deviceIds=10111826&deviceIds=10111825&gatewayId=10111824&productId=100535&signatureNonce=1583917874&signature=jXyF61CqK03l8yIsb8ANKSw4Xeg%253D	请求方式:POST
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '2'}
+请求正文：{}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:10 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":[{"deviceId":10111826,"parentId":10111824,"productId":100535,"masterKey":"ZGY0ZTZjYjI4ZWMwZmQ0ODc4MzY="},{"deviceId":10111825,"parentId":10111824,"productId":100535,"masterKey":"ZGY0ZTZjYjI4ZWMwZmQ0ODc4MzY="}],"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:15,124 - root - INFO - case:查询网关配置信息-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/devices/gateway/information/10111824?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917874&signature=5NbsY5q7aMnOqShOBW6JaeNWkyo%253D	请求方式:GET
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '2'}
+请求正文：{}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:11 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":{"rulesCount":0,"exportCount":0,"deviceCount":2,"channelCount":0},"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:15,483 - root - INFO - case:查询网关配置信息-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/devices/gateway/multi/10111824/1?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917875&signature=bPXbw1s6s3A%252FyN2%252BLWsJh42jYNo%253D	请求方式:GET
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '2'}
+请求正文：{}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:11 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":[{"id":10111826,"name":"edge_terminal_dev02","userId":null,"productId":100535,"created":1583917866659,"modified":1583917866659,"description":"","adminState":1,"operatingState":0,"labels":null,"lastConnected":0,"lastReported":0,"location":null,"apiKey":"NzlkYjhhMzE2MWIwZjI2YmM5YmY=","protocolType":1,"connectGatewayId":"0","encrypt":false,"parentid":null},{"id":10111825,"name":"edge_terminal_dev01","userId":null,"productId":100535,"created":1583917864468,"modified":1583917864829,"description":"","adminState":1,"operatingState":0,"labels":null,"lastConnected":0,"lastReported":0,"location":null,"apiKey":"MTRlNmNjNjBhYTdjNzZlNmE4ZWU=","protocolType":1,"connectGatewayId":"0","encrypt":false,"parentid":null}],"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:16,323 - root - INFO - case:删除网关设备关联-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/devices/gateway/associations?accessKeyId=jCTA6cduvIYINMs5&deviceIds=10111826&deviceIds=10111825&gatewayId=10111824&signatureNonce=1583917876&signature=n7k0wVxovAf8xvCoerxWUv0Quuk%253D	请求方式:DELETE
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '2'}
+请求正文：{}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:12 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":1,"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:16,771 - root - INFO - case:删除网关设备关联-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/devices/subdevice/IN/page?accessKeyId=jCTA6cduvIYINMs5&currentPage=1&parentId=10111824&pageSize=10&protocol=1&gatewayId=10111824&signatureNonce=1583917876&signature=oBuYpCPfp1Pakr1N%252FLZEtiHYpY0%253D	请求方式:GET
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '2'}
+请求正文：{}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:12 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":{"currentPage":1,"pageSize":10,"totalCount":0,"totalPage":0,"content":[]},"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:17,262 - root - INFO - case:删除网关设备关联-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/devices/subdevice/NIN/page?accessKeyId=jCTA6cduvIYINMs5&currentPage=1&parentId=10111824&pageSize=10&product=100535&protocol=1&gatewayId=10111824&signatureNonce=1583917877&signature=dkP5F5XmtmZWBUmjb%252FS5KicsGn0%253D	请求方式:GET
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '2'}
+请求正文：{}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:13 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":{"currentPage":1,"pageSize":10,"totalCount":2,"totalPage":1,"content":[{"id":10111826,"name":"edge_terminal_dev02","userId":null,"productId":100535,"created":1583917866659,"modified":1583917866659,"description":"","adminState":1,"operatingState":0,"labels":null,"lastConnected":0,"lastReported":0,"location":null,"apiKey":"NzlkYjhhMzE2MWIwZjI2YmM5YmY=","protocolType":1,"connectGatewayId":"0","encrypt":false,"parentid":null},{"id":10111825,"name":"edge_terminal_dev01","userId":null,"productId":100535,"created":1583917864468,"modified":1583917864829,"description":"","adminState":1,"operatingState":0,"labels":null,"lastConnected":0,"lastReported":0,"location":null,"apiKey":"MTRlNmNjNjBhYTdjNzZlNmE4ZWU=","protocolType":1,"connectGatewayId":"0","encrypt":false,"parentid":null}]},"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:17,534 - root - INFO - case:批量创建设备-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/devices/multi?accessKeyId=jCTA6cduvIYINMs5&productId=100535&signatureNonce=1583917877&signature=Nd67wDdyrxWOur3hkbVFCLXaq%252Bc%253D	请求方式:POST
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '143'}
+请求正文：{"list": [{"name": "edge_terminal_dev03", "description": "third terminal"}, {"name": "edge_terminal_dev04", "description": "fourth terminal"}]}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:13 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":[{"id":10111827,"apiKey":"NmY3Y2M1ODcxNDRkNmFmMzZiODI="},{"id":10111828,"apiKey":"YmRiODljY2U4OTViOGYxZjE0NDQ="}],"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:18,153 - root - INFO - case:批量创建设备-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/devices/lock?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917878&signature=A5AcKTbuKKlZSbIA7cSooFAWTOg%253D	请求方式:PUT
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '35'}
+请求正文：{"deviceIds": [10111828, 10111827]}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:14 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":2,"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:18,740 - root - INFO - case:批量启用设备-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/devices/unlock?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917878&signature=A5AcKTbuKKlZSbIA7cSooFAWTOg%253D	请求方式:PUT
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '35'}
+请求正文：{"deviceIds": [10111828, 10111827]}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:14 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":2,"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:18,858 - root - INFO - case:创建模板-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/objtemplate?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917878&signature=f760b8vyiH7N8IZHRGr%252FIsZYPgM%253D	请求方式:POST
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '84'}
+请求正文：{"name": "edge_mqtt_template_01", "protocolType": 1, "description": "mqtt template"}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:14 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":{"content":"","id":392,"userId":"150051","created":1583917874946,"modified":1583917874946,"name":"edge_mqtt_template_01","description":"mqtt template","protocolType":1,"platform":2},"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:19,099 - root - INFO - case:模板中创建功能-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/objtemplate/property?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917878&signature=R84tHPd0f%252Fx7sLcdeRGad%252BfChVo%253D	请求方式:PUT
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '152'}
+请求正文：{"id": 392, "propertyList": [{"name": "someInteger", "identifier": "someInteger", "accessMode": 2, "type": 7, "maxString": 12345, "minString": -12345}]}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:15 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":null,"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:19,462 - root - INFO - case:模板中创建功能-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/objtemplate/property/withtemplate?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917879&signature=MU5mK4cBwhEixi65rMAdXNiH4PY%253D	请求方式:POST
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '40'}
+请求正文：{"productId": 100535, "templateId": 392}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:15 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":[{"nodeName":"","name":"someInteger","accessMode":2,"unit":"","minimum":-12345,"maximum":12345,"id":0,"productId":100535,"created":0,"modified":0,"identifier":"someInteger","type":7}],"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:19,698 - root - INFO - case:模板中创建功能-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/objtemplate?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917879&signature=DnXlrqPYkWj5lpaV6o5pkprdZDM%253D	请求方式:PUT
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '11'}
+请求正文：{"id": 392}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:15 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":null,"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:19,937 - root - INFO - case:模板中创建功能-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/objtemplate/id/392?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917879&signature=ynJbuhHZWRYIAENlVIDwSfmHbGo%253D	请求方式:GET
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '2'}
+请求正文：{}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:16 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":{"name":"edge_mqtt_template_01","description":"mqtt template","protocolType":1,"content":"[{\"accessMode\":2,\"identifier\":\"someInteger\",\"maxString\":\"12345\",\"maximum\":12345,\"minString\":\"-12345\",\"minimum\":-12345,\"name\":\"someInteger\",\"type\":7}]","created":1583917874946,"id":392,"modified":1583917875785,"platform":2,"userId":"150051"},"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:20,339 - root - INFO - case:模板中创建功能-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/data/properties/recent/value?accessKeyId=jCTA6cduvIYINMs5&deviceId=10111828&propertyNames=someInteger&signatureNonce=1583917880&signature=tEKp5W7cjHjL2w%252FP8qd1FQ5XcKw%253D	请求方式:GET
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '2'}
+请求正文：{}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:16 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":[],"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:20,735 - root - INFO - case:模板中创建功能-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/label?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917880&signature=r0PJujh46vU%252B%252FEizb6zmj6hBTXw%253D	请求方式:DELETE
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '14'}
+请求正文：{"ids": [232]}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:16 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":null,"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:21,091 - root - INFO - case:模板中创建功能-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/devices/10111828?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917880&signature=ryAwVgpVm8nvFKE5i%252FejWMpW3Ug%253D	请求方式:DELETE
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '2'}
+请求正文：{}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:17 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":"","success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:21,919 - root - INFO - case:模板中创建功能-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/devices?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917881&signature=61RRlBhq6lvRLTzKPM9Vhxh1vE4%253D	请求方式:DELETE
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '45'}
+请求正文：{"deviceIds": [10111827, 10111826, 10111825]}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:18 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":3,"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:22,153 - root - INFO - case:模板中创建功能-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/objtemplate/id/392?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917882&signature=XYjtAPP%252Bqfzm1kX0E8scsTf39rQ%253D	请求方式:DELETE
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '2'}
+请求正文：{}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:18 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":null,"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:22,395 - root - INFO - case:模板中创建功能-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/products/100535?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917882&signature=XYjtAPP%252Bqfzm1kX0E8scsTf39rQ%253D	请求方式:DELETE
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '2'}
+请求正文：{}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:18 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":null,"success":true,"code":0,"msg":null}
+
+2020-03-11 17:11:22,650 - root - INFO - case:模板中创建功能-成功
+请求地址：http://api.heclouds.com:9090/oes/api/v1/products/100534?accessKeyId=jCTA6cduvIYINMs5&signatureNonce=1583917882&signature=XYjtAPP%252Bqfzm1kX0E8scsTf39rQ%253D	请求方式:DELETE
+请求头：{'User-Agent': 'python-requests/2.23.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '2', 'Content-Length': '2'}
+请求正文：{}
+响应头：{'Date': 'Wed, 11 Mar 2020 09:11:18 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'nginx/1.13.12', 'Vary': 'Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache, no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'Content-Encoding': 'gzip'}
+响应正文：{"data":null,"success":true,"code":0,"msg":null}
+
