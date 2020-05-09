@@ -3,6 +3,8 @@ from HTMLTestRunner import HTMLTestRunner
 import unittest
 import time
 import logging
+from unittest import runner
+
 
 time = time.strftime('%Y-%m-%d %H_%M_%S')  # 获取时间
 report_title = '测试报告'  # 设置报告标题
@@ -22,8 +24,13 @@ path = './case/'  # 设置路径
 # 获得测试集对象
 discover = unittest.defaultTestLoader.discover(start_dir=path, pattern='test_*.py')
 # wb方式写入report中
-with open(report_file, 'wb') as report:
-    runner = HTMLTestRunner(stream=report, title=report_title, description=report_description)
-    # 使用runner运行测试套件
-    runner.run(discover)
-    report.close()
+# with open(report_file, 'w') as report:
+#     runner = HTMLTestRunner.HTMLTestRunner(stream=report, title=report_title, description=report_description)
+#     # 使用runner运行测试套件
+#     runner.run(discover)
+#     report.close()
+
+
+runner = runner.TextTestRunner()
+# 使用runner运行测试套件
+runner.run(discover)

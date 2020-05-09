@@ -46,7 +46,7 @@ class Test_CreateGatewayDeviceAssociate(unittest.TestCase):
         }
         signature = getSignature.get_signature(params, body, self.accessKeySecret, 'DELETE')
         params['signature'] = signature
-        r = requests.delete(url=self.url, params=params, data=json.dumps(body), headers=self.headers)
+        r = requests.delete(url=self.url, params=params, data=json.dumps(body), headers=self.headers, verify= False)
         # success = r.json()['success']
         # 对响应的结果进行断言
         self.assertIn('true', r.text.lower())

@@ -3,7 +3,18 @@ from lib import getSignature
 
 def get_url():
     """获得公用的url"""
-    url = 'http://api.heclouds.com:9090/oes/api/v1'
+
+    # url = 'http://api.heclouds.com:9090/oes/api/v1'
+    # 测试环境地址
+    url = 'https://test.api.heclouds.com/oes/api/v1'
+    # return url
+
+    # 韶钢线上环境
+    # url = 'https://api.heclouds.com/oes/api/v1'
+    # return url
+
+    # 线上环境
+    # url = 'https://api.heclouds.com/oes/api/v1'
     return url
 
 def getHeaders():
@@ -16,11 +27,19 @@ def getHeaders():
 
 def getAccesskey():
     """获得公用的accessKey参数"""
-    accessKey = 'jCTA6cduvIYINMs5'
+    # 公网的accesskey
+    # accessKey = 'Y3ESupiB9IGa9L90'
+
+    # 测试环境
+    accessKey = 'i11ebqvm0ZfzdjNk'
     return accessKey
 
 def getAccessKeySecret():
     """获得公用的accessKeySecret参数"""
-    accessKeySecret = 'ytvAT2KIvIR3Cfs6l24njL9gFdIxllxhYXzM'
+    # 公网环境
+    # accessKeySecret = 'XM5Odos4fZd0ETqvGa6XjPZZVVBnSZdD7qcA'
+
+    # 测试环境
+    accessKeySecret = 'UvHCr4pEXj9ZJtVTXFCHqIwuJq3KfrWcB6eZ'
     return accessKeySecret
 

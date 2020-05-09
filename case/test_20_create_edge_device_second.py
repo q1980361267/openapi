@@ -43,7 +43,7 @@ class Test_CreateEdgeTerminalDevice(unittest.TestCase):
             'signatureNonce': self.signatureNonce,
         }
         body = {
-            'name': 'edge_terminal_dev02'
+            'name': 'edge_terminal_' + str(int(time.time()))
         }
         signature = getSignature.get_signature(params, body, self.accessKeySecret, 'POST')
         params['signature'] = signature

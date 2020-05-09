@@ -6,13 +6,26 @@ import urllib3
 from lib import getOpenApiPramsTemplate,getSignature
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+import random
+
+def ranstr():
+    # 猜猜变量名为啥叫 H
+    H = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+
+    salt = ''
+    for i in range(6):
+        salt += random.choice(H)
+
+    return salt
+
+
 def getGatewayProductInfo():
     """获得创建的网关节点产品的信息"""
     url = getOpenApiPramsTemplate.get_url() + '/products'
     accessKey = getOpenApiPramsTemplate.getAccesskey()
     accessKeySecret = getOpenApiPramsTemplate.getAccessKeySecret()
     headers = getOpenApiPramsTemplate.getHeaders()
-    signatureNonce = int(time.time())
+    signatureNonce = ranstr()
 
     params = {
         'accessKeyId': accessKey,
@@ -23,7 +36,7 @@ def getGatewayProductInfo():
     body = {}
     signature = getSignature.get_signature(params, body, accessKeySecret, 'GET')
     params['signature'] = signature
-    r = requests.get(url=url, params=params, headers=headers)
+    r = requests.get(url=url, params=params, headers=headers, verify=False)
     # print(r.json())
     return r
 

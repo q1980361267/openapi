@@ -14,8 +14,9 @@ class Test_createNodeDevice(unittest.TestCase):
     #类执行前初始
     @classmethod
     def setUpClass(cls):
-        #关闭https的证书校验
+        # 关闭https的证书校验
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        pass
     @classmethod
     def tearDownClass(cls):
         pass
@@ -44,10 +45,12 @@ class Test_createNodeDevice(unittest.TestCase):
             'cpuType': 0,
             'systemType': 0
         }
+
         signature = getSignature.get_signature(params,body,self.accessKeySecret,'POST')
         params['signature'] = signature
-        r = requests.post(url=self.url,params=params,data=json.dumps(body),headers=self.headers)
+        r = requests.post(url=self.url, params=params, data=json.dumps(body),headers=self.headers, verify=False)
         # success = r.json()['success']
+        print(self.signatureNonce)
         #断言success字段中的值
         self.assertIn('true', r.text.lower())
         logging.info(f"case:创建网关设备-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
