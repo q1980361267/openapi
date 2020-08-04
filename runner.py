@@ -20,17 +20,17 @@ if not os.path.exists(report_path):
     os.mkdir(report_path)
 else:
     pass
-path = './case/'  # 设置路径
+path = './case/ecp_openapi_auto_test'  # 设置路径
 # 获得测试集对象
 discover = unittest.defaultTestLoader.discover(start_dir=path, pattern='test_*.py')
 # wb方式写入report中
-# with open(report_file, 'w') as report:
-#     runner = HTMLTestRunner.HTMLTestRunner(stream=report, title=report_title, description=report_description)
-#     # 使用runner运行测试套件
-#     runner.run(discover)
-#     report.close()
+with open(report_file, 'w', encoding='utf-8') as report:
+    runner = HTMLTestRunner.HTMLTestRunner(stream=report, title=report_title, description=report_description)
+    # 使用runner运行测试套件
+    runner.run(discover)
+    report.close()
 
 
-runner = runner.TextTestRunner()
+# runner = runner.TextTestRunner()
 # 使用runner运行测试套件
-runner.run(discover)
+# runner.run(discover)
