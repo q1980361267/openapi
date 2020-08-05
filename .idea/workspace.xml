@@ -2,123 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="feef71ba-74a6-4063-9628-df3040c2dadd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assist/abcd/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assist_config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_00_create_node.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_01_create_node_dev.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_02_modify_node_dev.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_03_get_node_dev.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_04_modify_node_dev_feature.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_05_get_node_dev_feature.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_06_create_edge_ternimal_product.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_07_modify_edge_terminal_product.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_08_get_edge_terminal_product.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_09_get_product_lists.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_10_create_function.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_11_modify_function.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_12_get_function.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_13_delete_function.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_14_create_edge_terminal_device_onece.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_15_modify_edge_terminal_device.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_16_get_edge_terminal_device.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_17_create_group.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_18_modify_group.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_19_get_group.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_20_create_edge_device_second.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_21_add_devices_to_group.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_22_remove_devices_from_group.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_23_get_device_list_from_group_related.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_24_get_device_list_from_group_unrelated.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_25_create_gateway_device_associate.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_26_get_gateway_configuration.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_27_get_gateway_associate_devices.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_28_delete_gateway_associate_devices.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_29_get_device_list_related.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_30_get_device_list_unrelated.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_31_create_devices_multi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_32_disable_devices_multi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_33_enable_devices_multi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_34_create_template.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_35_create_function_in_template.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_36_add_template_to_product.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_37_modify_template.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_38_get_template.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_39_get_functions_value_from_dev.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_40_delete_group.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_41_delete_device.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_42_delete_devices_multi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_43_delete_template.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_44_delete_terminal_product.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_new/test_45_delete_node_product.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_00_create_node_product.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zhaoshang_pro_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/openapi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/openapi.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assist/abcd/中文.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_12_get_category.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_00_create_node_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_00_create_node_product.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_01_create_node_dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_01_create_node_dev.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_02_modify_node_dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_02_modify_node_dev.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_03_get_node_dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_03_get_node_dev.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_04_modify_node_dev_feature.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_04_modify_node_dev_feature.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_05_get_node_dev_feature.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_05_get_node_dev_feature.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_06_create_edge_ternimal_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_06_create_edge_ternimal_product.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_07_modify_edge_terminal_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_07_modify_edge_terminal_product.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_08_get_edge_terminal_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_08_get_edge_terminal_product.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_09_get_product_lists.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_09_get_product_lists.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_10_create_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_10_create_function.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_11_modify_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_11_modify_function.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_12_get_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_12_get_function.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_13_delete_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_13_delete_function.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_14_create_edge_terminal_device_onece.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_14_create_edge_terminal_device_onece.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_15_modify_edge_terminal_device.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_15_modify_edge_terminal_device.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_16_get_edge_terminal_device.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_16_get_edge_terminal_device.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_17_create_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_17_create_group.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_18_modify_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_18_modify_group.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_19_get_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_19_get_group.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_20_create_edge_device_second.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_20_create_edge_device_second.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_21_add_devices_to_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_21_add_devices_to_group.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_22_remove_devices_from_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_22_remove_devices_from_group.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_23_get_device_list_from_group_related.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_23_get_device_list_from_group_related.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_24_get_device_list_from_group_unrelated.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_24_get_device_list_from_group_unrelated.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_25_create_gateway_device_associate.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_25_create_gateway_device_associate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_26_get_gateway_configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_26_get_gateway_configuration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_27_get_gateway_associate_devices.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_27_get_gateway_associate_devices.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_28_delete_gateway_associate_devices.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_28_delete_gateway_associate_devices.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_29_get_device_list_related.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_29_get_device_list_related.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_30_get_device_list_unrelated.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_30_get_device_list_unrelated.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_31_create_devices_multi.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_31_create_devices_multi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_32_disable_devices_multi.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_32_disable_devices_multi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_33_enable_devices_multi.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_33_enable_devices_multi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_34_create_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_34_create_template.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_35_create_function_in_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_35_create_function_in_template.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_36_add_template_to_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_36_add_template_to_product.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_37_modify_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_37_modify_template.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_38_get_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_38_get_template.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_39_get_functions_value_from_dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_39_get_functions_value_from_dev.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_40_delete_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_40_delete_group.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_41_delete_device.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_41_delete_device.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_42_delete_devices_multi.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_42_delete_devices_multi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_43_delete_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_43_delete_template.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_44_delete_terminal_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_44_delete_terminal_product.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_45_delete_node_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_45_delete_node_product.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/assist/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/getDeviceInfo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/getFunctionInfo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/getGatewayDeviceInfo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/getGatewayProductInfo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/getGroupInfo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/getOpenApiPramsTemplate.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/getSignature.py" beforeDir="false" afterPath="$PROJECT_DIR$/assist/getSignature.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/getTemplateInfo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/assist/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/2020-05-09 17_12_42_log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/2020-05-09 17_12_42_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/2020-05-09 17_15_20_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/2020-05-09 17_23_15_log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assist/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/assist/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assist/test.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/assist/test.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assist_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/assist_config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_05_get_node_dev_feature.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_05_get_node_dev_feature.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_06_create_edge_ternimal_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_06_create_edge_ternimal_product.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_07_modify_edge_terminal_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_07_modify_edge_terminal_product.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_08_get_edge_terminal_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_08_get_edge_terminal_product.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_09_get_product_lists.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_09_get_product_lists.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_10_create_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_10_create_function_draft.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_11_modify_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_11_function_draft_publish.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_12_get_function.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_13_delete_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_13_get_catogry_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_14_create_edge_terminal_device_onece.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_14_get_model_function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_15_modify_edge_terminal_device.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_15_create_ecp_device.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_16_get_edge_terminal_device.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_16_modify_ecp_device.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_17_create_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_17_get_ecp_device.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_18_modify_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_18_create_group.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_19_get_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_19_modify_group.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_20_create_edge_device_second.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_20_get_group.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_21_add_devices_to_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_21_add_devices_to_group.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_22_remove_devices_from_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_22_remove_devices_from_group.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_23_get_device_list_from_group_related.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_23_get_device_list_from_group_related.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_24_get_device_list_from_group_unrelated.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_auto_test/test_24_get_device_list_from_group_unrelated.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,8 +65,8 @@
       <recent name="E:\work_code\openapi\openapi_python\case\ecp_openapi_auto_test" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for test_05_get_node_dev_feature.Test_modifyNodeDevFeature.test_00">
-    <configuration name="Unittests for test_01_create_node_dev.Test_createNodeDevice.test_00" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Unittests for test_24_get_device_list_from_group_unrelated.Test_RemoveDevicesFromGroup.test_00">
+    <configuration name="Unittests for test_21_add_devices_to_group.Test_CreateEdgeTerminalDevice.test_00" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="openapi" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -167,11 +76,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_01_create_node_dev.Test_createNodeDevice.test_00&quot;" />
+      <option name="_new_target" value="&quot;test_21_add_devices_to_group.Test_CreateEdgeTerminalDevice.test_00&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for test_04_modify_node_dev_feature.Test_modifyNodeDevFeature.test_00" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for test_23_get_device_list_from_group_related.Test_RemoveDevicesFromGroup.test_00" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="openapi" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -181,11 +90,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_04_modify_node_dev_feature.Test_modifyNodeDevFeature.test_00&quot;" />
+      <option name="_new_target" value="&quot;test_23_get_device_list_from_group_related.Test_RemoveDevicesFromGroup.test_00&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for test_05_get_node_dev_feature.Test_modifyNodeDevFeature.test_00" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for test_24_get_device_list_from_group_unrelated.Test_RemoveDevicesFromGroup.test_00" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="openapi" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -195,25 +104,25 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_05_get_node_dev_feature.Test_modifyNodeDevFeature.test_00&quot;" />
+      <option name="_new_target" value="&quot;test_24_get_device_list_from_group_unrelated.Test_RemoveDevicesFromGroup.test_00&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_00_create_node_product.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in test_22_remove_devices_from_group.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="openapi" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case/ecp_openapi_auto_test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_00_create_node_product.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/case/ecp_openapi_auto_test/test_22_remove_devices_from_group.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_02_modify_node_dev.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in test_23_get_device_list_from_group_related.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="openapi" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -223,31 +132,17 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/case/ecp_openapi_auto_test/test_02_modify_node_dev.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests in test_03_get_node_dev.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="openapi" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case/ecp_openapi_auto_test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/case/ecp_openapi_auto_test/test_03_get_node_dev.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/case/ecp_openapi_auto_test/test_23_get_device_list_from_group_related.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests for test_05_get_node_dev_feature.Test_modifyNodeDevFeature.test_00" />
-        <item itemvalue="Python tests.Unittests for test_04_modify_node_dev_feature.Test_modifyNodeDevFeature.test_00" />
-        <item itemvalue="Python tests.Unittests in test_03_get_node_dev.py" />
-        <item itemvalue="Python tests.Unittests in test_02_modify_node_dev.py" />
-        <item itemvalue="Python tests.Unittests for test_01_create_node_dev.Test_createNodeDevice.test_00" />
+        <item itemvalue="Python tests.Unittests for test_24_get_device_list_from_group_unrelated.Test_RemoveDevicesFromGroup.test_00" />
+        <item itemvalue="Python tests.Unittests in test_23_get_device_list_from_group_related.py" />
+        <item itemvalue="Python tests.Unittests for test_23_get_device_list_from_group_related.Test_RemoveDevicesFromGroup.test_00" />
+        <item itemvalue="Python tests.Unittests in test_22_remove_devices_from_group.py" />
+        <item itemvalue="Python tests.Unittests for test_21_add_devices_to_group.Test_CreateEdgeTerminalDevice.test_00" />
       </list>
     </recent_temporary>
   </component>
@@ -269,22 +164,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="627" y="209" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596528908328" />
-    <state width="1894" height="245" key="GridCell.Tab.0.bottom" timestamp="1596535836204">
+    <state width="1894" height="341" key="GridCell.Tab.0.bottom" timestamp="1596622455529">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1894" height="245" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596535836204" />
-    <state width="1894" height="245" key="GridCell.Tab.0.center" timestamp="1596535836204">
+    <state width="1894" height="341" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596622455529" />
+    <state width="1894" height="341" key="GridCell.Tab.0.center" timestamp="1596622455529">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1894" height="245" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596535836204" />
-    <state width="1894" height="245" key="GridCell.Tab.0.left" timestamp="1596535836204">
+    <state width="1894" height="341" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596622455529" />
+    <state width="1894" height="341" key="GridCell.Tab.0.left" timestamp="1596622455529">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1894" height="245" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596535836204" />
-    <state width="1894" height="245" key="GridCell.Tab.0.right" timestamp="1596535836204">
+    <state width="1894" height="341" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596622455529" />
+    <state width="1894" height="341" key="GridCell.Tab.0.right" timestamp="1596622455529">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1894" height="245" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596535836204" />
+    <state width="1894" height="341" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596622455529" />
     <state x="310" y="74" key="SettingsEditor" timestamp="1596526731917">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -297,5 +192,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="574" y="29" width="771" height="981" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588932380898" />
+    <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1596620353252">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1596620353252" />
   </component>
 </project>

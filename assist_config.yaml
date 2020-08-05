@@ -1,4 +1,6 @@
-ecp_node_productId: 100428
-ecp_node_productSecret: NzQyYjc3NzNjZmZjNDA5MTAwNjM=  # 产品ID
-ecp_node_deviceSecret: NGE4NmQ2ZmQ4MDdmOTBiZjQyODM=
-ecp_node_devicetId: 10003006
+category_id: 1515
+ecp_productId: 100455
+ecp_productSecret: YWE4NDMwMzRiMmFmZjY5NjljYmY=
+ecp_deviceId: 10005089
+ecp_deviceSecrete: MGIxNWVjMTZmN2MxN2I3MWNiOTM=
+group_id: 396

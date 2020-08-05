@@ -61,7 +61,7 @@ class Test_modifyNodeDevFeature(unittest.TestCase):
         # success = r.json()['success']
         #断言success字段中的值
         self.assertIn('true', r.text.lower())
-        print(r.text.lower())
+        # print(r.text.lower())
         logging.info(f"case:查看网关设备特征属性-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n"
                      f"请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
 

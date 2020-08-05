@@ -18,12 +18,11 @@ with open("../../zhaoshang_pro_config.json", 'r') as f:
 
 with open('../../assist_config.yaml', 'r') as f:
     data = yaml.load(f, Loader=yaml.FullLoader)
-    id_group = data.get('group_id')
-    id_dev = data.get('ecp_deviceId')
+    category_id = data.get('category_id')
 
 
-class Test_RemoveDevicesFromGroup(unittest.TestCase):
-    """创建边缘终端设备(mqtt)接口"""
+class Test_ModifyFunction(unittest.TestCase):
+    """查询模板功能接口"""
 
     # 类执行前初始
     @classmethod
@@ -37,8 +36,8 @@ class Test_RemoveDevicesFromGroup(unittest.TestCase):
 
     # 方法前初始
     def setUp(self):
-        self.id_group = id_group
-        self.url = url + '/label/group/NIN/page'
+        self.category_id = category_id
+        self.url = url + '/industry/' + str(self.category_id) + '/properties'
         self.accessKey = accessKeyId
         self.accessKeySecret = accessSecret
         self.headers = {
@@ -51,14 +50,11 @@ class Test_RemoveDevicesFromGroup(unittest.TestCase):
         pass
 
     def test_00(self):  # 执行逻辑::设置入参，参数正确填写
-        """创建边缘终端设备(mqtt)-成功"""
+        """查询模板功能-成功"""
 
         params = {
             'accessKeyId': self.accessKey,
-            'currentPage': 1,
-            'label': self.id_group,
-            'pageSize': 10,
-            'signatureNonce': self.signatureNonce
+            'signatureNonce': self.signatureNonce,
         }
         body = {}
         signature = getSignature.get_signature(params, body, self.accessKeySecret, 'GET')
@@ -66,13 +62,12 @@ class Test_RemoveDevicesFromGroup(unittest.TestCase):
         r = requests.get(url=self.url, params=params, data=json.dumps(body), headers=self.headers)
         # success = r.json()['success']
         # 对响应的结果进行断言
-        # print(r.json())
+        print(r.json())
         self.assertIn('true', r.text.lower())
-        print(r.text.lower())
-        logging.info(f"case:创建边缘终端设备(mqtt)-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n"
+        # print(r.text.lower())
+        logging.info(f"case:查询模板功能-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n"
                      f"请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
 
 
 if __name__ == '__main__':
     unittest.main()
-
