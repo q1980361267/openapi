@@ -20,7 +20,7 @@ if not os.path.exists(report_path):
     os.mkdir(report_path)
 else:
     pass
-path = './case/ecp_openapi_auto_test'  # 设置路径
+path = 'case/ecp_openapi_old'  # 设置路径
 # 获得测试集对象
 discover = unittest.defaultTestLoader.discover(start_dir=path, pattern='test_*.py')
 # wb方式写入report中
