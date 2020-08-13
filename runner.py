@@ -6,16 +6,18 @@ import logging
 from unittest import runner
 
 
-time = time.strftime('%Y-%m-%d_%H:%M:%S')  # 获取时间
+time = time.strftime('%Y-%m-%d %H_%M_%S')  # 获取时间
 report_title = '测试报告'  # 设置报告标题
 report_description = '测试描述'  # 设置报告描述
 report_path = './result/'  # 设置测试报告的路径
 
+
 report_file = report_path + time + '_report.html'  # 获得测试报告
 log_file = report_path + time + '_log.txt'  # 获得日志文件
 # filename 日志文件路径 level 日志的级别 format 格式
+print("file name is:", log_file)
 
-logging.basicConfig(level=logging.INFO,
+logging.basicConfig(level=logging.INFO, filename=log_file,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 # 如果没有这个路径，就创建路径
@@ -33,7 +35,7 @@ with open(report_file, 'w', encoding='utf-8') as report:
     runner.run(discover)
     report.close()
 
-# #
+# # #
 # runner = runner.TextTestRunner(verbosity=2)
 # # 使用runner运行测试套件
 # runner.run(discover)

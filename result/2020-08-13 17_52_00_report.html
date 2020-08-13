@@ -1,0 +1,3169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>测试报告</h1>
+<p class='attribute'><strong>Start Time:</strong> 2020-08-13 17:52:00</p>
+<p class='attribute'><strong>Duration:</strong> 0:01:14.372562</p>
+<p class='attribute'><strong>Status:</strong> Pass 80 Failure 23</p>
+
+<p class='description'>测试描述</p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Failed</a>
+<a href='javascript:showCase(2)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_00_ecp_node.Test_CreateNodeProduct: 边缘节点接口</td>
+    <td>9</td>
+    <td>9</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',9)">Detail</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_00: 创建节点-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
+
+    <div id='div_pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.1: https://test.api.heclouds.com/oes/api/v1/edgenode/pro
+{'code': 0, 'data': {'apiKey': 'NzRkZWRiM2IzMWJiNzE5ZjBmMzA=', 'id': 10082992}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01: 查看边缘节点属性-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+        pass</a>
+
+    <div id='div_pt1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.2: https://test.api.heclouds.com/oes/api/v1/edgenode/pro/10082992
+{'code': 0, 'data': {'hostName': '', 'appVersion': '', 'cpuType': 2, 'addresses': None, 'apiKey': 'NzRkZWRiM2IzMWJiNzE5ZjBmMzA=', 'upgradeTime': 0, 'operatingState': 0, 'containerRuntimeVersion': '', 'description': '', 'upgradeStatus': 1, 'logLevel': 2, 'lastConnected': 0, 'adminState': 1, 'systemType': 0, 'modified': 1597312323718, 'id': 10082992, 'created': 1597312323718, 'specification': '', 'nodeType': 1, 'userName': None, 'userId': '38724', 'logDay': 1, 'systemInfo': '', 'lastReported': 0, 'name': 'edge_node_d5fa1', 'logEnable': 0, 'dataSavePeriod': 0, 'deployStatus': 0}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02: 更新边缘节点属性-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        pass</a>
+
+    <div id='div_pt1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.3: https://test.api.heclouds.com/oes/api/v1/edgenode/pro/10082992
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03: 分页查询边缘节点属性-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4')" >
+        pass</a>
+
+    <div id='div_pt1.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.4: https://test.api.heclouds.com/oes/api/v1/edgenode/pro/page
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 8, 'content': [{'appVersion': '', 'cpuType': 2, 'apiKey': 'NzRkZWRiM2IzMWJiNzE5ZjBmMzA=', 'upgradeTime': 0, 'operatingState': 0, 'created': 1597312323718, 'description': '', 'nodeType': 1, 'userName': None, 'userId': '38724', 'logDay': 1, 'upgradeStatus': 1, 'logLevel': 2, 'lastConnected': 0, 'lastReported': 0, 'adminState': 1, 'name': 'edge_node_d5fa1', 'systemType': 0, 'modified': 1597312324058, 'logEnable': 0, 'id': 10082992, 'dataSavePeriod': 0, 'deployStatus': 0}, {'appVersion': '', 'cpuType': 2, 'apiKey': 'OGUxM2QwMWUxMzIzMTRiOThmZDc=', 'upgradeTime': 0, 'operatingState': 0, 'created': 1597310885406, 'description': '', 'nodeType': 1, 'userName': None, 'userId': '38724', 'logDay': 1, 'upgradeStatus': 1, 'logLevel': 2, 'lastConnected': 0, 'lastReported': 0, 'adminState': 1, 'name': 'edge_node_b65f3', 'systemType': 0, 'modified': 1597310886767, 'logEnable': 0, 'id': 10082984, 'dataSavePeriod': 0, 'deployStatus': 0}, {'appVersion': '', 'cpuType': 2, 'apiKey': 'YTY2OTU1NzFmYjZhNDVlOWE5NmQ=', 'upgradeTime': 0, 'operatingState': 0, 'created': 1597310836734, 'description': '', 'nodeType': 1, 'userName': None, 'userId': '38724', 'logDay': 1, 'upgradeStatus': 1, 'logLevel': 2, 'lastConnected': 0, 'lastReported': 0, 'adminState': 1, 'name': 'edge_node_4bead', 'systemType': 0, 'modified': 1597310837852, 'logEnable': 0, 'id': 10082980, 'dataSavePeriod': 0, 'deployStatus': 0}, {'appVersion': '', 'cpuType': 2, 'apiKey': 'ODVhMGExYWI2MTk3MjY0ZjY1Yjk=', 'upgradeTime': 0, 'operatingState': 0, 'created': 1597310707870, 'description': '', 'nodeType': 1, 'userName': None, 'userId': '38724', 'logDay': 1, 'upgradeStatus': 1, 'logLevel': 2, 'lastConnected': 0, 'lastReported': 0, 'adminState': 1, 'name': 'edge_node_1abdc', 'systemType': 0, 'modified': 1597310709077, 'logEnable': 0, 'id': 10082979, 'dataSavePeriod': 0, 'deployStatus': 0}, {'appVersion': '', 'cpuType': 2, 'apiKey': 'MzMwODVjNzcxNDdkZDhiZGE4ZTE=', 'upgradeTime': 0, 'operatingState': 0, 'created': 1597310492954, 'description': '', 'nodeType': 1, 'userName': None, 'userId': '38724', 'logDay': 1, 'upgradeStatus': 1, 'logLevel': 2, 'lastConnected': 0, 'lastReported': 0, 'adminState': 1, 'name': 'edge_node_1f5a6', 'systemType': 0, 'modified': 1597310494090, 'logEnable': 0, 'id': 10082975, 'dataSavePeriod': 0, 'deployStatus': 0}, {'appVersion': '', 'cpuType': 2, 'apiKey': 'YWU3ZGE1MDljN2YwOTY4OTlkY2Q=', 'upgradeTime': 0, 'operatingState': 0, 'created': 1597308543799, 'description': '', 'nodeType': 1, 'userName': None, 'userId': '38724', 'logDay': 1, 'upgradeStatus': 1, 'logLevel': 2, 'lastConnected': 0, 'lastReported': 0, 'adminState': 1, 'name': 'edge_node_fbc13', 'systemType': 0, 'modified': 1597308545064, 'logEnable': 0, 'id': 10082966, 'dataSavePeriod': 0, 'deployStatus': 0}, {'appVersion': '', 'cpuType': 2, 'apiKey': 'MDg2ODExYTYyZDE2MzEwNzJlYmQ=', 'upgradeTime': 0, 'operatingState': 0, 'created': 1597308523379, 'description': '', 'nodeType': 1, 'userName': None, 'userId': '38724', 'logDay': 1, 'upgradeStatus': 1, 'logLevel': 2, 'lastConnected': 0, 'lastReported': 0, 'adminState': 1, 'name': 'edge_node_edc5a', 'systemType': 0, 'modified': 1597308524686, 'logEnable': 0, 'id': 10082965, 'dataSavePeriod': 0, 'deployStatus': 0}, {'appVersion': '', 'cpuType': 2, 'apiKey': 'ZGQ5MWZhMjYyYjA4MTcyNTNlZmI=', 'upgradeTime': 0, 'operatingState': 0, 'created': 1597299212835, 'description': '', 'nodeType': 1, 'userName': None, 'userId': '38724', 'logDay': 1, 'upgradeStatus': 1, 'logLevel': 2, 'lastConnected': 0, 'lastReported': 0, 'adminState': 1, 'name': 'edge_node_0431f', 'systemType': 0, 'modified': 1597299214791, 'logEnable': 0, 'id': 10082932, 'dataSavePeriod': 0, 'deployStatus': 0}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04: 查询边缘节点配置信息-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5')" >
+        pass</a>
+
+    <div id='div_pt1.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.5: https://test.api.heclouds.com/oes/api/v1/devices/gateway/information/10082992
+{'code': 0, 'data': {'channelCount': 0, 'deviceCount': 0, 'rulesCount': 0, 'exportCount': 0}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_05: 查询边缘节点下所有关联的边缘终端-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.6')" >
+        pass</a>
+
+    <div id='div_pt1.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.6: https://test.api.heclouds.com/oes/api/v1/devices/gateway/multi/10082992/7
+{'code': 0, 'data': [], 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_06: 批量禁用边缘节点节点-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.7')" >
+        pass</a>
+
+    <div id='div_pt1.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.7: https://test.api.heclouds.com/oes/api/v1/edgenode/pro/adminstate/multi
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_07: 批量启用边缘节点-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.8')" >
+        pass</a>
+
+    <div id='div_pt1.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.8: https://test.api.heclouds.com/oes/api/v1/edgenode/pro/adminstate/multi
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_08: 查询边缘节点的功能列表-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.9')" >
+        pass</a>
+
+    <div id='div_pt1.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.9: https://test.api.heclouds.com/oes/api/v1/edgenode/pro/properties
+{'code': 0, 'data': [{'nodeName': '', 'identifier': 'cpu.used', 'productId': 0, 'minString': None, 'kind': 0, 'accessMode': 1, 'type': 6, 'userId': None, 'maxString': None, 'required': False, 'special': {'length': None, 'step': None, 'enumArray': None}, 'unit': '', 'name': 'CPU使用率', 'maximum': 1, 'id': 0, 'minimum': 0, 'class': 0}, {'nodeName': '', 'identifier': 'mem.used', 'productId': 0, 'minString': None, 'kind': 0, 'accessMode': 1, 'type': 6, 'userId': None, 'maxString': None, 'required': False, 'special': {'length': None, 'step': None, 'enumArray': None}, 'unit': '', 'name': '内存使用率', 'maximum': 1, 'id': 0, 'minimum': 0, 'class': 0}, {'nodeName': '', 'identifier': 'disk.used', 'productId': 0, 'minString': None, 'kind': 0, 'accessMode': 1, 'type': 6, 'userId': None, 'maxString': None, 'required': False, 'special': {'length': None, 'step': None, 'enumArray': None}, 'unit': '', 'name': '磁盘使用率', 'maximum': 1, 'id': 0, 'minimum': 0, 'class': 0}], 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_01_node_deploy.Test_CreateNodeProduct: 边缘节点接口</td>
+    <td>3</td>
+    <td>3</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c2',3)">Detail</a></td>
+</tr>
+
+<tr id='pt2.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_00: 部署边缘节点配置-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
+        pass</a>
+
+    <div id='div_pt2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.1: https://test.api.heclouds.com/oes/api/v1/command/gateway/deploy/10082992
+{'data': None, 'success': False, 'code': 22500004, 'msg': '边缘节点离线', 'referInfo': 'gateway is offline '}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01: 部署边缘节点检查-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.2')" >
+        pass</a>
+
+    <div id='div_pt2.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.2: https://test.api.heclouds.com/oes/api/v1/command/gateway/deploy/check/id/10082992
+{'code': 0, 'data': True, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02: 获取边缘节点MQTT broker地址-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.3')" >
+        pass</a>
+
+    <div id='div_pt2.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.3: https://test.api.heclouds.com/oes/api/v1/edge/node/mqtt/broker
+{'code': 0, 'data': '10.12.6.24:32147', 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_02_ecp_product.Test_modifyNodeDevFeature: 创建边缘终端产品(bacnet)接口</td>
+    <td>4</td>
+    <td>4</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c3',4)">Detail</a></td>
+</tr>
+
+<tr id='pt3.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_00: 创建边缘终端产品(BACnet)-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.1')" >
+        pass</a>
+
+    <div id='div_pt3.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.1: https://test.api.heclouds.com/oes/api/v1/products
+{'code': 0, 'data': {'masterKey': 'NGMyZTU3ZDgzNjljM2I4YWY0Njk=', 'id': 104291}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01: 根据产品ID查询产品信息-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.2')" >
+        pass</a>
+
+    <div id='div_pt3.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.2: https://test.api.heclouds.com/oes/api/v1/products/104291
+{'code': 0, 'data': {'masterKey': 'NGMyZTU3ZDgzNjljM2I4YWY0Njk=', 'description': '', 'categoryName': '', 'platform': 3, 'manufacturer': '', 'networkMethod': 1, 'dynamicRegister': 0, 'modified': 1597312325984, 'model': 1, 'id': 104291, 'onlineDeviceCount': 0, 'deviceCount': 0, 'created': 1597312325984, 'netType': 0, 'dataFormat': 1, 'enableDeviceCount': 0, 'protocolType': 7, 'nodeType': 1, 'userName': None, 'userId': '38724', 'field': '', 'authenticationMethod': 1, 'name': 'bacnet_product_ch610', 'category': None, 'categoryId': 0}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02: 查询产品列表信息-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.3')" >
+        pass</a>
+
+    <div id='div_pt3.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.3: https://test.api.heclouds.com/oes/api/v1/products
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 6, 'content': [{'masterKey': 'NGMyZTU3ZDgzNjljM2I4YWY0Njk=', 'description': '', 'categoryName': '', 'platform': 3, 'manufacturer': '', 'networkMethod': 1, 'dynamicRegister': 0, 'modified': 1597312325984, 'model': 1, 'id': 104291, 'onlineDeviceCount': 0, 'deviceCount': 0, 'created': 1597312325984, 'netType': 0, 'dataFormat': 1, 'enableDeviceCount': 0, 'protocolType': 7, 'nodeType': 1, 'userName': None, 'userId': '38724', 'field': '', 'authenticationMethod': 1, 'name': 'bacnet_product_ch610', 'category': None, 'categoryId': 0}, {'masterKey': 'YTlkNWIxYzk0OWU3NDhjM2EyY2E=', 'description': '', 'categoryName': '', 'platform': 3, 'manufacturer': '', 'networkMethod': 1, 'dynamicRegister': 0, 'modified': 1597310888180, 'model': 1, 'id': 104289, 'onlineDeviceCount': 0, 'deviceCount': 3, 'created': 1597310887701, 'netType': 0, 'dataFormat': 1, 'enableDeviceCount': 0, 'protocolType': 7, 'nodeType': 1, 'userName': None, 'userId': '38724', 'field': '', 'authenticationMethod': 1, 'name': 'bacnet_product_f26b3', 'category': None, 'categoryId': 0}, {'masterKey': 'ZjQxYjk2OTczZWY1NDY1ZDNkYzQ=', 'description': '', 'categoryName': '', 'platform': 3, 'manufacturer': '', 'networkMethod': 1, 'dynamicRegister': 0, 'modified': 1597310840546, 'model': 1, 'id': 104288, 'onlineDeviceCount': 0, 'deviceCount': 3, 'created': 1597310840046, 'netType': 0, 'dataFormat': 1, 'enableDeviceCount': 0, 'protocolType': 7, 'nodeType': 1, 'userName': None, 'userId': '38724', 'field': '', 'authenticationMethod': 1, 'name': 'bacnet_product_aceb0', 'category': None, 'categoryId': 0}, {'masterKey': 'NWVhNGJkZDU3N2FjNDYxMzc4YjU=', 'description': '', 'categoryName': '', 'platform': 3, 'manufacturer': '', 'networkMethod': 1, 'dynamicRegister': 0, 'modified': 1597310711213, 'model': 1, 'id': 104287, 'onlineDeviceCount': 0, 'deviceCount': 0, 'created': 1597310710726, 'netType': 0, 'dataFormat': 1, 'enableDeviceCount': 0, 'protocolType': 7, 'nodeType': 1, 'userName': None, 'userId': '38724', 'field': '', 'authenticationMethod': 1, 'name': 'bacnet_product_fdce4', 'category': None, 'categoryId': 0}, {'masterKey': 'NmU0MmViMTJhMTAxZGM2NTQ5NTk=', 'description': '', 'categoryName': '', 'platform': 3, 'manufacturer': '', 'networkMethod': 1, 'dynamicRegister': 0, 'modified': 1597310495579, 'model': 1, 'id': 104286, 'onlineDeviceCount': 0, 'deviceCount': 3, 'created': 1597310495104, 'netType': 0, 'dataFormat': 1, 'enableDeviceCount': 0, 'protocolType': 7, 'nodeType': 1, 'userName': None, 'userId': '38724', 'field': '', 'authenticationMethod': 1, 'name': 'bacnet_product_4ab1c', 'category': None, 'categoryId': 0}, {'masterKey': 'ZTczZDk0ODEwYzI0YWM2Yjc5MWU=', 'description': '', 'categoryName': '', 'platform': 3, 'manufacturer': '', 'networkMethod': 1, 'dynamicRegister': 0, 'modified': 1597299236922, 'model': 1, 'id': 104275, 'onlineDeviceCount': 0, 'deviceCount': 0, 'created': 1597299235374, 'netType': 0, 'dataFormat': 1, 'enableDeviceCount': 0, 'protocolType': 7, 'nodeType': 1, 'userName': None, 'userId': '38724', 'field': '', 'authenticationMethod': 1, 'name': 'bacnet_product_h340b', 'category': None, 'categoryId': 0}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03: 更改产品-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.4')" >
+        pass</a>
+
+    <div id='div_pt3.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.4: https://test.api.heclouds.com/oes/api/v1/products/104291
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_03_function_model.Test_FunctionModel: 物模型(bacnet)接口</td>
+    <td>9</td>
+    <td>9</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c4',9)">Detail</a></td>
+</tr>
+
+<tr id='pt4.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_00: 分页查询BACnet属性（bacnet）-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.1')" >
+        pass</a>
+
+    <div id='div_pt4.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.1: https://test.api.heclouds.com/oes/api/v1/products/protocol/7/property/page
+{'code': 0, 'data': {'totalPage': 0, 'pageSize': 10, 'currentPage': 1, 'totalCount': 0, 'content': []}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01: 创建BACnet物模型草稿（bacnet）-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.2')" >
+        pass</a>
+
+    <div id='div_pt4.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.2: https://test.api.heclouds.com/oes/api/v1/products/protocol/7/property/draft
+{'code': 0, 'data': {'nodeName': '', 'identifier': 'identifier_fadb4', 'productId': 104291, 'minString': None, 'kind': 2, 'accessMode': 2, 'type': 1, 'userId': None, 'maxString': None, 'required': False, 'objectType': 0, 'special': {'length': 1, 'step': None, 'enumArray': None}, 'unit': '1', 'name': 'name_05bc4', 'maximum': 0, 'id': 0, 'minimum': 0, 'propertyId': 85, 'class': 1, 'objectId': 1}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02: 根据BACnet产品ID查询物模型草稿（bacnet）-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.3')" >
+        pass</a>
+
+    <div id='div_pt4.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.3: https://test.api.heclouds.com/oes/api/v1/products/protocol/7/property/draft
+{'code': 0, 'data': [{'nodeName': '', 'identifier': 'identifier_fadb4', 'productId': 104291, 'minString': None, 'kind': 2, 'accessMode': 2, 'type': 1, 'userId': None, 'maxString': None, 'required': False, 'objectType': 0, 'special': {'length': 1, 'step': None, 'enumArray': None}, 'unit': '1', 'name': 'name_05bc4', 'maximum': 0, 'id': 11326, 'minimum': 0, 'propertyId': 85, 'class': 1, 'objectId': 1}], 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03: 更新BACnet物模草稿（bacnet）-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.4')" >
+        pass</a>
+
+    <div id='div_pt4.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.4: https://test.api.heclouds.com/oes/api/v1/products/protocol/7/property/draft
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04: 根据BACnet产品ID发布物模型草稿（bacnet）-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.5')" >
+        pass</a>
+
+    <div id='div_pt4.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.5: https://test.api.heclouds.com/oes/api/v1/products/protocol/7/property/draft/publish/104291
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_05: 分页查询BACnet物模型草稿（bacnet）-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.6')" >
+        pass</a>
+
+    <div id='div_pt4.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.6: https://test.api.heclouds.com/oes/api/v1/products/protocol/7/property/draft/page
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 1, 'content': [{'nodeName': '', 'identifier': 'identifier_fadb4', 'productId': 104291, 'minString': None, 'kind': 2, 'accessMode': 2, 'type': 1, 'userId': None, 'maxString': None, 'required': False, 'objectType': 0, 'special': {'length': 1, 'step': None, 'enumArray': None}, 'unit': '1', 'name': 'name_fea35', 'maximum': 0, 'id': 11326, 'minimum': 0, 'propertyId': 85, 'class': 1, 'objectId': 1}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_06: 根据BACnet产品ID查询所有功能（bacnet）-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.7')" >
+        pass</a>
+
+    <div id='div_pt4.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.7: https://test.api.heclouds.com/oes/api/v1/products/protocol/7/property
+{'code': 0, 'data': [{'nodeName': '', 'identifier': 'identifier_fadb4', 'productId': 104291, 'minString': None, 'kind': 2, 'accessMode': 2, 'type': 1, 'userId': None, 'maxString': None, 'required': False, 'objectType': 0, 'special': {'length': 1, 'step': None, 'enumArray': None}, 'unit': '1', 'name': 'name_fea35', 'maximum': 0, 'id': 11623, 'minimum': 0, 'propertyId': 85, 'class': 1, 'objectId': 1}], 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_07: 根据BACnet属性ID查询BACnet属性信息（bacnet）-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.8')" >
+        pass</a>
+
+    <div id='div_pt4.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.8: https://test.api.heclouds.com/oes/api/v1/products/protocol/7/property/11623
+{'code': 0, 'data': {'nodeName': '', 'identifier': 'identifier_fadb4', 'productId': 104291, 'minString': None, 'kind': 2, 'accessMode': 2, 'type': 1, 'userId': None, 'maxString': None, 'required': False, 'objectType': 0, 'special': {'length': 1, 'step': None, 'enumArray': None}, 'unit': '1', 'name': 'name_fea35', 'maximum': 0, 'id': 11623, 'minimum': 0, 'propertyId': 85, 'class': 1, 'objectId': 1}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_08: 根据BACnet属性ID查询BACnet物模型草稿-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.9')" >
+        pass</a>
+
+    <div id='div_pt4.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.9: https://test.api.heclouds.com/oes/api/v1/products/protocol/7/property/draft/11326
+{'code': 0, 'data': {'nodeName': '', 'identifier': 'identifier_fadb4', 'productId': 104291, 'minString': None, 'kind': 2, 'accessMode': 2, 'type': 1, 'userId': None, 'maxString': None, 'required': False, 'objectType': 0, 'special': {'length': 1, 'step': None, 'enumArray': None}, 'unit': '1', 'name': 'name_fea35', 'maximum': 0, 'id': 11326, 'minimum': 0, 'propertyId': 85, 'class': 1, 'objectId': 1}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_04_category.Test_FunctionModel: 行业物模板接口</td>
+    <td>3</td>
+    <td>3</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c5',3)">Detail</a></td>
+</tr>
+
+<tr id='pt5.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_00: 分页获取行业名称-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.1')" >
+        pass</a>
+
+    <div id='div_pt5.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.1: https://test.api.heclouds.com/oes/api/v1/industry/industryname/page
+{'code': 0, 'data': {'totalPage': 2, 'pageSize': 10, 'currentPage': 1, 'totalCount': 14, 'content': ['Some系列', '商业共享', '商业共享test', '智慧建筑', '智能农业', '智能园区', '智能城市', '智能工业', '智能模板', '智能生活']}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01: 分页获取行业物模板信息-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.2')" >
+        pass</a>
+
+    <div id='div_pt5.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.2: https://test.api.heclouds.com/oes/api/v1/industry/page
+{'code': 0, 'data': {'totalPage': 39, 'pageSize': 10, 'currentPage': 1, 'totalCount': 388, 'content': [{'field': 'Some系列', 'modified': 1595053729357, 'description': '', 'id': 28, 'category': 'some系列', 'userId': None, 'scene': '场景test'}, {'field': 'Some系列', 'modified': 1594611148478, 'description': '', 'id': 27, 'category': 'sdsdf', 'userId': None, 'scene': '数字门店'}, {'field': 'Some系列', 'modified': 1594609074708, 'description': 'sdffds', 'id': 26, 'category': 'dfdffd', 'userId': None, 'scene': '数字门店'}, {'field': '行业test2', 'modified': 1592373524957, 'description': '23213', 'id': 17, 'category': 'model2', 'userId': None, 'scene': '场景test2'}, {'field': '行业test', 'modified': 1592372755392, 'description': '2321', 'id': 15, 'category': 'model_test', 'userId': None, 'scene': '场景test'}, {'field': '商业共享', 'modified': 1592366114965, 'description': 'sfsdf', 'id': 14, 'category': '333', 'userId': None, 'scene': '共享租赁服务'}, {'field': '商业共享', 'modified': 1592366046691, 'description': '111111111111111111', 'id': 13, 'category': '1', 'userId': None, 'scene': '数字门店'}, {'field': '商业共享test', 'modified': 1592289050263, 'description': '', 'id': 12, 'category': 'test_1', 'userId': None, 'scene': '新的商业场景'}, {'field': '商业共享test', 'modified': 1592270968932, 'description': '', 'id': 11, 'category': '物模型模板test', 'userId': None, 'scene': '新的商业场景'}, {'field': '商业共享test', 'modified': 1592270478130, 'description': '', 'id': 10, 'category': '商业共享模板名称', 'userId': None, 'scene': '新的商业场景'}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03: 获取行业物模板下所有功能-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.3')" >
+        pass</a>
+
+    <div id='div_pt5.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.3: https://test.api.heclouds.com/oes/api/v1/industry/28/properties
+{'code': 0, 'data': [{'nodeName': None, 'identifier': 'someEnum', 'accessMode': 2, 'type': 9, 'userId': None, 'required': True, 'special': {'length': None, 'step': None, 'enumArray': [{'describe': '0', 'key': 0}, {'describe': '1', 'key': 1}]}, 'unit': '', 'industryId': None, 'name': 'someEnum', 'maximum': 0, 'id': 44785, 'category': 'some系列', 'minimum': 0, 'class': 1, 'categoryId': 28}, {'nodeName': None, 'identifier': 'someDate', 'accessMode': 2, 'type': 8, 'userId': None, 'required': True, 'special': {'length': None, 'step': None, 'enumArray': None}, 'unit': '', 'industryId': None, 'name': 'someDate', 'maximum': 0, 'id': 44784, 'category': 'some系列', 'minimum': 0, 'class': 1, 'categoryId': 28}, {'nodeName': None, 'identifier': 'someBoolean', 'accessMode': 2, 'type': 2, 'userId': None, 'required': True, 'special': {'length': None, 'step': None, 'enumArray': [{'describe': 'false', 'key': 0}, {'describe': 'true', 'key': 1}]}, 'unit': '', 'industryId': None, 'name': 'someBoolean', 'maximum': 0, 'id': 44783, 'category': 'some系列', 'minimum': 0, 'class': 1, 'categoryId': 28}, {'nodeName': None, 'identifier': 'someDouble', 'accessMode': 2, 'type': 6, 'userId': None, 'required': True, 'special': {'length': None, 'step': 2.0, 'enumArray': None}, 'unit': '', 'industryId': None, 'name': 'someDouble', 'maximum': 999999, 'id': 44782, 'category': 'some系列', 'minimum': -999999, 'class': 1, 'categoryId': 28}, {'nodeName': None, 'identifier': 'someFloat', 'accessMode': 2, 'type': 5, 'userId': None, 'required': True, 'special': {'length': None, 'step': 50.0, 'enumArray': None}, 'unit': '', 'industryId': None, 'name': 'someFloat', 'maximum': 999999, 'id': 44781, 'category': 'some系列', 'minimum': -999999, 'class': 1, 'categoryId': 28}, {'nodeName': None, 'identifier': 'someLong', 'accessMode': 2, 'type': 4, 'userId': None, 'required': True, 'special': {'length': None, 'step': 10.0, 'enumArray': None}, 'unit': '', 'industryId': None, 'name': 'someLong', 'maximum': 999999, 'id': 44780, 'category': 'some系列', 'minimum': -999999, 'class': 1, 'categoryId': 28}, {'nodeName': None, 'identifier': 'someInteger', 'accessMode': 2, 'type': 3, 'userId': None, 'required': True, 'special': {'length': None, 'step': 2.0, 'enumArray': None}, 'unit': '', 'industryId': None, 'name': 'someInteger', 'maximum': 999999, 'id': 44779, 'category': 'some系列', 'minimum': -999999, 'class': 1, 'categoryId': 28}, {'nodeName': None, 'identifier': 'someString', 'accessMode': 2, 'type': 1, 'userId': None, 'required': True, 'special': {'length': 1, 'step': None, 'enumArray': None}, 'unit': '', 'industryId': None, 'name': 'someString', 'maximum': 0, 'id': 44778, 'category': 'some系列', 'minimum': 0, 'class': 1, 'categoryId': 28}], 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_05_ecp_device.Test_FunctionModel: 边缘终端设备接口</td>
+    <td>13</td>
+    <td>13</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c6',13)">Detail</a></td>
+</tr>
+
+<tr id='pt6.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_00: 注册边缘终端-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.1')" >
+        pass</a>
+
+    <div id='div_pt6.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.1: https://test.api.heclouds.com/oes/api/v1/devices
+{'code': 0, 'data': {'apiKey': 'Y2UyMzM5ODY4MmJmZWIxMTg5ZDk=', 'id': 10082993}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01: 获取边缘终端详情-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.2')" >
+        pass</a>
+
+    <div id='div_pt6.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.2: https://test.api.heclouds.com/oes/api/v1/devices/10082993
+{'code': 0, 'data': {'productId': 104291, 'apiKey': 'Y2UyMzM5ODY4MmJmZWIxMTg5ZDk=', 'operatingState': -1, 'created': 1597312328516, 'description': '', 'protocolType': 7, 'userId': None, 'productName': None, 'parentid': 0, 'labels': None, 'connectGatewayId': '0', 'lastConnected': 0, 'lastReported': 0, 'encrypt': False, 'name': 'dev_dbc1e', 'adminState': 1, 'modified': 1597312328516, 'location': None, 'id': 10082993}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02: 更新设备的基本属性-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.3')" >
+        pass</a>
+
+    <div id='div_pt6.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.3: https://test.api.heclouds.com/oes/api/v1/devices/10082993
+{'code': 0, 'data': '', 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03: 按条件分页查询边缘终端-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.4')" >
+        pass</a>
+
+    <div id='div_pt6.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.4: https://test.api.heclouds.com/oes/api/v1/devices/multi
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 10, 'content': [{'apiKey': 'Y2UyMzM5ODY4MmJmZWIxMTg5ZDk=', 'operatingState': -1, 'description': '', 'psk': '', 'subscription': None, 'imsi': '', 'productName': 'bacnet_product_ch610', 'parentid': None, 'connectGatewayId': '0', 'lastConnected': 0, 'encrypt': False, 'adminState': 1, 'modified': 1597312328859, 'id': 10082993, 'addressable': None, 'authKey': None, 'productId': 104291, 'created': 1597312328516, 'protocolType': 7, 'userId': None, 'labels': None, 'pskString': None, 'lastReported': 0, 'name': 'dev_dbc1e', 'imei': '', 'location': None}, {'apiKey': 'MGVkNjkzZDZiZTg0Njc2ZmZmMTE=', 'operatingState': -1, 'description': '', 'psk': '', 'subscription': None, 'imsi': '', 'productName': 'bacnet_product_f26b3', 'parentid': None, 'connectGatewayId': '0', 'lastConnected': 0, 'encrypt': False, 'adminState': 1, 'modified': 1597310891491, 'id': 10082987, 'addressable': None, 'authKey': None, 'productId': 104289, 'created': 1597310891491, 'protocolType': 7, 'userId': None, 'labels': None, 'pskString': None, 'lastReported': 0, 'name': 'api_device_45dbc', 'imei': '', 'location': None}, {'apiKey': 'NWE3OTQ1ZTRmZjljMmMwMzA2YTI=', 'operatingState': -1, 'description': '', 'psk': '', 'subscription': None, 'imsi': '', 'productName': 'bacnet_product_f26b3', 'parentid': None, 'connectGatewayId': '0', 'lastConnected': 0, 'encrypt': False, 'adminState': 1, 'modified': 1597310891491, 'id': 10082986, 'addressable': None, 'authKey': None, 'productId': 104289, 'created': 1597310891491, 'protocolType': 7, 'userId': None, 'labels': None, 'pskString': None, 'lastReported': 0, 'name': 'api_device_b1cae', 'imei': '', 'location': None}, {'apiKey': 'MDI4MmRlNWNmZjcxYmNkNGRkY2Y=', 'operatingState': -1, 'description': '', 'psk': '', 'subscription': None, 'imsi': '', 'productName': 'bacnet_product_f26b3', 'parentid': None, 'connectGatewayId': '0', 'lastConnected': 0, 'encrypt': False, 'adminState': 1, 'modified': 1597310891019, 'id': 10082985, 'addressable': None, 'authKey': None, 'productId': 104289, 'created': 1597310890614, 'protocolType': 7, 'userId': None, 'labels': None, 'pskString': None, 'lastReported': 0, 'name': 'dev_ad1c3', 'imei': '', 'location': None}, {'apiKey': 'NzVjYmI3OWNiZTU0YzllZDBmZjA=', 'operatingState': -1, 'description': '', 'psk': '', 'subscription': None, 'imsi': '', 'productName': 'bacnet_product_aceb0', 'parentid': None, 'connectGatewayId': '0', 'lastConnected': 0, 'encrypt': False, 'adminState': 1, 'modified': 1597310843355, 'id': 10082983, 'addressable': None, 'authKey': None, 'productId': 104288, 'created': 1597310843355, 'protocolType': 7, 'userId': None, 'labels': None, 'pskString': None, 'lastReported': 0, 'name': 'api_device_be4d3', 'imei': '', 'location': None}, {'apiKey': 'YjU0NGYwMGQyOGU2MWU3NTNmNDA=', 'operatingState': -1, 'description': '', 'psk': '', 'subscription': None, 'imsi': '', 'productName': 'bacnet_product_aceb0', 'parentid': None, 'connectGatewayId': '0', 'lastConnected': 0, 'encrypt': False, 'adminState': 1, 'modified': 1597310843355, 'id': 10082982, 'addressable': None, 'authKey': None, 'productId': 104288, 'created': 1597310843355, 'protocolType': 7, 'userId': None, 'labels': None, 'pskString': None, 'lastReported': 0, 'name': 'api_device_d241b', 'imei': '', 'location': None}, {'apiKey': 'YTc2YTk3ZmFkOWIxNTE1YWYzNjc=', 'operatingState': -1, 'description': '', 'psk': '', 'subscription': None, 'imsi': '', 'productName': 'bacnet_product_aceb0', 'parentid': None, 'connectGatewayId': '0', 'lastConnected': 0, 'encrypt': False, 'adminState': 1, 'modified': 1597310842958, 'id': 10082981, 'addressable': None, 'authKey': None, 'productId': 104288, 'created': 1597310842576, 'protocolType': 7, 'userId': None, 'labels': None, 'pskString': None, 'lastReported': 0, 'name': 'dev_b10ec', 'imei': '', 'location': None}, {'apiKey': 'ZGI3YjhkZjhiN2RkNDNhMmNhOWE=', 'operatingState': -1, 'description': '', 'psk': '', 'subscription': None, 'imsi': '', 'productName': 'bacnet_product_4ab1c', 'parentid': None, 'connectGatewayId': '0', 'lastConnected': 0, 'encrypt': False, 'adminState': 1, 'modified': 1597310498368, 'id': 10082978, 'addressable': None, 'authKey': None, 'productId': 104286, 'created': 1597310498368, 'protocolType': 7, 'userId': None, 'labels': None, 'pskString': None, 'lastReported': 0, 'name': 'api_device_14bdc', 'imei': '', 'location': None}, {'apiKey': 'ZDdlZTQyN2NjMmRjYjhhZDZjYTg=', 'operatingState': -1, 'description': '', 'psk': '', 'subscription': None, 'imsi': '', 'productName': 'bacnet_product_4ab1c', 'parentid': None, 'connectGatewayId': '0', 'lastConnected': 0, 'encrypt': False, 'adminState': 1, 'modified': 1597310498368, 'id': 10082977, 'addressable': None, 'authKey': None, 'productId': 104286, 'created': 1597310498368, 'protocolType': 7, 'userId': None, 'labels': None, 'pskString': None, 'lastReported': 0, 'name': 'api_device_db521', 'imei': '', 'location': None}, {'apiKey': 'YTQ4MzNmNTA3MjlmZDEzM2E0NjI=', 'operatingState': -1, 'description': '', 'psk': '', 'subscription': None, 'imsi': '', 'productName': 'bacnet_product_4ab1c', 'parentid': None, 'connectGatewayId': '0', 'lastConnected': 0, 'encrypt': False, 'adminState': 1, 'modified': 1597310498021, 'id': 10082976, 'addressable': None, 'authKey': None, 'productId': 104286, 'created': 1597310497788, 'protocolType': 7, 'userId': None, 'labels': None, 'pskString': None, 'lastReported': 0, 'name': 'dev_d0c2e', 'imei': '', 'location': None}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04: 批量创建边缘终端-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.5')" >
+        pass</a>
+
+    <div id='div_pt6.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.5: https://test.api.heclouds.com/oes/api/v1/devices/multi
+{'code': 0, 'data': [{'apiKey': 'MWVjNWNkZjk1NzBjMzNlYmQwMDU=', 'id': 10082994}, {'apiKey': 'MGYyNTQ3YjVjNTE4YmJkYTgwM2I=', 'id': 10082995}], 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_05: 批量禁用边缘终端-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.6')" >
+        pass</a>
+
+    <div id='div_pt6.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.6: https://test.api.heclouds.com/oes/api/v1/devices/lock
+{'code': 0, 'data': 1, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_06: 批量启用边缘终端-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.7')" >
+        pass</a>
+
+    <div id='div_pt6.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.7: https://test.api.heclouds.com/oes/api/v1/devices/unlock
+{'code': 0, 'data': 1, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_07: 查询边缘终端的功能列表-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.8')" >
+        pass</a>
+
+    <div id='div_pt6.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.8: https://test.api.heclouds.com/oes/api/v1/devices/10082993/properties
+{'code': 0, 'data': [{'nodeName': '', 'identifier': 'identifier_fadb4', 'productId': 104291, 'minString': None, 'kind': 2, 'accessMode': 2, 'type': 1, 'userId': None, 'maxString': None, 'required': False, 'objectType': 0, 'special': {'length': 1, 'step': None, 'enumArray': None}, 'unit': '1', 'name': 'name_fea35', 'maximum': 0, 'id': 11623, 'minimum': 0, 'propertyId': 85, 'class': 1, 'objectId': 1}], 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_08: 分页获取批次列表-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.9')" >
+        pass</a>
+
+    <div id='div_pt6.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.9: https://test.api.heclouds.com/oes/api/v1/products/batch/page
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 4, 'content': [{'created': 1597312329238, 'count': 2, 'id': 100450, 'protocolType': 1}, {'created': 1597310891491, 'count': 2, 'id': 100448, 'protocolType': 1}, {'created': 1597310843355, 'count': 2, 'id': 100447, 'protocolType': 1}, {'created': 1597310498368, 'count': 2, 'id': 100446, 'protocolType': 1}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_09: 分页获取批次下的设备列表-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.10')" >
+        pass</a>
+
+    <div id='div_pt6.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.10: https://test.api.heclouds.com/oes/api/v1/devices/batch/page
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 2, 'content': [{'productId': 104291, 'apiKey': 'MWVjNWNkZjk1NzBjMzNlYmQwMDU=', 'operatingState': -1, 'created': 1597312329238, 'certificate': '', 'description': '', 'protocolType': 7, 'certSN': '', 'deviceId': 0, 's_version': '', 'productName': 'bacnet_product_ch610', 'privateKey': '', 'connectGatewayId': 0, 'lastConnected': 0, 'lastReported': 0, 'encrypt': False, 'f_version': '', 'name': 'api_device_5ea21', 'adminState': 1, 'modified': 1597312329238, 'id': 10082994}, {'productId': 104291, 'apiKey': 'MGYyNTQ3YjVjNTE4YmJkYTgwM2I=', 'operatingState': -1, 'created': 1597312329238, 'certificate': '', 'description': '', 'protocolType': 7, 'certSN': '', 'deviceId': 0, 's_version': '', 'productName': 'bacnet_product_ch610', 'privateKey': '', 'connectGatewayId': 0, 'lastConnected': 0, 'lastReported': 0, 'encrypt': False, 'f_version': '', 'name': 'api_device_b2ec4', 'adminState': 1, 'modified': 1597312329238, 'id': 10082995}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.11' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_10: 添加边缘节点设备关联-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.11')" >
+        pass</a>
+
+    <div id='div_pt6.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.11: https://test.api.heclouds.com/oes/api/v1/devices/gateway/associations
+{'code': 0, 'data': [{'productId': 104291, 'masterKey': 'NGMyZTU3ZDgzNjljM2I4YWY0Njk=', 'deviceId': 10082993, 'parentId': 10082992}], 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.12' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_11: 分页查询边缘节点已关联的边缘终端-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.12')" >
+        pass</a>
+
+    <div id='div_pt6.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.12: https://test.api.heclouds.com/oes/api/v1/devices/subdevice/IN/page
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 1, 'content': [{'productId': 104291, 'apiKey': 'Y2UyMzM5ODY4MmJmZWIxMTg5ZDk=', 'operatingState': -1, 'created': 1597312328516, 'description': '', 'protocolType': 7, 'userId': None, 'productName': None, 'parentid': None, 'labels': None, 'connectGatewayId': '0', 'lastConnected': 0, 'lastReported': 0, 'encrypt': False, 'name': 'dev_dbc1e', 'adminState': 1, 'modified': 1597312328859, 'location': None, 'id': 10082993}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.13' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_12: 分页查询边缘节点未关联的边缘终端-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.13')" >
+        pass</a>
+
+    <div id='div_pt6.13' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.13').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.13: https://test.api.heclouds.com/oes/api/v1/devices/subdevice/NIN/page
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 2, 'content': [{'productId': 104291, 'apiKey': 'MGYyNTQ3YjVjNTE4YmJkYTgwM2I=', 'operatingState': -1, 'created': 1597312329238, 'description': '', 'protocolType': 7, 'userId': None, 'productName': None, 'parentid': None, 'labels': None, 'connectGatewayId': '0', 'lastConnected': 0, 'lastReported': 0, 'encrypt': False, 'name': 'api_device_b2ec4', 'adminState': 1, 'modified': 1597312329238, 'location': None, 'id': 10082995}, {'productId': 104291, 'apiKey': 'MWVjNWNkZjk1NzBjMzNlYmQwMDU=', 'operatingState': -1, 'created': 1597312329238, 'description': '', 'protocolType': 7, 'userId': None, 'productName': None, 'parentid': None, 'labels': None, 'connectGatewayId': '0', 'lastConnected': 0, 'lastReported': 0, 'encrypt': False, 'name': 'api_device_5ea21', 'adminState': 1, 'modified': 1597312329238, 'location': None, 'id': 10082994}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_06_channel.Test_Channel: 通道接口</td>
+    <td>6</td>
+    <td>6</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c7',6)">Detail</a></td>
+</tr>
+
+<tr id='pt7.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_00: 创建BACnet通道-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.1')" >
+        pass</a>
+
+    <div id='div_pt7.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.1: https://test.api.heclouds.com/oes/api/v1/device/bacnet/channel/add
+{'code': 0, 'data': 232, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt7.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01: 修改BACnet通道-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.2')" >
+        pass</a>
+
+    <div id='div_pt7.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.2: https://test.api.heclouds.com/oes/api/v1/device/bacnet/channel/update
+{'code': 0, 'data': {'created': 0, 'ifName': None, 'name': None, 'modified': 0, 'id': None, 'type': None, 'gatewayid': None}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt7.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02: 查询BACnet通道详情-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.3')" >
+        pass</a>
+
+    <div id='div_pt7.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.3: https://test.api.heclouds.com/oes/api/v1/device/bacnet/channel/232
+{'code': 0, 'data': {'created': 1597312330751, 'ifName': 'name_dae41', 'name': 'name_5b4de', 'modified': 1597312330905, 'id': 232, 'type': 1, 'gatewayid': 10082992}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt7.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03: 查询边缘节点下的所有BACnet通道-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.4')" >
+        pass</a>
+
+    <div id='div_pt7.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.4: https://test.api.heclouds.com/oes/api/v1/device/bacnet/channel/page
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 1, 'content': [{'created': 1597312330751, 'ifName': 'name_dae41', 'name': 'name_5b4de', 'modified': 1597312330905, 'id': 232, 'type': 1, 'gatewayid': 10082992}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt7.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04: 设置BACnet设备的边缘节点通道配置-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.5')" >
+        pass</a>
+
+    <div id='div_pt7.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.5: https://test.api.heclouds.com/oes/api/v1/devices/bacnet/channel-config/gateway
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt7.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_05: 获取BACnet设备的边缘节点通道配置-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.6')" >
+        pass</a>
+
+    <div id='div_pt7.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.6: https://test.api.heclouds.com/oes/api/v1/devices/bacnet/channel-config/gateway?accessKeyId=ex6GiYQvEOXk1umz&amp;signatureNonce=1597312328&amp;id=10082993&amp;signature=OrJN03ll9QzfcciUhM9iS1uM8
+{'code': 0, 'data': {'collectTime': 5, 'discoveryMode': 1, 'maxAPDU': 26, 'bacnetAddress': '1.2.3.4:47808', 'id': 10082993, 'bacnetDeviceId': 9, 'channelId': 232}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_07_group.Test_FunctionModel: 分组接口</td>
+    <td>8</td>
+    <td>8</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c8',8)">Detail</a></td>
+</tr>
+
+<tr id='pt8.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_00: 模糊分页查询分组列表-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.1')" >
+        pass</a>
+
+    <div id='div_pt8.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.1: https://test.api.heclouds.com/oes/api/v1/label
+{'code': 0, 'data': {'totalPage': 0, 'pageSize': 10, 'currentPage': 1, 'totalCount': 0, 'content': []}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt8.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01: 添加分组-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.2')" >
+        pass</a>
+
+    <div id='div_pt8.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.2: https://test.api.heclouds.com/oes/api/v1/label
+{'code': 0, 'data': {'productId': 104291, 'created': 1597312331914, 'name': 'group_bc542', 'description': '', 'id': 382}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt8.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02: 编辑分组-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.3')" >
+        pass</a>
+
+    <div id='div_pt8.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.3: https://test.api.heclouds.com/oes/api/v1/label
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt8.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03: 查看分组详情-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.4')" >
+        pass</a>
+
+    <div id='div_pt8.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.4: https://test.api.heclouds.com/oes/api/v1/label/id/382
+{'code': 0, 'data': {'onlineDeviceCount': 0, 'productId': 104291, 'deviceCount': 0, 'created': 1597312331914, 'name': 'group_bc542', 'description': '', 'enableDeviceCount': 0, 'id': 382, 'protocolType': 7, 'productName': 'bacnet_product_ch610'}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt8.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04: 添加批量设备到分组-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.5')" >
+        pass</a>
+
+    <div id='div_pt8.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.5: https://test.api.heclouds.com/oes/api/v1/label/add/devices
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt8.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_05: 批量将多个设备移除分组-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.6')" >
+        pass</a>
+
+    <div id='div_pt8.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.6: https://test.api.heclouds.com/oes/api/v1/label/remove/devices
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt8.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_06: 分页查询分组里的设备列表-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.7')" >
+        pass</a>
+
+    <div id='div_pt8.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.7: https://test.api.heclouds.com/oes/api/v1/label/group/IN/page
+{'code': 0, 'data': {'totalPage': 0, 'pageSize': 10, 'currentPage': 1, 'totalCount': 0, 'content': None}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt8.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_07: 分页查询分组外的设备列表-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.8')" >
+        pass</a>
+
+    <div id='div_pt8.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.8: https://test.api.heclouds.com/oes/api/v1/label/group/NIN/page
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 3, 'content': [{'productId': 104291, 'apiKey': 'MGYyNTQ3YjVjNTE4YmJkYTgwM2I=', 'operatingState': -1, 'created': 1597312329238, 'description': '', 'protocolType': 7, 'userId': None, 'productName': None, 'parentid': None, 'labels': None, 'connectGatewayId': '0', 'lastConnected': 0, 'lastReported': 0, 'encrypt': False, 'name': 'api_device_b2ec4', 'adminState': 1, 'modified': 1597312329238, 'location': None, 'id': 10082995}, {'productId': 104291, 'apiKey': 'MWVjNWNkZjk1NzBjMzNlYmQwMDU=', 'operatingState': -1, 'created': 1597312329238, 'description': '', 'protocolType': 7, 'userId': None, 'productName': None, 'parentid': None, 'labels': None, 'connectGatewayId': '0', 'lastConnected': 0, 'lastReported': 0, 'encrypt': False, 'name': 'api_device_5ea21', 'adminState': 1, 'modified': 1597312329238, 'location': None, 'id': 10082994}, {'productId': 104291, 'apiKey': 'Y2UyMzM5ODY4MmJmZWIxMTg5ZDk=', 'operatingState': -1, 'created': 1597312328516, 'description': '', 'protocolType': 7, 'userId': None, 'productName': None, 'parentid': None, 'labels': None, 'connectGatewayId': '0', 'lastConnected': 0, 'lastReported': 0, 'encrypt': False, 'name': 'dev_dbc1e', 'adminState': 1, 'modified': 1597312328859, 'location': None, 'id': 10082993}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_08_label.Test_Lable: 标签接口</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c9',1)">Detail</a></td>
+</tr>
+
+<tr id='pt9.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_00: 根据资源id获取标签信息-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.1')" >
+        pass</a>
+
+    <div id='div_pt9.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt9.1: https://test.api.heclouds.com/oes/api/v1/tag/10082992
+{'code': 0, 'data': [], 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_09_check_statistic.Test_Lable: 查询标签接口</td>
+    <td>6</td>
+    <td>6</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c10',6)">Detail</a></td>
+</tr>
+
+<tr id='pt10.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_00: 查询查询数据转发最近的聚合数据-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt10.1')" >
+        pass</a>
+
+    <div id='div_pt10.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt10.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt10.1: https://test.api.heclouds.com/oes/api/v1/routers/data/last
+{'code': 0, 'data': [{'timeCostAverage': 0.0, 'countFailed': 0, 'count': 0, 'time': 1597305600, 'countSuccess': 0}, {'timeCostAverage': 0.0, 'countFailed': 0, 'count': 0, 'time': 1597309200, 'countSuccess': 0}], 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt10.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01: 查询消息路由实例总数-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt10.2')" >
+        pass</a>
+
+    <div id='div_pt10.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt10.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt10.2: https://test.api.heclouds.com/oes/api/v1/routers/count
+{'code': 0, 'data': 4, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt10.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02: 数据上传数量统计-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt10.3')" >
+        pass</a>
+
+    <div id='div_pt10.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt10.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt10.3: https://test.api.heclouds.com/oes/api/v1/data/overview/count/event
+{'code': 0, 'data': [{'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-12T09:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-12T10:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-12T11:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-12T12:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-12T13:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-12T14:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-12T15:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-12T16:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-12T17:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-12T18:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-12T19:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-12T20:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-12T21:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-12T22:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-12T23:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-13T00:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-13T01:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-13T03:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-13T04:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-13T05:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-13T06:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-13T07:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-13T08:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-13T09:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}], 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt10.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03: 按时间段统计边缘节点和边缘终端数量-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt10.4')" >
+        pass</a>
+
+    <div id='div_pt10.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt10.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt10.4: https://test.api.heclouds.com/oes/api/v1/data/overview/count/duration
+{'code': 0, 'data': [{'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-12T09:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-12T10:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-12T11:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-12T12:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-12T13:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-12T14:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-12T15:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-12T16:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-12T17:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 15, 'time': '2020-08-12T18:00:00.000+0000', 'userId': '', 'offlineNodeCount': 12}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 15, 'time': '2020-08-12T19:00:00.000+0000', 'userId': '', 'offlineNodeCount': 12}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 15, 'time': '2020-08-12T20:00:00.000+0000', 'userId': '', 'offlineNodeCount': 12}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 15, 'time': '2020-08-12T21:00:00.000+0000', 'userId': '', 'offlineNodeCount': 12}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 15, 'time': '2020-08-12T22:00:00.000+0000', 'userId': '', 'offlineNodeCount': 12}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 15, 'time': '2020-08-12T23:00:00.000+0000', 'userId': '', 'offlineNodeCount': 12}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 15, 'time': '2020-08-13T00:00:00.000+0000', 'userId': '', 'offlineNodeCount': 12}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 15, 'time': '2020-08-13T01:00:00.000+0000', 'userId': '', 'offlineNodeCount': 12}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-13T03:00:00.000+0000', 'userId': '', 'offlineNodeCount': 1}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-13T04:00:00.000+0000', 'userId': '', 'offlineNodeCount': 8}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-13T05:00:00.000+0000', 'userId': '', 'offlineNodeCount': 8}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-13T06:00:00.000+0000', 'userId': '', 'offlineNodeCount': 8}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-13T07:00:00.000+0000', 'userId': '', 'offlineNodeCount': 1}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-13T08:00:00.000+0000', 'userId': '', 'offlineNodeCount': 1}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-13T09:00:00.000+0000', 'userId': '', 'offlineNodeCount': 3}], 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt10.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04: 边缘节点和边缘终端实时数量统计-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt10.5')" >
+        pass</a>
+
+    <div id='div_pt10.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt10.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt10.5: https://test.api.heclouds.com/oes/api/v1/data/overview/count/realtime
+{'code': 0, 'data': {'nodeCounter': {'onlineNodeCount': 0, 'nodeCount': 8, 'offlineNodeCount': 8}, 'deviceCounter': {'onlineDeviceCount': 0, 'deviceCount': 12, 'offlineDeviceCount': 12, 'enableDeviceCount': None}}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt10.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_05: 边缘节点监控-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt10.6')" >
+        pass</a>
+
+    <div id='div_pt10.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt10.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt10.6: https://test.api.heclouds.com/oes/api/v1/data/overview/nodestatus
+{'code': 0, 'data': {'disk': [], 'mem': [], 'cpu': []}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_10_data_check.Test_Lable: 查询标签接口</td>
+    <td>2</td>
+    <td>2</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c11',2)">Detail</a></td>
+</tr>
+
+<tr id='pt11.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_00: 查询设备的多个属性值的最新值-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.1')" >
+        pass</a>
+
+    <div id='div_pt11.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.1: https://test.api.heclouds.com/oes/api/v1/data/properties/recent/value
+{'code': 0, 'data': [], 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01: 分页查询资源某时间段数据点-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.2')" >
+        pass</a>
+
+    <div id='div_pt11.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.2: https://test.api.heclouds.com/oes/api/v1/data/device/10082993
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 0, 'content': []}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>test_11_check_logs.Test_Lable: 查询标签接口</td>
+    <td>3</td>
+    <td>2</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c12',3)">Detail</a></td>
+</tr>
+
+<tr id='ft12.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_00: 模糊分页查询指定设备的日志信息-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft12.1')" >
+        fail</a>
+
+    <div id='div_ft12.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft12.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft12.1: https://test.api.heclouds.com/oes/api/v1/monitor/logs
+{'data': None, 'success': False, 'code': 10000001, 'msg': '发生错误', 'referInfo': 'I/O error on POST request for "http://oes-ecp-gateway-log-svc:48888/gatewayLog/logs": Read timed out; nested exception is java.net.SocketTimeoutException: Read timed out'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_openapi_new\test_11_check_logs.py", line 84, in test_00
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":10000001,"msg":"发生错误","referinfo":"i/o error on post request for \\"http://oes-ecp-gateway-log-svc:48888/gatewaylog/logs\\": read timed out; nested exception is java.net.sockettimeoutexception: read timed out"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01: 查询设备下可供查询日志模块-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.2')" >
+        pass</a>
+
+    <div id='div_pt12.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.2: https://test.api.heclouds.com/oes/api/v1/monitor/logs/10082992/modules
+{'code': 0, 'data': {'modules': []}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02: 查询部署日志-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.3')" >
+        pass</a>
+
+    <div id='div_pt12.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.3: https://test.api.heclouds.com/oes/api/v1/monitor/configlog/page
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 1, 'content': [{'result': False, 'msg': 'gateway is offline ', 'time': 1597312325397, 'deviceId': '10082992'}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>test_12_router_destination.Test_Router: 目的地配置接口</td>
+    <td>5</td>
+    <td>1</td>
+    <td>4</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c13',5)">Detail</a></td>
+</tr>
+
+<tr id='ft13.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_00: 测试路由目的地端点-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft13.1')" >
+        fail</a>
+
+    <div id='div_ft13.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft13.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft13.1: https://test.api.heclouds.com/oes/api/v1/address-configs/connection/testing
+{'data': None, 'success': False, 'code': 17020115, 'msg': '路由目的地端点连接失败', 'referInfo': '路由目的地端点连接失败'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_openapi_new\test_12_router_destination.py", line 86, in test_00
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":17020115,"msg":"路由目的地端点连接失败","referinfo":"路由目的地端点连接失败"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft13.2' class='none'>
+    <td class='failCase'><div class='testcase'>test_01: 新增路由目的地端点-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft13.2')" >
+        fail</a>
+
+    <div id='div_ft13.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft13.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft13.2: https://test.api.heclouds.com/oes/api/v1/address-configs
+{'data': None, 'success': False, 'code': 17020115, 'msg': '路由目的地端点连接失败', 'referInfo': '路由目的地端点连接失败'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_openapi_new\test_12_router_destination.py", line 118, in test_01
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":17020115,"msg":"路由目的地端点连接失败","referinfo":"路由目的地端点连接失败"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft13.3' class='none'>
+    <td class='failCase'><div class='testcase'>test_02: 修改路由目的地端点-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft13.3')" >
+        fail</a>
+
+    <div id='div_ft13.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft13.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft13.3: https://test.api.heclouds.com/oes/api/v1/address-configs/None
+{'data': None, 'success': False, 'code': 10000113, 'msg': '参数(id:None)错误', 'referInfo': 'Failed to convert value of type \'java.lang.String\' to required type \'java.lang.Integer\'; nested exception is java.lang.NumberFormatException: For input string: "None"'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_openapi_new\test_12_router_destination.py", line 149, in test_02
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":10000113,"msg":"参数(id:none)错误","referinfo":"failed to convert value of type \'java.lang.string\' to required type \'java.lang.integer\'; nested exception is java.lang.numberformatexception: for input string: \\"none\\""}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft13.4' class='none'>
+    <td class='failCase'><div class='testcase'>test_03: 获取路由目的地端点-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft13.4')" >
+        fail</a>
+
+    <div id='div_ft13.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft13.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft13.4: https://test.api.heclouds.com/oes/api/v1/address-configs/None
+{'data': None, 'success': False, 'code': 10000113, 'msg': '参数(id:None)错误', 'referInfo': 'Failed to convert value of type \'java.lang.String\' to required type \'java.lang.Integer\'; nested exception is java.lang.NumberFormatException: For input string: "None"'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_openapi_new\test_12_router_destination.py", line 174, in test_03
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":10000113,"msg":"参数(id:none)错误","referinfo":"failed to convert value of type \'java.lang.string\' to required type \'java.lang.integer\'; nested exception is java.lang.numberformatexception: for input string: \\"none\\""}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt13.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04: 分页查询路由目的地端点-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt13.5')" >
+        pass</a>
+
+    <div id='div_pt13.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt13.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt13.5: https://test.api.heclouds.com/oes/api/v1/address-configs
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 3, 'content': [{'clientId': None, 'created': 1597299827814, 'keytab': '', 'env': 1, 'type': 4, 'userId': '38724', 'platform': 3, 'path': None, 'database': 'edgetester', 'password': 'Iot!@10086', 'ownerName': None, 'port': 3306, 'host': '36.155.103.36', 'name': 'mysql_3e5cf', 'topic': None, 'modified': 1597299828259, 'id': '14257', 'addr': None, 'table': 'test', 'username': 'root'}, {'clientId': None, 'created': 1597298966964, 'keytab': '', 'env': 1, 'type': 4, 'userId': '38724', 'platform': 3, 'path': None, 'database': 'edgetester', 'password': 'Iot!@10086', 'ownerName': None, 'port': 3306, 'host': '36.155.103.36', 'name': 'mysql_52c31', 'topic': None, 'modified': 1597298967411, 'id': '14255', 'addr': None, 'table': 'test', 'username': 'root'}, {'clientId': None, 'created': 1597218992678, 'keytab': '', 'env': 1, 'type': 4, 'userId': '38724', 'platform': 3, 'path': None, 'database': 'edgetester', 'password': 'Iot!@10086', 'ownerName': None, 'port': 3306, 'host': '36.155.103.36', 'name': 'mysql_dc623', 'topic': None, 'modified': 1597218993104, 'id': '14251', 'addr': None, 'table': 'test', 'username': 'root'}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>test_13_router.Test_Router: 数据路由接口</td>
+    <td>9</td>
+    <td>1</td>
+    <td>8</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c14',9)">Detail</a></td>
+</tr>
+
+<tr id='ft14.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_00: 新增路由实例(边缘端)-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft14.1')" >
+        fail</a>
+
+    <div id='div_ft14.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft14.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft14.1: https://test.api.heclouds.com/oes/api/v1/routers
+{'data': None, 'success': False, 'code': 17020100, 'msg': '无效的路由目的地端点ID', 'referInfo': '无效的路由目的地端点ID'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_openapi_new\test_13_router.py", line 103, in test_00
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":17020100,"msg":"无效的路由目的地端点id","referinfo":"无效的路由目的地端点id"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft14.2' class='none'>
+    <td class='failCase'><div class='testcase'>test_00_00: 新增路由实例（云端）-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft14.2')" >
+        fail</a>
+
+    <div id='div_ft14.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft14.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft14.2: https://test.api.heclouds.com/oes/api/v1/routers
+{'data': None, 'success': False, 'code': 17020100, 'msg': '无效的路由目的地端点ID', 'referInfo': '无效的路由目的地端点ID'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_openapi_new\test_13_router.py", line 155, in test_00_00
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":17020100,"msg":"无效的路由目的地端点id","referinfo":"无效的路由目的地端点id"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft14.3' class='none'>
+    <td class='failCase'><div class='testcase'>test_01: 获取路由实例-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft14.3')" >
+        fail</a>
+
+    <div id='div_ft14.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft14.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft14.3: https://test.api.heclouds.com/oes/api/v1/routers/None
+{'data': None, 'success': False, 'code': 10000113, 'msg': '参数(id:None)错误', 'referInfo': 'Failed to convert value of type \'java.lang.String\' to required type \'java.lang.Integer\'; nested exception is java.lang.NumberFormatException: For input string: "None"'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_openapi_new\test_13_router.py", line 186, in test_01
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":10000113,"msg":"参数(id:none)错误","referinfo":"failed to convert value of type \'java.lang.string\' to required type \'java.lang.integer\'; nested exception is java.lang.numberformatexception: for input string: \\"none\\""}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft14.4' class='none'>
+    <td class='failCase'><div class='testcase'>test_02: 修改路由实例-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft14.4')" >
+        fail</a>
+
+    <div id='div_ft14.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft14.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft14.4: https://test.api.heclouds.com/oes/api/v1/routers/None
+{'data': None, 'success': False, 'code': 10000113, 'msg': '参数(id:None)错误', 'referInfo': 'Failed to convert value of type \'java.lang.String\' to required type \'java.lang.Integer\'; nested exception is java.lang.NumberFormatException: For input string: "None"'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_openapi_new\test_13_router.py", line 211, in test_02
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":10000113,"msg":"参数(id:none)错误","referinfo":"failed to convert value of type \'java.lang.string\' to required type \'java.lang.integer\'; nested exception is java.lang.numberformatexception: for input string: \\"none\\""}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt14.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03: 分页查询路由实例-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt14.5')" >
+        pass</a>
+
+    <div id='div_pt14.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt14.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt14.5: https://test.api.heclouds.com/oes/api/v1/routers
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 4, 'content': [{'addressType': 4, 'created': 1597299828957, 'format': 1, 'scriptString': '', 'addressConfigName': 'mysql_3e5cf', 'env': 1, 'type': 1, 'userId': '38724', 'platform': 3, 'filter': {'devIdentifiers': [{'pid': '104276', 'protocolType': 1, 'deviceId': '10082934', 'deviceName': None, 'valueDescriptorIdentifiers': ['identifier_c4021'], 'productName': None}]}, 'encryption': {'initializingVector': None, 'encryptionKey': None, 'encryptionAlgorithm': 1}, 'ownerName': None, 'scriptType': 0, 'name': 'router_2e4bd', 'modified': 1597299829524, 'id': 11414, 'compression': 1, 'addressConfigId': 14257, 'status': 1}, {'addressType': 4, 'created': 1597298967878, 'format': 1, 'scriptString': '', 'addressConfigName': 'mysql_52c31', 'env': 2, 'type': 2, 'userId': '38724', 'platform': 3, 'filter': {'devIdentifiers': None}, 'encryption': {'initializingVector': None, 'encryptionKey': None, 'encryptionAlgorithm': 1}, 'ownerName': None, 'scriptType': 0, 'name': 'router_315de', 'modified': 1597298967878, 'id': 11411, 'compression': 1, 'addressConfigId': 14255, 'status': 3}, {'addressType': 4, 'created': 1597218998870, 'format': 1, 'scriptString': '', 'addressConfigName': 'mysql_dc623', 'env': 1, 'type': 1, 'userId': '38724', 'platform': 3, 'filter': {'devIdentifiers': [{'pid': '104265', 'protocolType': 1, 'deviceId': '10082892', 'deviceName': None, 'valueDescriptorIdentifiers': ['identifier_412d3'], 'productName': None}]}, 'encryption': {'initializingVector': None, 'encryptionKey': None, 'encryptionAlgorithm': 1}, 'ownerName': None, 'scriptType': 0, 'name': 'router_2a13b', 'modified': 1597218999154, 'id': 11406, 'compression': 1, 'addressConfigId': 14251, 'status': 1}, {'addressType': 4, 'created': 1597218998743, 'format': 1, 'scriptString': '', 'addressConfigName': 'mysql_dc623', 'env': 2, 'type': 2, 'userId': '38724', 'platform': 3, 'filter': {'devIdentifiers': None}, 'encryption': {'initializingVector': None, 'encryptionKey': None, 'encryptionAlgorithm': 1}, 'ownerName': None, 'scriptType': 0, 'name': 'router_341c2', 'modified': 1597218998743, 'id': 11405, 'compression': 1, 'addressConfigId': 14251, 'status': 3}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft14.6' class='none'>
+    <td class='failCase'><div class='testcase'>test_04: 禁用路由实例-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft14.6')" >
+        fail</a>
+
+    <div id='div_ft14.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft14.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft14.6: https://test.api.heclouds.com/oes/api/v1/routers/None/disable
+{'data': None, 'success': False, 'code': 10000113, 'msg': '参数(id:None)错误', 'referInfo': 'Failed to convert value of type \'java.lang.String\' to required type \'java.lang.Integer\'; nested exception is java.lang.NumberFormatException: For input string: "None"'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_openapi_new\test_13_router.py", line 258, in test_04
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":10000113,"msg":"参数(id:none)错误","referinfo":"failed to convert value of type \'java.lang.string\' to required type \'java.lang.integer\'; nested exception is java.lang.numberformatexception: for input string: \\"none\\""}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft14.7' class='none'>
+    <td class='failCase'><div class='testcase'>test_05: 启用路由实例-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft14.7')" >
+        fail</a>
+
+    <div id='div_ft14.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft14.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft14.7: https://test.api.heclouds.com/oes/api/v1/routers/None/enable
+{'data': None, 'success': False, 'code': 10000113, 'msg': '参数(id:None)错误', 'referInfo': 'Failed to convert value of type \'java.lang.String\' to required type \'java.lang.Integer\'; nested exception is java.lang.NumberFormatException: For input string: "None"'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_openapi_new\test_13_router.py", line 283, in test_05
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":10000113,"msg":"参数(id:none)错误","referinfo":"failed to convert value of type \'java.lang.string\' to required type \'java.lang.integer\'; nested exception is java.lang.numberformatexception: for input string: \\"none\\""}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft14.8' class='none'>
+    <td class='failCase'><div class='testcase'>test_06: 批量禁用路由实例-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft14.8')" >
+        fail</a>
+
+    <div id='div_ft14.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft14.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft14.8: https://test.api.heclouds.com/oes/api/v1/routers/disable
+{'data': None, 'success': False, 'code': 17010117, 'msg': '非法的云端路由实例ID数组参数', 'referInfo': '非法的云端路由实例ID数组参数'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_openapi_new\test_13_router.py", line 309, in test_06
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":17010117,"msg":"非法的云端路由实例id数组参数","referinfo":"非法的云端路由实例id数组参数"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft14.9' class='none'>
+    <td class='failCase'><div class='testcase'>test_07: 批量启用路由实例-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft14.9')" >
+        fail</a>
+
+    <div id='div_ft14.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft14.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft14.9: https://test.api.heclouds.com/oes/api/v1/routers/disable
+{'data': None, 'success': False, 'code': 17010117, 'msg': '非法的云端路由实例ID数组参数', 'referInfo': '非法的云端路由实例ID数组参数'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_openapi_new\test_13_router.py", line 336, in test_07
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":17010117,"msg":"非法的云端路由实例id数组参数","referinfo":"非法的云端路由实例id数组参数"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_14_deploy_router.Test_Router: 数据路由接口</td>
+    <td>3</td>
+    <td>3</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c15',3)">Detail</a></td>
+</tr>
+
+<tr id='pt15.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_00: 分配路由实例至某边缘节点-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt15.1')" >
+        pass</a>
+
+    <div id='div_pt15.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt15.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt15.1: https://test.api.heclouds.com/oes/api/v1/routers/gateway/association
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt15.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01: 分页查询已分配至边缘节点的路由实例-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt15.2')" >
+        pass</a>
+
+    <div id='div_pt15.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt15.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt15.2: https://test.api.heclouds.com/oes/api/v1/routers/gateway/association
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 0, 'content': []}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt15.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03: 分页查询未分配的路由实例信息-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt15.3')" >
+        pass</a>
+
+    <div id='div_pt15.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt15.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt15.3: https://test.api.heclouds.com/oes/api/v1/routers/gateway/unassignedclient
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 2, 'content': [{'addressType': 4, 'created': 1597298967878, 'format': 1, 'scriptString': '', 'addressConfigName': '', 'env': 2, 'type': 2, 'userId': '38724', 'platform': 3, 'filter': {'devIdentifiers': None}, 'encryption': {'initializingVector': None, 'encryptionKey': None, 'encryptionAlgorithm': 1}, 'ownerName': None, 'scriptType': 0, 'name': 'router_315de', 'modified': 1597298967878, 'id': 11411, 'compression': 1, 'addressConfigId': 14255, 'status': 3}, {'addressType': 4, 'created': 1597218998743, 'format': 1, 'scriptString': '', 'addressConfigName': '', 'env': 2, 'type': 2, 'userId': '38724', 'platform': 3, 'filter': {'devIdentifiers': None}, 'encryption': {'initializingVector': None, 'encryptionKey': None, 'encryptionAlgorithm': 1}, 'ownerName': None, 'scriptType': 0, 'name': 'router_341c2', 'modified': 1597218998743, 'id': 11405, 'compression': 1, 'addressConfigId': 14251, 'status': 3}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>test_15_rules.Test_Router: 规则引擎接口</td>
+    <td>4</td>
+    <td>1</td>
+    <td>3</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c16',4)">Detail</a></td>
+</tr>
+
+<tr id='ft16.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_00: 新建规则-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft16.1')" >
+        fail</a>
+
+    <div id='div_ft16.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft16.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft16.1: https://test.api.heclouds.com/oes/api/v1/rules
+{'data': None, 'success': False, 'code': 10141153, 'msg': None}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_openapi_new\test_15_rules.py", line 103, in test_00
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":10141153,"msg":null}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft16.2' class='none'>
+    <td class='failCase'><div class='testcase'>test_01: 获取详细规则信息-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft16.2')" >
+        fail</a>
+
+    <div id='div_ft16.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft16.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft16.2: https://test.api.heclouds.com/oes/api/v1/rules/None
+{'data': None, 'success': False, 'code': 18001314, 'msg': '规则不存在'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_openapi_new\test_15_rules.py", line 135, in test_01
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":18001314,"msg":"规则不存在"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft16.3' class='none'>
+    <td class='failCase'><div class='testcase'>test_02: 更新规则-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft16.3')" >
+        fail</a>
+
+    <div id='div_ft16.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft16.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft16.3: https://test.api.heclouds.com/oes/api/v1/rules/None
+{'data': None, 'success': False, 'code': 18001314, 'msg': '规则不存在'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_openapi_new\test_15_rules.py", line 179, in test_02
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":18001314,"msg":"规则不存在"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt16.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03: 分页查询规则-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt16.4')" >
+        pass</a>
+
+    <div id='div_pt16.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt16.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt16.4: https://test.api.heclouds.com/oes/api/v1/rules
+{'code': 0, 'data': {'totalPage': 0, 'pageSize': 10, 'currentPage': 1, 'totalCount': 0, 'content': []}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>test_16_rule_deploy.Test_RuleDeploy: 规则引擎部署接口</td>
+    <td>3</td>
+    <td>2</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c17',3)">Detail</a></td>
+</tr>
+
+<tr id='ft17.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_00: 批量分配规则到网关-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft17.1')" >
+        fail</a>
+
+    <div id='div_ft17.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft17.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft17.1: https://test.api.heclouds.com/oes/api/v1/rules/gateway/allocate/multi
+{'data': None, 'success': False, 'code': 10145501, 'msg': '规则引擎服务器错误 (500Internal Server Error)'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_openapi_new\test_16_rule_deploy.py", line 86, in test_00
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":10145501,"msg":"规则引擎服务器错误 (500internal server error)"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt17.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01: 分页查询已分配的规则-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt17.2')" >
+        pass</a>
+
+    <div id='div_pt17.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt17.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt17.2: https://test.api.heclouds.com/oes/api/v1/rules/gateway/allocated
+{'code': 0, 'data': {'totalPage': 0, 'pageSize': 10, 'currentPage': 1, 'totalCount': 0, 'content': []}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt17.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02: 分页查询未分配规则-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt17.3')" >
+        pass</a>
+
+    <div id='div_pt17.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt17.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt17.3: https://test.api.heclouds.com/oes/api/v1/rules/gateway/unallocated
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 1, 'content': [{'mailServerId': None, 'log': None, 'mailPatternName': None, 'subscription': [], 'type': 'rulesengine', 'ruleType': 2, 'exportClientId': '11405', 'id': '8ae48e9673e145580173e1abf5e60000', 'export': True, 'mailServerName': None, 'created': 1597219009985, 'smsInterval': None, 'filters': [], 'userName': '17623862844', 'userId': '38724', 'timeTrigger': None, 'nextRuleName': None, 'mailPatternId': None, 'phone': [], 'exportClientName': 'router_341c2', 'nextRuleId': None, 'linkedToAlarm': False, 'alarmInfos': [], 'name': 'rule_e3d01', 'conditions': [{'productId': 104265, 'labelId': None, 'nameList': ['dev_1ec42'], 'protocolType': 7, 'check': {'parameter': 'identifier_412d3', 'type': 1, 'operation': '=', 'operand': '4'}, 'type': 1, 'didList': [10082892], 'labelName': None, 'productName': 'bacnet_product_c2106'}], 'actions': [], 'status': 'DISABLED'}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>test_17_delete_template.Test_RuleDeploy: 删除+解除分配接口</td>
+    <td>12</td>
+    <td>6</td>
+    <td>6</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c18',12)">Detail</a></td>
+</tr>
+
+<tr id='ft18.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_00: 解除分配的规则-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft18.1')" >
+        fail</a>
+
+    <div id='div_ft18.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft18.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft18.1: https://test.api.heclouds.com/oes/api/v1/rules/gateway/deallocate
+{'data': None, 'success': False, 'code': 10140006, 'msg': '请选择规则'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_openapi_new\test_17_delete_template.py", line 87, in test_00
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":10140006,"msg":"请选择规则"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft18.2' class='none'>
+    <td class='failCase'><div class='testcase'>test_01: 移除某个已分配的路由实例-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft18.2')" >
+        fail</a>
+
+    <div id='div_ft18.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft18.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft18.2: https://test.api.heclouds.com/oes/api/v1/routers/gateway/disassociation/None/10082992
+{'data': None, 'success': False, 'code': 17010302, 'msg': '边缘网关移除已关联路由实例失败', 'referInfo': '边缘网关移除已关联路由实例失败'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_openapi_new\test_17_delete_template.py", line 113, in test_01
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":17010302,"msg":"边缘网关移除已关联路由实例失败","referinfo":"边缘网关移除已关联路由实例失败"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt18.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02: 根据BACnet属性ID删除BACnet物模型草稿-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt18.3')" >
+        pass</a>
+
+    <div id='div_pt18.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt18.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt18.3: https://test.api.heclouds.com/oes/api/v1/products/protocol/7/property/draft/11326
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt18.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03: 删除边缘节点设备关联-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt18.4')" >
+        pass</a>
+
+    <div id='div_pt18.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt18.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt18.4: https://test.api.heclouds.com/oes/api/v1/devices/gateway/associations
+{'code': 0, 'data': 1, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft18.5' class='none'>
+    <td class='failCase'><div class='testcase'>test_04: 通过id删除规则-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft18.5')" >
+        fail</a>
+
+    <div id='div_ft18.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft18.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft18.5: https://test.api.heclouds.com/oes/api/v1/rules/None
+{'data': None, 'success': False, 'code': 18001314, 'msg': '规则不存在'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_openapi_new\test_17_delete_template.py", line 193, in test_04
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":18001314,"msg":"规则不存在"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft18.6' class='none'>
+    <td class='failCase'><div class='testcase'>test_05: 删除路由实例（边缘端）-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft18.6')" >
+        fail</a>
+
+    <div id='div_ft18.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft18.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft18.6: https://test.api.heclouds.com/oes/api/v1/routers/None
+{'data': None, 'success': False, 'code': 10000113, 'msg': '参数(id:None)错误', 'referInfo': 'Failed to convert value of type \'java.lang.String\' to required type \'java.lang.Integer\'; nested exception is java.lang.NumberFormatException: For input string: "None"'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_openapi_new\test_17_delete_template.py", line 218, in test_05
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":10000113,"msg":"参数(id:none)错误","referinfo":"failed to convert value of type \'java.lang.string\' to required type \'java.lang.integer\'; nested exception is java.lang.numberformatexception: for input string: \\"none\\""}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft18.7' class='none'>
+    <td class='failCase'><div class='testcase'>test_05_00: 删除路由实例（云端）-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft18.7')" >
+        fail</a>
+
+    <div id='div_ft18.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft18.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft18.7: https://test.api.heclouds.com/oes/api/v1/routers/None
+{'data': None, 'success': False, 'code': 10000113, 'msg': '参数(id:None)错误', 'referInfo': 'Failed to convert value of type \'java.lang.String\' to required type \'java.lang.Integer\'; nested exception is java.lang.NumberFormatException: For input string: "None"'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_openapi_new\test_17_delete_template.py", line 243, in test_05_00
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":10000113,"msg":"参数(id:none)错误","referinfo":"failed to convert value of type \'java.lang.string\' to required type \'java.lang.integer\'; nested exception is java.lang.numberformatexception: for input string: \\"none\\""}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft18.8' class='none'>
+    <td class='failCase'><div class='testcase'>test_06: 删除路由目的地端点-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft18.8')" >
+        fail</a>
+
+    <div id='div_ft18.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft18.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft18.8: https://test.api.heclouds.com/oes/api/v1/address-configs/None
+{'data': None, 'success': False, 'code': 10000113, 'msg': '参数(id:None)错误', 'referInfo': 'Failed to convert value of type \'java.lang.String\' to required type \'java.lang.Integer\'; nested exception is java.lang.NumberFormatException: For input string: "None"'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_openapi_new\test_17_delete_template.py", line 269, in test_06
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":10000113,"msg":"参数(id:none)错误","referinfo":"failed to convert value of type \'java.lang.string\' to required type \'java.lang.integer\'; nested exception is java.lang.numberformatexception: for input string: \\"none\\""}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt18.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_07: 删除分组-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt18.9')" >
+        pass</a>
+
+    <div id='div_pt18.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt18.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt18.9: https://test.api.heclouds.com/oes/api/v1/label
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt18.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_08: 删除边缘终端-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt18.10')" >
+        pass</a>
+
+    <div id='div_pt18.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt18.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt18.10: https://test.api.heclouds.com/oes/api/v1/devices/10082993
+{'code': 0, 'data': '', 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt18.11' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_09: 删除产品-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt18.11')" >
+        pass</a>
+
+    <div id='div_pt18.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt18.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt18.11: https://test.api.heclouds.com/oes/api/v1/products/104291
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt18.12' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_10: 删除边缘节点-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt18.12')" >
+        pass</a>
+
+    <div id='div_pt18.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt18.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt18.12: https://test.api.heclouds.com/oes/api/v1/edgenode/pro/10082992
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>103</td>
+    <td>80</td>
+    <td>23</td>
+    <td>0</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>

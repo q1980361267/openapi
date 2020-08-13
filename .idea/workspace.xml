@@ -2,76 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="feef71ba-74a6-4063-9628-df3040c2dadd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/case/ecp_openapi_new/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_openapi_new/test_00_ecp_node.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_openapi_new/test_01_node_deploy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_openapi_new/test_02_ecp_product.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_openapi_new/test_03_function_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_openapi_new/test_04_category.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_openapi_new/test_05_ecp_device.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_openapi_new/test_06_channel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_openapi_new/test_07_group.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_openapi_new/test_11_check_logs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_openapi_new/test_13_router.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_openapi_new/test_15_rules.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_openapi_new/test_16_rule_deploy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/ecp_openapi_new/test_17_delete_template.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/devv_config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/global_environment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assist_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/assist_config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_new/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_00_create_node.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_01_modify_node.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_02_get_node.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_03_get_node_list.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_04_get_node_property.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_05_get_node_configuration.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_05_node_turn_on_and_off.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_06_create_ecp_product.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_07_modify_ecp_product.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_08_get_ecp_product.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_09_get_product_lists.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_10_create_function_draft.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_11_function_draft_publish.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_12_get_category.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_13_get_catogry_model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_14_get_model_function.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_15_create_ecp_device.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_16_modify_ecp_device.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_17_get_ecp_device.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_new/test_08_label.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_18_create_group.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_19_modify_group.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_20_get_group.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_21_add_devices_to_group.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_22_remove_devices_from_group.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_23_get_device_list_from_group_related.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_24_get_device_list_from_group_unrelated.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_25_create_gateway_device_associate.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_26_get_gateway_configuration.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_27_get_gateway_associate_devices.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_28_delete_gateway_associate_devices.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_29_get_device_list_related.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_30_get_device_list_unrelated.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_31_deploy_node.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_32_check_deploy_node.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_33_get_node_mqtt_address.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_34_label.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_35_check_statistic.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_new/test_09_check_statistic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_36_data_check.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_new/test_10_data_check.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_37_check_logs.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_new/test_14_deploy_router.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_38_router_destination.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_new/test_12_router_destination.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_39_router.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_40_deploy_router.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_41_delete_device.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_42_delete_devices_multi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_43_delete_template.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_44_delete_terminal_product.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_new_bacnet/test_45_delete_node_product.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_openapi_old/test_00_create_node_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_openapi_old/test_00_create_node_product.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/test_config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +44,7 @@
       <recent name="E:\work_code\openapi\openapi_python\case\ecp_openapi_auto_test" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.runner_1">
+  <component name="RunManager" selected="Python.runner">
     <configuration name="runner" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="openapi" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -205,8 +138,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.runner_1" />
         <item itemvalue="Python.runner" />
+        <item itemvalue="Python.runner_1" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python tests.Unittests in test_00_ecp_node.py" />
         <item itemvalue="Python tests.Unittests for test_00_ecp_node.Test_CreateNodeProduct.test_01" />
@@ -227,6 +160,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="665" y="306" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597312298826">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="665" y="306" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1597312298826" />
     <state x="627" y="209" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596528908328">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -235,22 +172,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="627" y="257" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1596708822675" />
-    <state width="1894" height="349" key="GridCell.Tab.0.bottom" timestamp="1597309713587">
+    <state width="1894" height="349" key="GridCell.Tab.0.bottom" timestamp="1597312454824">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1894" height="349" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597309713587" />
-    <state width="1894" height="349" key="GridCell.Tab.0.center" timestamp="1597309713586">
+    <state width="1894" height="349" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597312454824" />
+    <state width="1894" height="349" key="GridCell.Tab.0.center" timestamp="1597312454824">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1894" height="349" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597309713586" />
-    <state width="1894" height="349" key="GridCell.Tab.0.left" timestamp="1597309713586">
+    <state width="1894" height="349" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597312454824" />
+    <state width="1894" height="349" key="GridCell.Tab.0.left" timestamp="1597312454824">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1894" height="349" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597309713586" />
-    <state width="1894" height="349" key="GridCell.Tab.0.right" timestamp="1597309713586">
+    <state width="1894" height="349" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597312454824" />
+    <state width="1894" height="349" key="GridCell.Tab.0.right" timestamp="1597312454824">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1894" height="349" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597309713586" />
+    <state width="1894" height="349" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597312454824" />
     <state width="1894" height="321" key="GridCell.Tab.1.bottom" timestamp="1597141611477">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
