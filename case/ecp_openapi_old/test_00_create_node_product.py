@@ -9,8 +9,10 @@ import json
 import yaml
 
 from assist import getSignature
+import global_environment
 
-with open('../../zhaoshang_pro_config.json', 'r') as f:
+file = global_environment.configFilePath()
+with open(file, 'r') as f:
     f_json = json.load(f)
     url = f_json.get("baseURL")
     accessKeyId = f_json.get("accessKeyId")
@@ -62,10 +64,10 @@ class Test_CreateNodeProduct(unittest.TestCase):
         r = requests.post(url=self.url, params=params, data=json.dumps(body), headers=self.headers, verify=False)
         # success = r.json()['success']
         # 断言success字段中的值
-        result = r.json()
-        id = result.get('data').get('id')
-        masterKey = result.get('data').get('masterKey')
-        # print(r.json())
+        # result = r.json()
+        # id = result.get('data').get('id')
+        # masterKey = result.get('data').get('masterKey')
+        print(r.json())
         self.assertIn('true', r.text)
         logging.info(f"case:创建网关产品-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头："
                      f"{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
