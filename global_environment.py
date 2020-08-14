@@ -7,7 +7,7 @@ def workdir():
 
 
 def configFilePath(file_name='test_config.json'):
-    return workdir() + "\\" + file_name
+    return workdir() + "/" + file_name
 
 
 def assistFilePath(file_name='assist_config.yaml'):
