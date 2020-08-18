@@ -77,7 +77,7 @@ table： mysql中对应数据库中的表
 - 步骤三：
 ```
 命令行运行cmd中运行runner：
-runner -s dmp -m report
+python runner.py -s dmp -m report
 -s: 套件名称，可选值：dmp、ecp_new
 -m: 运行模式， 可选值：report, noReport
 ```
@@ -97,7 +97,7 @@ python环境：
 1、安装好对应的依赖包：pip install -r requirements.txt
 2、配置好前面步骤的信息
 3、命令行运行runner.py文件：python runner.py -s dmp -m report即可
-非python环境： 命令行cmd模式下： runner -s dmp -m report 即可
+非python环境： 暂时还没有打包后，待后续打包好二进制文件就可不依赖与python环境
 
 - 注意点3：
 套件中的接口部分有强关联性，以数据路由为例，如果global_environment.py
