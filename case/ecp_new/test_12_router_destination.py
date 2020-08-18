@@ -65,17 +65,18 @@ class Test_RouterDestination(unittest.TestCase):
             'accessKeyId': self.accessKey,
             'signatureNonce': self.signatureNonce
         }
-        body = {
-            "name": "mysql",
-            "type": 4,
-            "env": 1,
-            "host": "36.155.103.36",
-            "port": 3306,
-            "username": "root",
-            "password": "Iot!@10086",
-            "database": "edgetester",
-            "table": "test"
-        }
+        body = global_environment.routerDestination()
+        # body = {
+        #     "name": "mysql",
+        #     "type": 4,
+        #     "env": 1,
+        #     "host": "36.155.103.36",
+        #     "port": 3306,
+        #     "username": "root",
+        #     "password": "Iot!@10086",
+        #     "database": "edgetester",
+        #     "table": "test"
+        # }
         signature = getSignature.get_signature(params, body, self.accessKeySecret, 'POST')
         params['signature'] = signature
         r = requests.post(url=_url, params=params, data=json.dumps(body), headers=self.headers, verify=False)
@@ -95,17 +96,18 @@ class Test_RouterDestination(unittest.TestCase):
             'accessKeyId': self.accessKey,
             'signatureNonce': self.signatureNonce
         }
-        body = {
-            "name": "mysql_" + ''.join(random.sample('123456abcdef', 5)),
-            "type": 4,
-            "env": 1,
-            "host": "36.155.103.36",
-            "port": 3306,
-            "username": "root",
-            "password": "Iot!@10086",
-            "database": "edgetester",
-            "table": "test"
-        }
+        body = global_environment.routerDestination()
+        # body = {
+        #     "name": "mysql_" + ''.join(random.sample('123456abcdef', 5)),
+        #     "type": 4,
+        #     "env": 1,
+        #     "host": "36.155.103.36",
+        #     "port": 3306,
+        #     "username": "root",
+        #     "password": "Iot!@10086",
+        #     "database": "edgetester",
+        #     "table": "test"
+        # }
         signature = getSignature.get_signature(params, body, self.accessKeySecret, 'POST')
         params['signature'] = signature
         r = requests.post(url=_url, params=params, data=json.dumps(body), headers=self.headers, verify=False)

@@ -2,52 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be0a31b9-6b19-478e-b63e-3941a918747b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/zhaoshang_test_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assist/abcd/中文.py" beforeDir="false" afterPath="$PROJECT_DIR$/assist/abcd/中文.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assist_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/assist_config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/dmp/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/dmp/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/dmp/test_03_function_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/dmp/test_03_function_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/dmp/test_12_router_destination.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/dmp/test_12_router_destination.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_new/test_00_ecp_node.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_new/test_00_ecp_node.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_01_create_node_dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_01_create_node_dev.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_02_modify_node_dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_02_modify_node_dev.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_03_get_node_dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_03_get_node_dev.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_04_modify_node_dev_feature.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_04_modify_node_dev_feature.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_05_get_node_dev_feature.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_05_get_node_dev_feature.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_06_create_ecp_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_06_create_ecp_product.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_07_modify_ecp_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_07_modify_ecp_product.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_08_get_ecp_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_08_get_ecp_product.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_09_get_product_lists.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_09_get_product_lists.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_10_create_function_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_10_create_function_draft.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_11_function_draft_publish.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_11_function_draft_publish.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_12_get_category.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_12_get_category.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_13_get_catogry_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_13_get_catogry_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_14_get_model_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_14_get_model_function.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_15_create_ecp_device.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_15_create_ecp_device.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_16_modify_ecp_device.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_16_modify_ecp_device.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_17_get_ecp_device.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_17_get_ecp_device.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_18_create_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_18_create_group.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_19_modify_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_19_modify_group.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_20_get_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_20_get_group.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_21_add_devices_to_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_21_add_devices_to_group.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_22_remove_devices_from_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_22_remove_devices_from_group.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_23_get_device_list_from_group_related.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_23_get_device_list_from_group_related.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_24_get_device_list_from_group_unrelated.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_24_get_device_list_from_group_unrelated.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_25_create_gateway_device_associate.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_25_create_gateway_device_associate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_26_get_gateway_configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_26_get_gateway_configuration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_27_get_gateway_associate_devices.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_27_get_gateway_associate_devices.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_28_delete_gateway_associate_devices.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_28_delete_gateway_associate_devices.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_29_get_device_list_related.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_29_get_device_list_related.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_old/test_30_get_device_list_unrelated.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_old/test_30_get_device_list_unrelated.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/global_environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/global_environment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/2020-08-14 17_05_20_log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/2020-08-14 17_05_20_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_00_create_node_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_00_create_node_product.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhaoshang_pro_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/zhaoshang_pro_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/ecp_new/test_12_router_destination.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_new/test_12_router_destination.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
