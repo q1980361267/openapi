@@ -91,7 +91,7 @@ report模式会在result文件下自动生成一个html的报告文件
 准
 
 - 注意点2：
-runner -h 可以查看需要输入参数的帮助提示信息
+python runner.py -h 可以查看需要输入参数的帮助提示信息
 可以在python环境下或者非python环境下运行本套代码
 python环境：
 1、安装好对应的依赖包：pip install -r requirements.txt
