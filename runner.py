@@ -28,26 +28,26 @@ if not os.path.exists(report_path):
     os.mkdir(report_path)
 else:
     pass
-# path = 'case/' + args.suite  # 设置路径
-path = 'case/dmp'
+path = 'case/' + args.suite  # 设置路径
+# path = 'case/dmp'
 # 获得测试集对象
 discover = unittest.defaultTestLoader.discover(start_dir=path, pattern='test_*.py')
 # wb方式写入report中
-# if args.mode == 'report':
-#     with open(report_file, 'w', encoding='utf-8') as report:
-#         runner = HTMLTestRunner.HTMLTestRunner(stream=report, title=report_title, description=report_description)
-#         # 使用runner运行测试套件
-#         runner.run(discover)
-#         report.close()
-# elif args.mode == 'noReport':
-#     runner = runner.TextTestRunner(verbosity=2)
-#     # 使用runner运行测试套件
-#     runner.run(discover)
-# else:
-#     raise SystemExit('please specify the mode')
-
-with open(report_file, 'w', encoding='utf-8') as report:
+if args.mode == 'report':
+    with open(report_file, 'w', encoding='utf-8') as report:
         runner = HTMLTestRunner.HTMLTestRunner(stream=report, title=report_title, description=report_description)
         # 使用runner运行测试套件
         runner.run(discover)
         report.close()
+elif args.mode == 'noReport':
+    runner = runner.TextTestRunner(verbosity=2)
+    # 使用runner运行测试套件
+    runner.run(discover)
+else:
+    raise SystemExit('please specify the mode')
+
+# with open(report_file, 'w', encoding='utf-8') as report:
+#         runner = HTMLTestRunner.HTMLTestRunner(stream=report, title=report_title, description=report_description)
+#         # 使用runner运行测试套件
+#         runner.run(discover)
+#         report.close()
