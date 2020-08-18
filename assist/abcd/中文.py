@@ -10,7 +10,7 @@ import yaml
 
 from assist import getSignature
 
-with open("../../zhaoshang_pro_config.json", 'r') as f:
+with open("../../zhaoshang_test_config.json", 'r') as f:
     f_json = json.load(f)
     url = f_json.get("baseURL")
     accessKeyId = f_json.get("accessKeyId")

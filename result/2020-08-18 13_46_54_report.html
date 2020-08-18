@@ -1,0 +1,3168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>测试报告</h1>
+<p class='attribute'><strong>Start Time:</strong> 2020-08-18 13:46:55</p>
+<p class='attribute'><strong>Duration:</strong> 0:01:19.960867</p>
+<p class='attribute'><strong>Status:</strong> Pass 82 Failure 21</p>
+
+<p class='description'>测试描述</p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Failed</a>
+<a href='javascript:showCase(2)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_00_ecp_node.Test_CreateNodeProduct: 边缘节点接口</td>
+    <td>9</td>
+    <td>9</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',9)">Detail</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_00: 创建节点-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
+
+    <div id='div_pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.1: https://iotapi.cmft.com/oes/api/v1/edgenode/pro
+{'code': 0, 'data': {'apiKey': 'N2U5ZThiOGJhOGZiMDJiY2ZkZDA=', 'id': 10002216}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01: 查看边缘节点属性-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+        pass</a>
+
+    <div id='div_pt1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.2: https://iotapi.cmft.com/oes/api/v1/edgenode/pro/10002216
+{'code': 0, 'data': {'hostName': '', 'appVersion': '', 'cpuType': 2, 'addresses': None, 'apiKey': 'N2U5ZThiOGJhOGZiMDJiY2ZkZDA=', 'upgradeTime': 0, 'operatingState': 0, 'containerRuntimeVersion': '', 'description': '', 'upgradeStatus': 1, 'logLevel': 2, 'lastConnected': 0, 'adminState': 1, 'systemType': 0, 'modified': 1597729619289, 'id': 10002216, 'created': 1597729619289, 'specification': '', 'nodeType': 1, 'userName': None, 'userId': 'ffc1c74d-93bd-4c4c-8f8e-651c60d0acb2', 'logDay': 1, 'systemInfo': '', 'lastReported': 0, 'name': 'edge_node_a3c02', 'logEnable': 0, 'dataSavePeriod': 0, 'deployStatus': 0}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02: 更新边缘节点属性-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        pass</a>
+
+    <div id='div_pt1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.3: https://iotapi.cmft.com/oes/api/v1/edgenode/pro/10002216
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03: 分页查询边缘节点属性-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4')" >
+        pass</a>
+
+    <div id='div_pt1.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.4: https://iotapi.cmft.com/oes/api/v1/edgenode/pro/page
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 2, 'content': [{'appVersion': '', 'cpuType': 2, 'apiKey': 'N2U5ZThiOGJhOGZiMDJiY2ZkZDA=', 'upgradeTime': 0, 'operatingState': 0, 'created': 1597729619289, 'description': '', 'nodeType': 1, 'userName': None, 'userId': 'ffc1c74d-93bd-4c4c-8f8e-651c60d0acb2', 'logDay': 1, 'upgradeStatus': 1, 'logLevel': 2, 'lastConnected': 0, 'lastReported': 0, 'adminState': 1, 'name': 'edge_node_a3c02', 'systemType': 0, 'modified': 1597729624974, 'logEnable': 0, 'id': 10002216, 'dataSavePeriod': 0, 'deployStatus': 0}, {'appVersion': '', 'cpuType': 2, 'apiKey': 'OTA2ZDRkMGE1ZjFhYjljYTVmMzA=', 'upgradeTime': 0, 'operatingState': 0, 'created': 1597644119974, 'description': '', 'nodeType': 1, 'userName': None, 'userId': 'ffc1c74d-93bd-4c4c-8f8e-651c60d0acb2', 'logDay': 1, 'upgradeStatus': 1, 'logLevel': 2, 'lastConnected': 0, 'lastReported': 0, 'adminState': 1, 'name': 'edge_node_dec30', 'systemType': 0, 'modified': 1597644126586, 'logEnable': 0, 'id': 10000128, 'dataSavePeriod': 0, 'deployStatus': 0}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04: 查询边缘节点配置信息-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5')" >
+        pass</a>
+
+    <div id='div_pt1.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.5: https://iotapi.cmft.com/oes/api/v1/devices/gateway/information/10002216
+{'code': 0, 'data': {'channelCount': 0, 'deviceCount': 0, 'rulesCount': 0, 'exportCount': 0}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_05: 查询边缘节点下所有关联的边缘终端-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.6')" >
+        pass</a>
+
+    <div id='div_pt1.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.6: https://iotapi.cmft.com/oes/api/v1/devices/gateway/multi/10002216/7
+{'code': 0, 'data': [], 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_06: 批量禁用边缘节点节点-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.7')" >
+        pass</a>
+
+    <div id='div_pt1.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.7: https://iotapi.cmft.com/oes/api/v1/edgenode/pro/adminstate/multi
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_07: 批量启用边缘节点-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.8')" >
+        pass</a>
+
+    <div id='div_pt1.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.8: https://iotapi.cmft.com/oes/api/v1/edgenode/pro/adminstate/multi
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_08: 查询边缘节点的功能列表-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.9')" >
+        pass</a>
+
+    <div id='div_pt1.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.9: https://iotapi.cmft.com/oes/api/v1/edgenode/pro/properties
+{'code': 0, 'data': [{'nodeName': '', 'identifier': 'cpu.used', 'productId': 0, 'minString': None, 'kind': 0, 'accessMode': 1, 'type': 6, 'userId': None, 'maxString': None, 'required': False, 'special': {'length': None, 'step': None, 'enumArray': None}, 'unit': '', 'name': 'CPU使用率', 'maximum': 1, 'id': 0, 'minimum': 0, 'class': 0}, {'nodeName': '', 'identifier': 'mem.used', 'productId': 0, 'minString': None, 'kind': 0, 'accessMode': 1, 'type': 6, 'userId': None, 'maxString': None, 'required': False, 'special': {'length': None, 'step': None, 'enumArray': None}, 'unit': '', 'name': '内存使用率', 'maximum': 1, 'id': 0, 'minimum': 0, 'class': 0}, {'nodeName': '', 'identifier': 'disk.used', 'productId': 0, 'minString': None, 'kind': 0, 'accessMode': 1, 'type': 6, 'userId': None, 'maxString': None, 'required': False, 'special': {'length': None, 'step': None, 'enumArray': None}, 'unit': '', 'name': '磁盘使用率', 'maximum': 1, 'id': 0, 'minimum': 0, 'class': 0}], 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_01_node_deploy.Test_NodeDeploy: 节点部署接口</td>
+    <td>3</td>
+    <td>3</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c2',3)">Detail</a></td>
+</tr>
+
+<tr id='pt2.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_00: 部署边缘节点配置-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
+        pass</a>
+
+    <div id='div_pt2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.1: https://iotapi.cmft.com/oes/api/v1/command/gateway/deploy/10002216
+{'data': None, 'success': False, 'code': 22500004, 'msg': '边缘节点离线', 'referInfo': 'gateway is offline '}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01: 部署边缘节点检查-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.2')" >
+        pass</a>
+
+    <div id='div_pt2.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.2: https://iotapi.cmft.com/oes/api/v1/command/gateway/deploy/check/id/10002216
+{'code': 0, 'data': True, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02: 获取边缘节点MQTT broker地址-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.3')" >
+        pass</a>
+
+    <div id='div_pt2.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.3: https://iotapi.cmft.com/oes/api/v1/edge/node/mqtt/broker
+{'code': 0, 'data': 'tls://202.105.134.43:30002', 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_02_ecp_product.Test_EcpProduct: 边缘产品接口</td>
+    <td>4</td>
+    <td>4</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c3',4)">Detail</a></td>
+</tr>
+
+<tr id='pt3.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_00: 创建边缘终端产品(BACnet)-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.1')" >
+        pass</a>
+
+    <div id='div_pt3.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.1: https://iotapi.cmft.com/oes/api/v1/products
+{'code': 0, 'data': {'masterKey': 'NzNmYjFkNGEzNDZkYmNiZTNiMTA=', 'id': 100127}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01: 根据产品ID查询产品信息-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.2')" >
+        pass</a>
+
+    <div id='div_pt3.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.2: https://iotapi.cmft.com/oes/api/v1/products/100127
+{'code': 0, 'data': {'masterKey': 'NzNmYjFkNGEzNDZkYmNiZTNiMTA=', 'description': '', 'categoryName': '', 'platform': 3, 'manufacturer': '', 'networkMethod': 1, 'dynamicRegister': 0, 'modified': 1597729631622, 'model': 1, 'id': 100127, 'onlineDeviceCount': 0, 'deviceCount': 0, 'created': 1597729631622, 'netType': 0, 'dataFormat': 1, 'enableDeviceCount': 0, 'protocolType': 7, 'nodeType': 1, 'userName': None, 'userId': 'ffc1c74d-93bd-4c4c-8f8e-651c60d0acb2', 'field': '', 'authenticationMethod': 1, 'name': 'bacnet_product_bfe23', 'category': None, 'categoryId': 0}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02: 查询产品列表信息-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.3')" >
+        pass</a>
+
+    <div id='div_pt3.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.3: https://iotapi.cmft.com/oes/api/v1/products
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 1, 'content': [{'masterKey': 'NzNmYjFkNGEzNDZkYmNiZTNiMTA=', 'description': '', 'categoryName': '', 'platform': 3, 'manufacturer': '', 'networkMethod': 1, 'dynamicRegister': 0, 'modified': 1597729631622, 'model': 1, 'id': 100127, 'onlineDeviceCount': 0, 'deviceCount': 0, 'created': 1597729631622, 'netType': 0, 'dataFormat': 1, 'enableDeviceCount': 0, 'protocolType': 7, 'nodeType': 1, 'userName': None, 'userId': 'ffc1c74d-93bd-4c4c-8f8e-651c60d0acb2', 'field': '', 'authenticationMethod': 1, 'name': 'bacnet_product_bfe23', 'category': None, 'categoryId': 0}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03: 更改产品-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.4')" >
+        pass</a>
+
+    <div id='div_pt3.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.4: https://iotapi.cmft.com/oes/api/v1/products/100127
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_03_function_model.Test_FunctionModel: 物模型接口</td>
+    <td>9</td>
+    <td>9</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c4',9)">Detail</a></td>
+</tr>
+
+<tr id='pt4.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_00: 分页查询BACnet属性（bacnet）-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.1')" >
+        pass</a>
+
+    <div id='div_pt4.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.1: https://iotapi.cmft.com/oes/api/v1/products/protocol/7/property/page
+{'code': 0, 'data': {'totalPage': 0, 'pageSize': 10, 'currentPage': 1, 'totalCount': 0, 'content': []}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01: 创建BACnet物模型草稿（bacnet）-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.2')" >
+        pass</a>
+
+    <div id='div_pt4.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.2: https://iotapi.cmft.com/oes/api/v1/products/protocol/7/property/draft
+{'code': 0, 'data': {'nodeName': '', 'identifier': 'identifier_a3cf5', 'productId': 100127, 'minString': None, 'kind': 2, 'accessMode': 2, 'type': 1, 'userId': None, 'maxString': None, 'required': False, 'objectType': 0, 'special': {'length': 1, 'step': None, 'enumArray': None}, 'unit': '1', 'name': 'name_4c0de', 'maximum': 0, 'id': 0, 'minimum': 0, 'propertyId': 85, 'class': 1, 'objectId': 1}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02: 根据BACnet产品ID查询物模型草稿（bacnet）-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.3')" >
+        pass</a>
+
+    <div id='div_pt4.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.3: https://iotapi.cmft.com/oes/api/v1/products/protocol/7/property/draft
+{'code': 0, 'data': [{'nodeName': '', 'identifier': 'identifier_a3cf5', 'productId': 100127, 'minString': None, 'kind': 2, 'accessMode': 2, 'type': 1, 'userId': None, 'maxString': None, 'required': False, 'objectType': 0, 'special': {'length': 1, 'step': None, 'enumArray': None}, 'unit': '1', 'name': 'name_4c0de', 'maximum': 0, 'id': 11430, 'minimum': 0, 'propertyId': 85, 'class': 1, 'objectId': 1}], 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03: 更新BACnet物模草稿（bacnet）-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.4')" >
+        pass</a>
+
+    <div id='div_pt4.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.4: https://iotapi.cmft.com/oes/api/v1/products/protocol/7/property/draft
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04: 根据BACnet产品ID发布物模型草稿（bacnet）-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.5')" >
+        pass</a>
+
+    <div id='div_pt4.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.5: https://iotapi.cmft.com/oes/api/v1/products/protocol/7/property/draft/publish/100127
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_05: 分页查询BACnet物模型草稿（bacnet）-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.6')" >
+        pass</a>
+
+    <div id='div_pt4.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.6: https://iotapi.cmft.com/oes/api/v1/products/protocol/7/property/draft/page
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 1, 'content': [{'nodeName': '', 'identifier': 'identifier_a3cf5', 'productId': 100127, 'minString': None, 'kind': 2, 'accessMode': 2, 'type': 1, 'userId': None, 'maxString': None, 'required': False, 'objectType': 0, 'special': {'length': 1, 'step': None, 'enumArray': None}, 'unit': '1', 'name': 'name_b2d3c', 'maximum': 0, 'id': 11430, 'minimum': 0, 'propertyId': 85, 'class': 1, 'objectId': 1}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_06: 根据BACnet产品ID查询所有功能（bacnet）-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.7')" >
+        pass</a>
+
+    <div id='div_pt4.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.7: https://iotapi.cmft.com/oes/api/v1/products/protocol/7/property
+{'code': 0, 'data': [{'nodeName': '', 'identifier': 'identifier_a3cf5', 'productId': 100127, 'minString': None, 'kind': 2, 'accessMode': 2, 'type': 1, 'userId': None, 'maxString': None, 'required': False, 'objectType': 0, 'special': {'length': 1, 'step': None, 'enumArray': None}, 'unit': '1', 'name': 'name_b2d3c', 'maximum': 0, 'id': 11665, 'minimum': 0, 'propertyId': 85, 'class': 1, 'objectId': 1}], 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_07: 根据BACnet属性ID查询BACnet属性信息（bacnet）-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.8')" >
+        pass</a>
+
+    <div id='div_pt4.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.8: https://iotapi.cmft.com/oes/api/v1/products/protocol/7/property/11665
+{'code': 0, 'data': {'nodeName': '', 'identifier': 'identifier_a3cf5', 'productId': 100127, 'minString': None, 'kind': 2, 'accessMode': 2, 'type': 1, 'userId': None, 'maxString': None, 'required': False, 'objectType': 0, 'special': {'length': 1, 'step': None, 'enumArray': None}, 'unit': '1', 'name': 'name_b2d3c', 'maximum': 0, 'id': 11665, 'minimum': 0, 'propertyId': 85, 'class': 1, 'objectId': 1}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_08: 根据BACnet属性ID查询BACnet物模型草稿-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.9')" >
+        pass</a>
+
+    <div id='div_pt4.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.9: https://iotapi.cmft.com/oes/api/v1/products/protocol/7/property/draft/11430
+{'code': 0, 'data': {'nodeName': '', 'identifier': 'identifier_a3cf5', 'productId': 100127, 'minString': None, 'kind': 2, 'accessMode': 2, 'type': 1, 'userId': None, 'maxString': None, 'required': False, 'objectType': 0, 'special': {'length': 1, 'step': None, 'enumArray': None}, 'unit': '1', 'name': 'name_b2d3c', 'maximum': 0, 'id': 11430, 'minimum': 0, 'propertyId': 85, 'class': 1, 'objectId': 1}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_04_category.Test_Category: 行业物模板接口</td>
+    <td>3</td>
+    <td>3</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c5',3)">Detail</a></td>
+</tr>
+
+<tr id='pt5.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_00: 分页获取行业名称-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.1')" >
+        pass</a>
+
+    <div id='div_pt5.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.1: https://iotapi.cmft.com/oes/api/v1/industry/industryname/page
+{'code': 0, 'data': {'totalPage': 2, 'pageSize': 10, 'currentPage': 1, 'totalCount': 11, 'content': ['someString行业', '商业共享', '智慧建筑', '智能农业', '智能园区', '智能城市', '智能工业', '智能模板', '智能生活', '智能生活SOC']}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01: 分页获取行业物模板信息-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.2')" >
+        pass</a>
+
+    <div id='div_pt5.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.2: https://iotapi.cmft.com/oes/api/v1/industry/page
+{'code': 0, 'data': {'totalPage': 38, 'pageSize': 10, 'currentPage': 1, 'totalCount': 380, 'content': [{'field': 'someString行业', 'modified': 1597656233666, 'description': '', 'id': 100395, 'category': 'aaa', 'userId': None, 'scene': 'someString场景'}, {'field': 'someString行业', 'modified': 1597651361873, 'description': '', 'id': 100385, 'category': 'ecp_someString物模板', 'userId': None, 'scene': 'DLT645电表'}, {'field': 'someString行业', 'modified': 1597635502778, 'description': '', 'id': 100383, 'category': 'someString模板1', 'userId': None, 'scene': 'someString场景'}, {'field': '智能生活', 'modified': 1596635908076, 'description': '', 'id': 100096, 'category': '破壁机', 'userId': None, 'scene': '厨房电器'}, {'field': '智慧建筑', 'modified': 1596635908076, 'description': '', 'id': 100352, 'category': '智能VR类设备', 'userId': None, 'scene': '智能VR类设备'}, {'field': '智能生活', 'modified': 1596635908076, 'description': '', 'id': 100097, 'category': '微波炉', 'userId': None, 'scene': '厨房电器'}, {'field': '智能生活', 'modified': 1596635908076, 'description': '', 'id': 100353, 'category': '智能猫砂盆', 'userId': None, 'scene': '其它'}, {'field': '智能生活', 'modified': 1596635908076, 'description': '', 'id': 100098, 'category': '电饭煲', 'userId': None, 'scene': '厨房电器'}, {'field': '智能生活', 'modified': 1596635908076, 'description': '', 'id': 100354, 'category': '网络视频录像机', 'userId': None, 'scene': '家居安防'}, {'field': '智能城市', 'modified': 1596635908076, 'description': '', 'id': 100099, 'category': '酸碱度监测', 'userId': None, 'scene': '环境感知'}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03: 获取行业物模板下所有功能-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.3')" >
+        pass</a>
+
+    <div id='div_pt5.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.3: https://iotapi.cmft.com/oes/api/v1/industry/100395/properties
+{'code': 0, 'data': [], 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_05_ecp_device.Test_EcpDevice: 边缘终端设备接口</td>
+    <td>13</td>
+    <td>13</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c6',13)">Detail</a></td>
+</tr>
+
+<tr id='pt6.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_00: 注册边缘终端-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.1')" >
+        pass</a>
+
+    <div id='div_pt6.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.1: https://iotapi.cmft.com/oes/api/v1/devices
+{'code': 0, 'data': {'apiKey': 'NjMzNmE2MGQ5NTg4ZTU1Njg2YTU=', 'id': 10002217}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01: 获取边缘终端详情-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.2')" >
+        pass</a>
+
+    <div id='div_pt6.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.2: https://iotapi.cmft.com/oes/api/v1/devices/10002217
+{'code': 0, 'data': {'productId': 100127, 'apiKey': 'NjMzNmE2MGQ5NTg4ZTU1Njg2YTU=', 'operatingState': -1, 'created': 1597729640189, 'description': '', 'protocolType': 7, 'userId': None, 'productName': None, 'parentid': 0, 'labels': None, 'connectGatewayId': '0', 'lastConnected': 0, 'lastReported': 0, 'encrypt': False, 'name': 'dev_b40a1', 'adminState': 1, 'modified': 1597729640189, 'location': None, 'id': 10002217}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02: 更新设备的基本属性-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.3')" >
+        pass</a>
+
+    <div id='div_pt6.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.3: https://iotapi.cmft.com/oes/api/v1/devices/10002217
+{'code': 0, 'data': '', 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03: 按条件分页查询边缘终端-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.4')" >
+        pass</a>
+
+    <div id='div_pt6.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.4: https://iotapi.cmft.com/oes/api/v1/devices/multi
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 1, 'content': [{'apiKey': 'NjMzNmE2MGQ5NTg4ZTU1Njg2YTU=', 'operatingState': -1, 'description': '', 'psk': '', 'subscription': None, 'imsi': '', 'productName': 'bacnet_product_bfe23', 'parentid': None, 'connectGatewayId': '0', 'lastConnected': 0, 'encrypt': False, 'adminState': 1, 'modified': 1597729641976, 'id': 10002217, 'addressable': None, 'authKey': None, 'productId': 100127, 'created': 1597729640189, 'protocolType': 7, 'userId': None, 'labels': None, 'pskString': None, 'lastReported': 0, 'name': 'dev_b40a1', 'imei': '', 'location': None}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04: 批量创建边缘终端-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.5')" >
+        pass</a>
+
+    <div id='div_pt6.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.5: https://iotapi.cmft.com/oes/api/v1/devices/multi
+{'code': 0, 'data': [{'apiKey': 'NzM3NDJmNzEyZTQyYTU3NDA2MGQ=', 'id': 10002218}, {'apiKey': 'MTkwNzgwMDU1YzZmNzJmOWY2MWY=', 'id': 10002219}], 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_05: 批量禁用边缘终端-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.6')" >
+        pass</a>
+
+    <div id='div_pt6.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.6: https://iotapi.cmft.com/oes/api/v1/devices/lock
+{'code': 0, 'data': 1, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_06: 批量启用边缘终端-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.7')" >
+        pass</a>
+
+    <div id='div_pt6.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.7: https://iotapi.cmft.com/oes/api/v1/devices/unlock
+{'code': 0, 'data': 1, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_07: 查询边缘终端的功能列表-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.8')" >
+        pass</a>
+
+    <div id='div_pt6.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.8: https://iotapi.cmft.com/oes/api/v1/devices/10002217/properties
+{'code': 0, 'data': [{'nodeName': '', 'identifier': 'identifier_a3cf5', 'productId': 100127, 'minString': None, 'kind': 2, 'accessMode': 2, 'type': 1, 'userId': None, 'maxString': None, 'required': False, 'objectType': 0, 'special': {'length': 1, 'step': None, 'enumArray': None}, 'unit': '1', 'name': 'name_b2d3c', 'maximum': 0, 'id': 11665, 'minimum': 0, 'propertyId': 85, 'class': 1, 'objectId': 1}], 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_08: 分页获取批次列表-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.9')" >
+        pass</a>
+
+    <div id='div_pt6.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.9: https://iotapi.cmft.com/oes/api/v1/products/batch/page
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 1, 'content': [{'created': 1597729643713, 'count': 2, 'id': 100024, 'protocolType': 1}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_09: 分页获取批次下的设备列表-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.10')" >
+        pass</a>
+
+    <div id='div_pt6.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.10: https://iotapi.cmft.com/oes/api/v1/devices/batch/page
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 2, 'content': [{'productId': 100127, 'apiKey': 'MTkwNzgwMDU1YzZmNzJmOWY2MWY=', 'operatingState': -1, 'created': 1597729643713, 'certificate': '', 'description': '', 'protocolType': 7, 'certSN': '', 'deviceId': 0, 's_version': '', 'productName': 'bacnet_product_bfe23', 'privateKey': '', 'connectGatewayId': 0, 'lastConnected': 0, 'lastReported': 0, 'encrypt': False, 'f_version': '', 'name': 'api_device_1b2d4', 'adminState': 1, 'modified': 1597729643713, 'id': 10002219}, {'productId': 100127, 'apiKey': 'NzM3NDJmNzEyZTQyYTU3NDA2MGQ=', 'operatingState': -1, 'created': 1597729643713, 'certificate': '', 'description': '', 'protocolType': 7, 'certSN': '', 'deviceId': 0, 's_version': '', 'productName': 'bacnet_product_bfe23', 'privateKey': '', 'connectGatewayId': 0, 'lastConnected': 0, 'lastReported': 0, 'encrypt': False, 'f_version': '', 'name': 'api_device_cdae5', 'adminState': 1, 'modified': 1597729643713, 'id': 10002218}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.11' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_10: 添加边缘节点设备关联-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.11')" >
+        pass</a>
+
+    <div id='div_pt6.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.11: https://iotapi.cmft.com/oes/api/v1/devices/gateway/associations
+{'code': 0, 'data': [{'productId': 100127, 'masterKey': 'NzNmYjFkNGEzNDZkYmNiZTNiMTA=', 'deviceId': 10002217, 'parentId': 10002216}], 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.12' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_11: 分页查询边缘节点已关联的边缘终端-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.12')" >
+        pass</a>
+
+    <div id='div_pt6.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.12: https://iotapi.cmft.com/oes/api/v1/devices/subdevice/IN/page
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 1, 'content': [{'productId': 100127, 'apiKey': 'NjMzNmE2MGQ5NTg4ZTU1Njg2YTU=', 'operatingState': -1, 'created': 1597729640189, 'description': '', 'protocolType': 7, 'userId': None, 'productName': None, 'parentid': None, 'labels': None, 'connectGatewayId': '0', 'lastConnected': 0, 'lastReported': 0, 'encrypt': False, 'name': 'dev_b40a1', 'adminState': 1, 'modified': 1597729641976, 'location': None, 'id': 10002217}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.13' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_12: 分页查询边缘节点未关联的边缘终端-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.13')" >
+        pass</a>
+
+    <div id='div_pt6.13' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.13').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.13: https://iotapi.cmft.com/oes/api/v1/devices/subdevice/NIN/page
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 2, 'content': [{'productId': 100127, 'apiKey': 'MTkwNzgwMDU1YzZmNzJmOWY2MWY=', 'operatingState': -1, 'created': 1597729643713, 'description': '', 'protocolType': 7, 'userId': None, 'productName': None, 'parentid': None, 'labels': None, 'connectGatewayId': '0', 'lastConnected': 0, 'lastReported': 0, 'encrypt': False, 'name': 'api_device_1b2d4', 'adminState': 1, 'modified': 1597729643713, 'location': None, 'id': 10002219}, {'productId': 100127, 'apiKey': 'NzM3NDJmNzEyZTQyYTU3NDA2MGQ=', 'operatingState': -1, 'created': 1597729643713, 'description': '', 'protocolType': 7, 'userId': None, 'productName': None, 'parentid': None, 'labels': None, 'connectGatewayId': '0', 'lastConnected': 0, 'lastReported': 0, 'encrypt': False, 'name': 'api_device_cdae5', 'adminState': 1, 'modified': 1597729643713, 'location': None, 'id': 10002218}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_06_channel.Test_Channel: 通道接口</td>
+    <td>6</td>
+    <td>6</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c7',6)">Detail</a></td>
+</tr>
+
+<tr id='pt7.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_00: 创建BACnet通道-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.1')" >
+        pass</a>
+
+    <div id='div_pt7.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.1: https://iotapi.cmft.com/oes/api/v1/device/bacnet/channel/add
+{'code': 0, 'data': 198, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt7.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01: 修改BACnet通道-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.2')" >
+        pass</a>
+
+    <div id='div_pt7.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.2: https://iotapi.cmft.com/oes/api/v1/device/bacnet/channel/update
+{'code': 0, 'data': {'created': 0, 'ifName': None, 'name': None, 'modified': 0, 'id': None, 'type': None, 'gatewayid': None}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt7.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02: 查询BACnet通道详情-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.3')" >
+        pass</a>
+
+    <div id='div_pt7.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.3: https://iotapi.cmft.com/oes/api/v1/device/bacnet/channel/198
+{'code': 0, 'data': {'created': 1597729652489, 'ifName': 'name_a3ce5', 'name': 'name_cbde4', 'modified': 1597729654306, 'id': 198, 'type': 1, 'gatewayid': 10002216}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt7.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03: 查询边缘节点下的所有BACnet通道-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.4')" >
+        pass</a>
+
+    <div id='div_pt7.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.4: https://iotapi.cmft.com/oes/api/v1/device/bacnet/channel/page
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 1, 'content': [{'created': 1597729652489, 'ifName': 'name_a3ce5', 'name': 'name_cbde4', 'modified': 1597729654306, 'id': 198, 'type': 1, 'gatewayid': 10002216}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt7.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04: 设置BACnet设备的边缘节点通道配置-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.5')" >
+        pass</a>
+
+    <div id='div_pt7.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.5: https://iotapi.cmft.com/oes/api/v1/devices/bacnet/channel-config/gateway
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt7.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_05: 获取BACnet设备的边缘节点通道配置-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.6')" >
+        pass</a>
+
+    <div id='div_pt7.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.6: https://iotapi.cmft.com/oes/api/v1/devices/bacnet/channel-config/gateway?accessKeyId=zyeHNfGbLRiKA4FU&amp;signatureNonce=1597729656&amp;id=10002217&amp;signature=6xQIVM3vzo6SOcALCni4q5r0CY
+{'code': 0, 'data': {'collectTime': 5, 'discoveryMode': 1, 'maxAPDU': 12, 'bacnetAddress': '1.2.3.4:47808', 'id': 10002217, 'bacnetDeviceId': 7, 'channelId': 198}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_07_group.Test_Group: 分组接口</td>
+    <td>8</td>
+    <td>8</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c8',8)">Detail</a></td>
+</tr>
+
+<tr id='pt8.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_00: 模糊分页查询分组列表-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.1')" >
+        pass</a>
+
+    <div id='div_pt8.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.1: https://iotapi.cmft.com/oes/api/v1/label
+{'code': 0, 'data': {'totalPage': 0, 'pageSize': 10, 'currentPage': 1, 'totalCount': 0, 'content': []}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt8.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01: 添加分组-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.2')" >
+        pass</a>
+
+    <div id='div_pt8.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.2: https://iotapi.cmft.com/oes/api/v1/label
+{'code': 0, 'data': {'productId': 100127, 'created': 1597729658246, 'name': 'group_e3db2', 'description': '', 'id': 366}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt8.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02: 编辑分组-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.3')" >
+        pass</a>
+
+    <div id='div_pt8.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.3: https://iotapi.cmft.com/oes/api/v1/label
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt8.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03: 查看分组详情-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.4')" >
+        pass</a>
+
+    <div id='div_pt8.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.4: https://iotapi.cmft.com/oes/api/v1/label/id/366
+{'code': 0, 'data': {'onlineDeviceCount': 0, 'productId': 100127, 'deviceCount': 0, 'created': 1597729658246, 'name': 'group_e3db2', 'description': '', 'enableDeviceCount': 0, 'id': 366, 'protocolType': 7, 'productName': 'bacnet_product_bfe23'}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt8.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04: 添加批量设备到分组-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.5')" >
+        pass</a>
+
+    <div id='div_pt8.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.5: https://iotapi.cmft.com/oes/api/v1/label/add/devices
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt8.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_05: 批量将多个设备移除分组-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.6')" >
+        pass</a>
+
+    <div id='div_pt8.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.6: https://iotapi.cmft.com/oes/api/v1/label/remove/devices
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt8.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_06: 分页查询分组里的设备列表-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.7')" >
+        pass</a>
+
+    <div id='div_pt8.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.7: https://iotapi.cmft.com/oes/api/v1/label/group/IN/page
+{'code': 0, 'data': {'totalPage': 0, 'pageSize': 10, 'currentPage': 1, 'totalCount': 0, 'content': None}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt8.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_07: 分页查询分组外的设备列表-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.8')" >
+        pass</a>
+
+    <div id='div_pt8.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.8: https://iotapi.cmft.com/oes/api/v1/label/group/NIN/page
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 3, 'content': [{'productId': 100127, 'apiKey': 'MTkwNzgwMDU1YzZmNzJmOWY2MWY=', 'operatingState': -1, 'created': 1597729643713, 'description': '', 'protocolType': 7, 'userId': None, 'productName': None, 'parentid': None, 'labels': None, 'connectGatewayId': '0', 'lastConnected': 0, 'lastReported': 0, 'encrypt': False, 'name': 'api_device_1b2d4', 'adminState': 1, 'modified': 1597729643713, 'location': None, 'id': 10002219}, {'productId': 100127, 'apiKey': 'NzM3NDJmNzEyZTQyYTU3NDA2MGQ=', 'operatingState': -1, 'created': 1597729643713, 'description': '', 'protocolType': 7, 'userId': None, 'productName': None, 'parentid': None, 'labels': None, 'connectGatewayId': '0', 'lastConnected': 0, 'lastReported': 0, 'encrypt': False, 'name': 'api_device_cdae5', 'adminState': 1, 'modified': 1597729643713, 'location': None, 'id': 10002218}, {'productId': 100127, 'apiKey': 'NjMzNmE2MGQ5NTg4ZTU1Njg2YTU=', 'operatingState': -1, 'created': 1597729640189, 'description': '', 'protocolType': 7, 'userId': None, 'productName': None, 'parentid': None, 'labels': None, 'connectGatewayId': '0', 'lastConnected': 0, 'lastReported': 0, 'encrypt': False, 'name': 'dev_b40a1', 'adminState': 1, 'modified': 1597729641976, 'location': None, 'id': 10002217}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_08_label.Test_Lable: 标签接口</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c9',1)">Detail</a></td>
+</tr>
+
+<tr id='pt9.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_00: 根据资源id获取标签信息-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.1')" >
+        pass</a>
+
+    <div id='div_pt9.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt9.1: https://iotapi.cmft.com/oes/api/v1/tag/10002216
+{'code': 0, 'data': [], 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_09_check_statistic.Test_Statistic: 统计接口</td>
+    <td>6</td>
+    <td>6</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c10',6)">Detail</a></td>
+</tr>
+
+<tr id='pt10.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_00: 查询查询数据转发最近的聚合数据-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt10.1')" >
+        pass</a>
+
+    <div id='div_pt10.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt10.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt10.1: https://iotapi.cmft.com/oes/api/v1/routers/data/last
+{'code': 0, 'data': [{'timeCostAverage': 0.0, 'countFailed': 0, 'count': 0, 'time': 1597723200, 'countSuccess': 0}, {'timeCostAverage': 0.0, 'countFailed': 0, 'count': 0, 'time': 1597726800, 'countSuccess': 0}], 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt10.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01: 查询消息路由实例总数-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt10.2')" >
+        pass</a>
+
+    <div id='div_pt10.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt10.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt10.2: https://iotapi.cmft.com/oes/api/v1/routers/count
+{'code': 0, 'data': 0, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt10.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02: 数据上传数量统计-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt10.3')" >
+        pass</a>
+
+    <div id='div_pt10.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt10.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt10.3: https://iotapi.cmft.com/oes/api/v1/data/overview/count/event
+{'code': 0, 'data': [{'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T06:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T07:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T08:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T09:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T10:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T11:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T12:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T13:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T14:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T15:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T16:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T17:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T18:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T19:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T20:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T21:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T22:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T23:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-18T00:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-18T01:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-18T02:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-18T03:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-18T04:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-18T05:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}], 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt10.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03: 按时间段统计边缘节点和边缘终端数量-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt10.4')" >
+        pass</a>
+
+    <div id='div_pt10.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt10.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt10.4: https://iotapi.cmft.com/oes/api/v1/data/overview/count/duration
+{'code': 0, 'data': [{'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T06:00:00.000+0000', 'userId': '', 'offlineNodeCount': 0}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T07:00:00.000+0000', 'userId': '', 'offlineNodeCount': 1}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T08:00:00.000+0000', 'userId': '', 'offlineNodeCount': 1}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T09:00:00.000+0000', 'userId': '', 'offlineNodeCount': 1}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T10:00:00.000+0000', 'userId': '', 'offlineNodeCount': 1}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T11:00:00.000+0000', 'userId': '', 'offlineNodeCount': 1}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T12:00:00.000+0000', 'userId': '', 'offlineNodeCount': 1}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T13:00:00.000+0000', 'userId': '', 'offlineNodeCount': 1}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T14:00:00.000+0000', 'userId': '', 'offlineNodeCount': 1}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T15:00:00.000+0000', 'userId': '', 'offlineNodeCount': 1}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T16:00:00.000+0000', 'userId': '', 'offlineNodeCount': 1}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T17:00:00.000+0000', 'userId': '', 'offlineNodeCount': 1}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T18:00:00.000+0000', 'userId': '', 'offlineNodeCount': 1}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T19:00:00.000+0000', 'userId': '', 'offlineNodeCount': 1}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T20:00:00.000+0000', 'userId': '', 'offlineNodeCount': 1}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T21:00:00.000+0000', 'userId': '', 'offlineNodeCount': 1}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T22:00:00.000+0000', 'userId': '', 'offlineNodeCount': 1}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-17T23:00:00.000+0000', 'userId': '', 'offlineNodeCount': 1}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-18T00:00:00.000+0000', 'userId': '', 'offlineNodeCount': 1}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-18T01:00:00.000+0000', 'userId': '', 'offlineNodeCount': 1}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-18T02:00:00.000+0000', 'userId': '', 'offlineNodeCount': 1}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-18T03:00:00.000+0000', 'userId': '', 'offlineNodeCount': 1}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-18T04:00:00.000+0000', 'userId': '', 'offlineNodeCount': 1}, {'onlineNodeCount': 0, 'onlineDeviceCount': 0, 'count': 0, 'offlineDeviceCount': 0, 'time': '2020-08-18T05:00:00.000+0000', 'userId': '', 'offlineNodeCount': 1}], 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt10.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04: 边缘节点和边缘终端实时数量统计-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt10.5')" >
+        pass</a>
+
+    <div id='div_pt10.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt10.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt10.5: https://iotapi.cmft.com/oes/api/v1/data/overview/count/realtime
+{'code': 0, 'data': {'nodeCounter': {'onlineNodeCount': 0, 'nodeCount': 2, 'offlineNodeCount': 2}, 'deviceCounter': {'onlineDeviceCount': 0, 'deviceCount': 3, 'offlineDeviceCount': 3, 'enableDeviceCount': None}}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt10.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_05: 边缘节点监控-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt10.6')" >
+        pass</a>
+
+    <div id='div_pt10.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt10.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt10.6: https://iotapi.cmft.com/oes/api/v1/data/overview/nodestatus
+{'code': 0, 'data': {'disk': [], 'mem': [], 'cpu': []}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_10_data_check.Test_DataCheck: 数据查询接口</td>
+    <td>2</td>
+    <td>2</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c11',2)">Detail</a></td>
+</tr>
+
+<tr id='pt11.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_00: 查询设备的多个属性值的最新值-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.1')" >
+        pass</a>
+
+    <div id='div_pt11.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.1: https://iotapi.cmft.com/oes/api/v1/data/properties/recent/value
+{'code': 0, 'data': [], 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01: 分页查询资源某时间段数据点-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.2')" >
+        pass</a>
+
+    <div id='div_pt11.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.2: https://iotapi.cmft.com/oes/api/v1/data/device/10002217
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 0, 'content': []}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_11_check_logs.Test_LogCheck: 日志查询接口</td>
+    <td>3</td>
+    <td>3</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c12',3)">Detail</a></td>
+</tr>
+
+<tr id='pt12.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_00: 模糊分页查询指定设备的日志信息-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.1')" >
+        pass</a>
+
+    <div id='div_pt12.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.1: https://iotapi.cmft.com/oes/api/v1/monitor/logs
+{'code': 0, 'data': {'totalPage': 0, 'pageSize': 10, 'currentPage': 1, 'totalCount': 0, 'content': []}, 'msg': '成功', 'referInfo': None, 'success': True}
+case:模糊分页查询指定设备的日志信息-成功
+请求地址：https://iotapi.cmft.com/oes/api/v1/monitor/logs?accessKeyId=zyeHNfGbLRiKA4FU&amp;signatureNonce=1597729669&amp;deviceId=10002216&amp;currentPage=1&amp;pageSize=10&amp;signature=SO8ID5q41luYnlT2Gm8giEZFU	请求方式:GET
+请求头：{'User-Agent': 'python-requests/2.24.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'platform': '3', 'Content-Length': '2'}
+请求正文：{}
+响应头：{'Server': 'nginx', 'Date': 'Tue, 18 Aug 2020 05:47:51 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '138', 'Connection': 'keep-alive', 'X-RateLimit-Remaining': '198', 'X-RateLimit-Burst-Capacity': '200', 'X-RateLimit-Replenish-Rate': '200', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'X-Frame-Options': 'DENY', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'Set-Cookie': '1f5fd95ba130dd3bc7caa79dbdb1f764=d1d901c0608cb6d402b99174e9090acf; path=/; HttpOnly, BIGipServer~CMHK-PRD-PASS~pool_grd-iot-plat-iot_http8080_CMHK-PRD-PASS_prd=rd78o00000000000000000000ffff644e1d41o80; path=/; Httponly, BIGipServer~CMHK-PRD-DMZ~pool_grd-iot-https_https443_CMHK-PRD-DMZ_prd=rd76o00000000000000000000ffff644e060co8080; path=/; Httponly; Secure'}
+响应正文：{"code":0,"data":{"totalPage":0,"pageSize":10,"currentPage":1,"totalCount":0,"content":[]},"msg":"成功","referInfo":null,"success":true}
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01: 查询设备下可供查询日志模块-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.2')" >
+        pass</a>
+
+    <div id='div_pt12.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.2: https://iotapi.cmft.com/oes/api/v1/monitor/logs/10002216/modules
+{'code': 0, 'data': {'modules': []}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02: 查询部署日志-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.3')" >
+        pass</a>
+
+    <div id='div_pt12.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.3: https://iotapi.cmft.com/oes/api/v1/monitor/configlog/page
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 1, 'content': [{'result': False, 'msg': 'gateway is offline ', 'time': 1597729630231, 'deviceId': '10002216'}]}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>test_12_router_destination.Test_RouterDestination: 目的地配置接口</td>
+    <td>5</td>
+    <td>1</td>
+    <td>4</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c13',5)">Detail</a></td>
+</tr>
+
+<tr id='ft13.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_00: 测试路由目的地端点-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft13.1')" >
+        fail</a>
+
+    <div id='div_ft13.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft13.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft13.1: https://iotapi.cmft.com/oes/api/v1/address-configs/connection/testing
+{'data': None, 'success': False, 'code': 17020115, 'msg': '路由目的地端点连接失败', 'referInfo': '路由目的地端点连接失败'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_new\test_12_router_destination.py", line 86, in test_00
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":17020115,"msg":"路由目的地端点连接失败","referinfo":"路由目的地端点连接失败"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft13.2' class='none'>
+    <td class='failCase'><div class='testcase'>test_01: 新增路由目的地端点-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft13.2')" >
+        fail</a>
+
+    <div id='div_ft13.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft13.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft13.2: https://iotapi.cmft.com/oes/api/v1/address-configs
+{'data': None, 'success': False, 'code': 17020115, 'msg': '路由目的地端点连接失败', 'referInfo': '路由目的地端点连接失败'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_new\test_12_router_destination.py", line 118, in test_01
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":17020115,"msg":"路由目的地端点连接失败","referinfo":"路由目的地端点连接失败"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft13.3' class='none'>
+    <td class='failCase'><div class='testcase'>test_02: 修改路由目的地端点-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft13.3')" >
+        fail</a>
+
+    <div id='div_ft13.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft13.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft13.3: https://iotapi.cmft.com/oes/api/v1/address-configs/14280
+{'data': None, 'success': False, 'code': 17020217, 'msg': '查询路由目的地端点信息失败', 'referInfo': '查询路由目的地端点信息失败'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_new\test_12_router_destination.py", line 149, in test_02
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":17020217,"msg":"查询路由目的地端点信息失败","referinfo":"查询路由目的地端点信息失败"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft13.4' class='none'>
+    <td class='failCase'><div class='testcase'>test_03: 获取路由目的地端点-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft13.4')" >
+        fail</a>
+
+    <div id='div_ft13.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft13.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft13.4: https://iotapi.cmft.com/oes/api/v1/address-configs/14280
+{'data': None, 'success': False, 'code': 17020217, 'msg': '查询路由目的地端点信息失败', 'referInfo': '查询路由目的地端点信息失败'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_new\test_12_router_destination.py", line 174, in test_03
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":17020217,"msg":"查询路由目的地端点信息失败","referinfo":"查询路由目的地端点信息失败"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt13.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04: 分页查询路由目的地端点-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt13.5')" >
+        pass</a>
+
+    <div id='div_pt13.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt13.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt13.5: https://iotapi.cmft.com/oes/api/v1/address-configs
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 0, 'content': []}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>test_13_router.Test_Router: 数据路由接口</td>
+    <td>9</td>
+    <td>1</td>
+    <td>8</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c14',9)">Detail</a></td>
+</tr>
+
+<tr id='ft14.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_00: 新增路由实例(边缘端)-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft14.1')" >
+        fail</a>
+
+    <div id='div_ft14.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft14.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft14.1: https://iotapi.cmft.com/oes/api/v1/routers
+{'data': None, 'success': False, 'code': 17020100, 'msg': '无效的路由目的地端点ID', 'referInfo': '无效的路由目的地端点ID'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_new\test_13_router.py", line 103, in test_00
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":17020100,"msg":"无效的路由目的地端点id","referinfo":"无效的路由目的地端点id"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft14.2' class='none'>
+    <td class='failCase'><div class='testcase'>test_00_00: 新增路由实例（云端）-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft14.2')" >
+        fail</a>
+
+    <div id='div_ft14.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft14.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft14.2: https://iotapi.cmft.com/oes/api/v1/routers
+{'data': None, 'success': False, 'code': 17020100, 'msg': '无效的路由目的地端点ID', 'referInfo': '无效的路由目的地端点ID'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_new\test_13_router.py", line 155, in test_00_00
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":17020100,"msg":"无效的路由目的地端点id","referinfo":"无效的路由目的地端点id"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft14.3' class='none'>
+    <td class='failCase'><div class='testcase'>test_01: 获取路由实例-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft14.3')" >
+        fail</a>
+
+    <div id='div_ft14.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft14.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft14.3: https://iotapi.cmft.com/oes/api/v1/routers/11454
+{'data': None, 'success': False, 'code': 17010108, 'msg': '非法的路由实例ID', 'referInfo': '非法的路由实例ID'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_new\test_13_router.py", line 186, in test_01
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":17010108,"msg":"非法的路由实例id","referinfo":"非法的路由实例id"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft14.4' class='none'>
+    <td class='failCase'><div class='testcase'>test_02: 修改路由实例-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft14.4')" >
+        fail</a>
+
+    <div id='div_ft14.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft14.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft14.4: https://iotapi.cmft.com/oes/api/v1/routers/11454
+{'data': None, 'success': False, 'code': 17010108, 'msg': '非法的路由实例ID', 'referInfo': '非法的路由实例ID'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_new\test_13_router.py", line 211, in test_02
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":17010108,"msg":"非法的路由实例id","referinfo":"非法的路由实例id"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt14.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03: 分页查询路由实例-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt14.5')" >
+        pass</a>
+
+    <div id='div_pt14.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt14.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt14.5: https://iotapi.cmft.com/oes/api/v1/routers
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 0, 'content': []}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft14.6' class='none'>
+    <td class='failCase'><div class='testcase'>test_04: 禁用路由实例-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft14.6')" >
+        fail</a>
+
+    <div id='div_ft14.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft14.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft14.6: https://iotapi.cmft.com/oes/api/v1/routers/11454/disable
+{'data': None, 'success': False, 'code': 17010108, 'msg': '非法的路由实例ID', 'referInfo': '非法的路由实例ID'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_new\test_13_router.py", line 258, in test_04
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":17010108,"msg":"非法的路由实例id","referinfo":"非法的路由实例id"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft14.7' class='none'>
+    <td class='failCase'><div class='testcase'>test_05: 启用路由实例-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft14.7')" >
+        fail</a>
+
+    <div id='div_ft14.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft14.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft14.7: https://iotapi.cmft.com/oes/api/v1/routers/11454/enable
+{'data': None, 'success': False, 'code': 17010108, 'msg': '非法的路由实例ID', 'referInfo': '非法的路由实例ID'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_new\test_13_router.py", line 283, in test_05
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":17010108,"msg":"非法的路由实例id","referinfo":"非法的路由实例id"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft14.8' class='none'>
+    <td class='failCase'><div class='testcase'>test_06: 批量禁用路由实例-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft14.8')" >
+        fail</a>
+
+    <div id='div_ft14.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft14.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft14.8: https://iotapi.cmft.com/oes/api/v1/routers/disable
+{'data': None, 'success': False, 'code': 17010117, 'msg': '非法的云端路由实例ID数组参数', 'referInfo': '非法的云端路由实例ID数组参数'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_new\test_13_router.py", line 309, in test_06
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":17010117,"msg":"非法的云端路由实例id数组参数","referinfo":"非法的云端路由实例id数组参数"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft14.9' class='none'>
+    <td class='failCase'><div class='testcase'>test_07: 批量启用路由实例-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft14.9')" >
+        fail</a>
+
+    <div id='div_ft14.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft14.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft14.9: https://iotapi.cmft.com/oes/api/v1/routers/enable
+{'data': None, 'success': False, 'code': 17010117, 'msg': '非法的云端路由实例ID数组参数', 'referInfo': '非法的云端路由实例ID数组参数'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_new\test_13_router.py", line 336, in test_07
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":17010117,"msg":"非法的云端路由实例id数组参数","referinfo":"非法的云端路由实例id数组参数"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_14_deploy_router.Test_RouterDeploy: 数据路由部署接口</td>
+    <td>3</td>
+    <td>3</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c15',3)">Detail</a></td>
+</tr>
+
+<tr id='pt15.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_00: 分配路由实例至某边缘节点-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt15.1')" >
+        pass</a>
+
+    <div id='div_pt15.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt15.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt15.1: https://iotapi.cmft.com/oes/api/v1/routers/gateway/association
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt15.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01: 分页查询已分配至边缘节点的路由实例-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt15.2')" >
+        pass</a>
+
+    <div id='div_pt15.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt15.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt15.2: https://iotapi.cmft.com/oes/api/v1/routers/gateway/association
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 0, 'content': []}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt15.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03: 分页查询未分配的路由实例信息-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt15.3')" >
+        pass</a>
+
+    <div id='div_pt15.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt15.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt15.3: https://iotapi.cmft.com/oes/api/v1/routers/gateway/unassignedclient
+{'code': 0, 'data': {'totalPage': 1, 'pageSize': 10, 'currentPage': 1, 'totalCount': 0, 'content': []}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>test_15_rules.Test_Rules: 规则引擎接口</td>
+    <td>4</td>
+    <td>1</td>
+    <td>3</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c16',4)">Detail</a></td>
+</tr>
+
+<tr id='ft16.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_00: 新建规则-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft16.1')" >
+        fail</a>
+
+    <div id='div_ft16.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft16.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft16.1: https://iotapi.cmft.com/oes/api/v1/rules
+{'data': None, 'success': False, 'code': 10141153, 'msg': None}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_new\test_15_rules.py", line 103, in test_00
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":10141153,"msg":null}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft16.2' class='none'>
+    <td class='failCase'><div class='testcase'>test_01: 获取详细规则信息-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft16.2')" >
+        fail</a>
+
+    <div id='div_ft16.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft16.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft16.2: https://iotapi.cmft.com/oes/api/v1/rules/8ae48e9673e145580173ec378c960044
+{'data': None, 'success': False, 'code': 18001314, 'msg': '规则不存在'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_new\test_15_rules.py", line 135, in test_01
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":18001314,"msg":"规则不存在"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft16.3' class='none'>
+    <td class='failCase'><div class='testcase'>test_02: 更新规则-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft16.3')" >
+        fail</a>
+
+    <div id='div_ft16.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft16.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft16.3: https://iotapi.cmft.com/oes/api/v1/rules/8ae48e9673e145580173ec378c960044
+{'data': None, 'success': False, 'code': 18001314, 'msg': '规则不存在'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_new\test_15_rules.py", line 179, in test_02
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":18001314,"msg":"规则不存在"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt16.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03: 分页查询规则-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt16.4')" >
+        pass</a>
+
+    <div id='div_pt16.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt16.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt16.4: https://iotapi.cmft.com/oes/api/v1/rules
+{'code': 0, 'data': {'totalPage': 0, 'pageSize': 10, 'currentPage': 1, 'totalCount': 0, 'content': []}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>test_16_rule_deploy.Test_RuleDeploy: 规则引擎部署接口</td>
+    <td>3</td>
+    <td>2</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c17',3)">Detail</a></td>
+</tr>
+
+<tr id='ft17.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_00: 批量分配规则到网关-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft17.1')" >
+        fail</a>
+
+    <div id='div_ft17.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft17.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft17.1: https://iotapi.cmft.com/oes/api/v1/rules/gateway/allocate/multi
+{'data': None, 'success': False, 'code': 18001314, 'msg': '规则不存在'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_new\test_16_rule_deploy.py", line 86, in test_00
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":18001314,"msg":"规则不存在"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt17.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01: 分页查询已分配的规则-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt17.2')" >
+        pass</a>
+
+    <div id='div_pt17.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt17.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt17.2: https://iotapi.cmft.com/oes/api/v1/rules/gateway/allocated
+{'code': 0, 'data': {'totalPage': 0, 'pageSize': 10, 'currentPage': 1, 'totalCount': 0, 'content': []}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt17.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02: 分页查询未分配规则-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt17.3')" >
+        pass</a>
+
+    <div id='div_pt17.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt17.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt17.3: https://iotapi.cmft.com/oes/api/v1/rules/gateway/unallocated
+{'code': 0, 'data': {'totalPage': 0, 'pageSize': 10, 'currentPage': 1, 'totalCount': 0, 'content': []}, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>test_17_delete_template.Test_Delete: 删除+解除分配接口</td>
+    <td>12</td>
+    <td>7</td>
+    <td>5</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c18',12)">Detail</a></td>
+</tr>
+
+<tr id='ft18.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_00: 解除分配的规则-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft18.1')" >
+        fail</a>
+
+    <div id='div_ft18.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft18.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft18.1: https://iotapi.cmft.com/oes/api/v1/rules/gateway/deallocate
+{'data': None, 'success': False, 'code': 18001314, 'msg': '规则不存在'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_new\test_17_delete_template.py", line 87, in test_00
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":18001314,"msg":"规则不存在"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft18.2' class='none'>
+    <td class='failCase'><div class='testcase'>test_01: 移除某个已分配的路由实例-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft18.2')" >
+        fail</a>
+
+    <div id='div_ft18.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft18.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft18.2: https://iotapi.cmft.com/oes/api/v1/routers/gateway/disassociation/None/10002216
+{'data': None, 'success': False, 'code': 17010302, 'msg': '边缘网关移除已关联路由实例失败', 'referInfo': '边缘网关移除已关联路由实例失败'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_new\test_17_delete_template.py", line 113, in test_01
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":17010302,"msg":"边缘网关移除已关联路由实例失败","referinfo":"边缘网关移除已关联路由实例失败"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt18.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02: 根据BACnet属性ID删除BACnet物模型草稿-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt18.3')" >
+        pass</a>
+
+    <div id='div_pt18.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt18.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt18.3: https://iotapi.cmft.com/oes/api/v1/products/protocol/7/property/draft/11430
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt18.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03: 删除边缘节点设备关联-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt18.4')" >
+        pass</a>
+
+    <div id='div_pt18.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt18.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt18.4: https://iotapi.cmft.com/oes/api/v1/devices/gateway/associations
+{'code': 0, 'data': 1, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft18.5' class='none'>
+    <td class='failCase'><div class='testcase'>test_04: 通过id删除规则-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft18.5')" >
+        fail</a>
+
+    <div id='div_ft18.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft18.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft18.5: https://iotapi.cmft.com/oes/api/v1/rules/8ae48e9673e145580173ec378c960044
+{'data': None, 'success': False, 'code': 18001314, 'msg': '规则不存在'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_new\test_17_delete_template.py", line 193, in test_04
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":18001314,"msg":"规则不存在"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft18.6' class='none'>
+    <td class='failCase'><div class='testcase'>test_05: 删除路由实例（边缘端）-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft18.6')" >
+        fail</a>
+
+    <div id='div_ft18.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft18.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft18.6: https://iotapi.cmft.com/oes/api/v1/routers/None
+{'data': None, 'success': False, 'code': 10000113, 'msg': '参数(id:None)错误', 'referInfo': 'Failed to convert value of type \'java.lang.String\' to required type \'java.lang.Integer\'; nested exception is java.lang.NumberFormatException: For input string: "None"'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_new\test_17_delete_template.py", line 218, in test_05
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":10000113,"msg":"参数(id:none)错误","referinfo":"failed to convert value of type \'java.lang.string\' to required type \'java.lang.integer\'; nested exception is java.lang.numberformatexception: for input string: \\"none\\""}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft18.7' class='none'>
+    <td class='failCase'><div class='testcase'>test_05_00: 删除路由实例（云端）-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft18.7')" >
+        fail</a>
+
+    <div id='div_ft18.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft18.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft18.7: https://iotapi.cmft.com/oes/api/v1/routers/11454
+{'data': None, 'success': False, 'code': 17010108, 'msg': '非法的路由实例ID', 'referInfo': '非法的路由实例ID'}
+Traceback (most recent call last):
+  File "E:\work_code\openapi\openapi_python\case\ecp_new\test_17_delete_template.py", line 243, in test_05_00
+    self.assertIn('true', r.text.lower())
+AssertionError: 'true' not found in '{"data":null,"success":false,"code":17010108,"msg":"非法的路由实例id","referinfo":"非法的路由实例id"}'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt18.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_06: 删除路由目的地端点-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt18.8')" >
+        pass</a>
+
+    <div id='div_pt18.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt18.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt18.8: https://iotapi.cmft.com/oes/api/v1/address-configs/14280
+{'code': 0, 'data': 'true', 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt18.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_07: 删除分组-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt18.9')" >
+        pass</a>
+
+    <div id='div_pt18.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt18.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt18.9: https://iotapi.cmft.com/oes/api/v1/label
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt18.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_08: 删除边缘终端-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt18.10')" >
+        pass</a>
+
+    <div id='div_pt18.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt18.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt18.10: https://iotapi.cmft.com/oes/api/v1/devices/10002217
+{'code': 0, 'data': '', 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt18.11' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_09: 删除产品-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt18.11')" >
+        pass</a>
+
+    <div id='div_pt18.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt18.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt18.11: https://iotapi.cmft.com/oes/api/v1/products/100127
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt18.12' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_10: 删除边缘节点-成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt18.12')" >
+        pass</a>
+
+    <div id='div_pt18.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt18.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt18.12: https://iotapi.cmft.com/oes/api/v1/edgenode/pro/10002216
+{'code': 0, 'data': None, 'msg': '成功', 'referInfo': None, 'success': True}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>103</td>
+    <td>82</td>
+    <td>21</td>
+    <td>0</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>
