@@ -1,3 +1,4 @@
+# coding:utf-8
 from urllib import parse
 import unittest
 import time
@@ -9,7 +10,8 @@ import json
 import yaml
 import random
 from assist import getSignature
-import global_environment
+from config import global_environment
+
 
 config_file = global_environment.configFilePath()
 assist_file = global_environment.assistFilePath()
@@ -74,8 +76,18 @@ class Test_DmpProduct(unittest.TestCase):
         # 断言success字段中的值
         result = r.json()
 
-        id = result.get('data').get('id')
-        masterKey = result.get('data').get('masterKey')
+        try:
+            id = result.get('data').get('id')
+            masterKey = result.get('data').get('masterKey')
+            with open(assist_file, 'a') as f:
+                _data = {
+                    "dmp_productId": id,
+                    "dmp_productSecret": masterKey
+                }
+                yaml.dump(_data, f)
+        except Exception:
+            pass
+
         print(r.url)
         print(r.json())
         self.assertIn('true', r.text)
@@ -83,12 +95,7 @@ class Test_DmpProduct(unittest.TestCase):
         logging.info(f"case:创建产品-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头："
                      f"{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
 
-        with open(assist_file, 'a') as f:
-            _data = {
-                "dmp_productId": id,
-                "dmp_productSecret": masterKey
-            }
-            yaml.dump(_data, f)
+
 
     def test_01(self):  # 执行逻辑::设置入参，参数正确填写
         """根据产品ID查询产品信息-成功"""
@@ -175,7 +182,6 @@ class Test_DmpProduct(unittest.TestCase):
         logging.info(
             f"case:更改产品-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n"
             f"请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
-
 
 
 if __name__ == '__main__':

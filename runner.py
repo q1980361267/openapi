@@ -7,7 +7,7 @@ from unittest import runner
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-s', '--suite', help='input the suite name')
+parser.add_argument('-s', '--suite', help='select the suite: dmp, ecp_new')
 parser.add_argument('-m', '--mode', help='select the mode: report, noReport')
 args = parser.parse_args()
 

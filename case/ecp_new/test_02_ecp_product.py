@@ -1,3 +1,4 @@
+# coding:utf-8
 from urllib import parse
 import unittest
 import time
@@ -11,7 +12,7 @@ import yaml
 from assist import getSignature
 
 
-import global_environment
+from config import global_environment
 
 config_file = global_environment.configFilePath()
 assist_file = global_environment.assistFilePath()

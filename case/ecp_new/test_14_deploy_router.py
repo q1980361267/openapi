@@ -1,4 +1,4 @@
-# coding:gbk
+# coding:utf-8
 from urllib import parse
 import unittest
 import time
@@ -10,7 +10,7 @@ import random
 import yaml
 
 from assist import getSignature
-import global_environment
+from config import global_environment
 
 config_file = global_environment.configFilePath()
 assist_file = global_environment.assistFilePath()
@@ -29,19 +29,19 @@ with open(config_file, 'r') as f:
 #     id_pro = data.get('ecp_productId')
 
 class Test_RouterDeploy(unittest.TestCase):
-    """Êı¾İÂ·ÓÉ²¿Êğ½Ó¿Ú"""
+    """æ•°æ®è·¯ç”±éƒ¨ç½²æ¥å£"""
 
-    # ÀàÖ´ĞĞÇ°³õÊ¼
+    # ç±»æ‰§è¡Œå‰åˆå§‹
     @classmethod
     def setUpClass(cls):
-        # ¹Ø±ÕhttpsµÄÖ¤ÊéĞ£Ñé
+        # å…³é—­httpsçš„è¯ä¹¦æ ¡éªŒ
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
     @classmethod
     def tearDownClass(cls):
         pass
 
-    # ·½·¨Ç°³õÊ¼
+    # æ–¹æ³•å‰åˆå§‹
     def setUp(self):
         # self.id_pro = id_pro
         # self.id_gateway = "10082804"
@@ -57,8 +57,8 @@ class Test_RouterDeploy(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_00(self):  # Ö´ĞĞÂß¼­::ÉèÖÃÈë²Î£¬²ÎÊıÕıÈ·ÌîĞ´
-        """·ÖÅäÂ·ÓÉÊµÀıÖÁÄ³±ßÔµ½Úµã-³É¹¦"""
+    def test_00(self):  # æ‰§è¡Œé€»è¾‘::è®¾ç½®å…¥å‚ï¼Œå‚æ•°æ­£ç¡®å¡«å†™
+        """åˆ†é…è·¯ç”±å®ä¾‹è‡³æŸè¾¹ç¼˜èŠ‚ç‚¹-æˆåŠŸ"""
         with open(assist_file, 'r') as f:
             data = yaml.load(f, Loader=yaml.FullLoader)
             id_dev = data.get('ecp_node_deviceId')
@@ -78,16 +78,16 @@ class Test_RouterDeploy(unittest.TestCase):
         params['signature'] = signature
         r = requests.post(url=_url, params=params, data=json.dumps(body), headers=self.headers, verify=False)
         # success = r.json()['success']
-        # ¶ÔÏìÓ¦µÄ½á¹û½øĞĞ¶ÏÑÔ
+        # å¯¹å“åº”çš„ç»“æœè¿›è¡Œæ–­è¨€
         print(_url)
         print(r.json())
         self.assertIn('true', r.text.lower())
 
-        logging.info(f"case:·ÖÅäÂ·ÓÉÊµÀıÖÁÄ³±ßÔµ½Úµã-³É¹¦\nÇëÇóµØÖ·£º{r.url}\tÇëÇó·½Ê½:{r.request.method}\n"
-                     f"ÇëÇóÍ·£º{r.request.headers}\nÇëÇóÕıÎÄ£º{parse.unquote(r.request.body)}\nÏìÓ¦Í·£º{r.headers}\nÏìÓ¦ÕıÎÄ£º{r.text}\n")
+        logging.info(f"case:åˆ†é…è·¯ç”±å®ä¾‹è‡³æŸè¾¹ç¼˜èŠ‚ç‚¹-æˆåŠŸ\nè¯·æ±‚åœ°å€ï¼š{r.url}\tè¯·æ±‚æ–¹å¼:{r.request.method}\n"
+                     f"è¯·æ±‚å¤´ï¼š{r.request.headers}\nè¯·æ±‚æ­£æ–‡ï¼š{parse.unquote(r.request.body)}\nå“åº”å¤´ï¼š{r.headers}\nå“åº”æ­£æ–‡ï¼š{r.text}\n")
 
-    def test_01(self):  # Ö´ĞĞÂß¼­::ÉèÖÃÈë²Î£¬²ÎÊıÕıÈ·ÌîĞ´
-        """·ÖÒ³²éÑ¯ÒÑ·ÖÅäÖÁ±ßÔµ½ÚµãµÄÂ·ÓÉÊµÀı-³É¹¦"""
+    def test_01(self):  # æ‰§è¡Œé€»è¾‘::è®¾ç½®å…¥å‚ï¼Œå‚æ•°æ­£ç¡®å¡«å†™
+        """åˆ†é¡µæŸ¥è¯¢å·²åˆ†é…è‡³è¾¹ç¼˜èŠ‚ç‚¹çš„è·¯ç”±å®ä¾‹-æˆåŠŸ"""
         with open(assist_file, 'r') as f:
             data = yaml.load(f, Loader=yaml.FullLoader)
             id_dev = data.get('ecp_node_deviceId')
@@ -106,16 +106,16 @@ class Test_RouterDeploy(unittest.TestCase):
         params['signature'] = signature
         r = requests.get(url=_url, params=params, data=json.dumps(body), headers=self.headers, verify=False)
         # success = r.json()['success']
-        # ¶ÔÏìÓ¦µÄ½á¹û½øĞĞ¶ÏÑÔ
+        # å¯¹å“åº”çš„ç»“æœè¿›è¡Œæ–­è¨€
         print(_url)
         print(r.json())
         self.assertIn('true', r.text.lower())
 
-        logging.info(f"case:·ÖÒ³²éÑ¯ÒÑ·ÖÅäÖÁ±ßÔµ½ÚµãµÄÂ·ÓÉÊµÀı-³É¹¦\nÇëÇóµØÖ·£º{r.url}\tÇëÇó·½Ê½:{r.request.method}\n"
-                     f"ÇëÇóÍ·£º{r.request.headers}\nÇëÇóÕıÎÄ£º{parse.unquote(r.request.body)}\nÏìÓ¦Í·£º{r.headers}\nÏìÓ¦ÕıÎÄ£º{r.text}\n")
+        logging.info(f"case:åˆ†é¡µæŸ¥è¯¢å·²åˆ†é…è‡³è¾¹ç¼˜èŠ‚ç‚¹çš„è·¯ç”±å®ä¾‹-æˆåŠŸ\nè¯·æ±‚åœ°å€ï¼š{r.url}\tè¯·æ±‚æ–¹å¼:{r.request.method}\n"
+                     f"è¯·æ±‚å¤´ï¼š{r.request.headers}\nè¯·æ±‚æ­£æ–‡ï¼š{parse.unquote(r.request.body)}\nå“åº”å¤´ï¼š{r.headers}\nå“åº”æ­£æ–‡ï¼š{r.text}\n")
 
-    def test_03(self):  # Ö´ĞĞÂß¼­::ÉèÖÃÈë²Î£¬²ÎÊıÕıÈ·ÌîĞ´
-        """·ÖÒ³²éÑ¯Î´·ÖÅäµÄÂ·ÓÉÊµÀıĞÅÏ¢-³É¹¦"""
+    def test_03(self):  # æ‰§è¡Œé€»è¾‘::è®¾ç½®å…¥å‚ï¼Œå‚æ•°æ­£ç¡®å¡«å†™
+        """åˆ†é¡µæŸ¥è¯¢æœªåˆ†é…çš„è·¯ç”±å®ä¾‹ä¿¡æ¯-æˆåŠŸ"""
         with open(assist_file, 'r') as f:
             data = yaml.load(f, Loader=yaml.FullLoader)
             id_dev = data.get('ecp_node_deviceId')
@@ -134,13 +134,13 @@ class Test_RouterDeploy(unittest.TestCase):
         params['signature'] = signature
         r = requests.get(url=_url, params=params, data=json.dumps(body), headers=self.headers, verify=False)
         # success = r.json()['success']
-        # ¶ÔÏìÓ¦µÄ½á¹û½øĞĞ¶ÏÑÔ
+        # å¯¹å“åº”çš„ç»“æœè¿›è¡Œæ–­è¨€
         print(_url)
         print(r.json())
         self.assertIn('true', r.text.lower())
 
-        logging.info(f"case:·ÖÒ³²éÑ¯Î´·ÖÅäµÄÂ·ÓÉÊµÀıĞÅÏ¢-³É¹¦\nÇëÇóµØÖ·£º{r.url}\tÇëÇó·½Ê½:{r.request.method}\n"
-                     f"ÇëÇóÍ·£º{r.request.headers}\nÇëÇóÕıÎÄ£º{parse.unquote(r.request.body)}\nÏìÓ¦Í·£º{r.headers}\nÏìÓ¦ÕıÎÄ£º{r.text}\n")
+        logging.info(f"case:åˆ†é¡µæŸ¥è¯¢æœªåˆ†é…çš„è·¯ç”±å®ä¾‹ä¿¡æ¯-æˆåŠŸ\nè¯·æ±‚åœ°å€ï¼š{r.url}\tè¯·æ±‚æ–¹å¼:{r.request.method}\n"
+                     f"è¯·æ±‚å¤´ï¼š{r.request.headers}\nè¯·æ±‚æ­£æ–‡ï¼š{parse.unquote(r.request.body)}\nå“åº”å¤´ï¼š{r.headers}\nå“åº”æ­£æ–‡ï¼š{r.text}\n")
 
 
 if __name__ == '__main__':

@@ -1,6 +1,8 @@
 # OPENAPI自动化测试使用说明
 现有的OPENAPI分为DMP和ECP两大类，对应的做成了DMP和ECP的套件。通过调用runner时指定套件名称达到对应的全量OPENAPI的回归
 ## 使用方法
+有两种方法，一种拉取源码，在本地python环境下装好相应的依赖包进行，一种不需要本地有python环境，直接用docker在容器中进行
+### 方法一： 本地python环境运行
 - 步骤一：配置好配置文件config.json
 ```
 {
@@ -80,6 +82,28 @@ table： mysql中对应数据库中的表
 python runner.py -s dmp -m report
 -s: 套件名称，可选值：dmp、ecp_new
 -m: 运行模式， 可选值：report, noReport
+```
+### 方法二： docker中运行
+- 步骤一： 构建镜像
+```
+docker build -t="imagename" .
+
+Dockerfile在项目文件下
+```
+- 步骤二： 运行容器
+```
+docker run -it -v $PWD\\config:/auto_openapi/config \  
+-v $PWD\\result:/auto_openapi/result 70833c3048ac bash
+
+把项目文件下的目录config和result挂载到了镜像中，这样方便后续
+配置和查看，也可以不挂载，直接在容器里面修改、查看文件
+
+```
+- 步骤三： 容器中执行OPENAPI自动化测试套件
+```
+python runner.py -s dmp -m report  
+
+可以用-h查看对应的参数含义，执行的结果会输出在result文件夹下面
 ```
 
 - 说明：

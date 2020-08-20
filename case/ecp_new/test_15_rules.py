@@ -11,7 +11,7 @@ import yaml
 
 from assist import getSignature
 
-import global_environment
+from config import global_environment
 
 config_file = global_environment.configFilePath()
 assist_file = global_environment.assistFilePath()
