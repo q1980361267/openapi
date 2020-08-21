@@ -285,33 +285,9 @@ class Test_Router(unittest.TestCase):
         logging.info(f"case:启用路由实例-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n"
                      f"请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
 
+
+
     def test_06(self):  # 执行逻辑::设置入参，参数正确填写
-        """批量禁用路由实例-成功"""
-        with open(assist_file, 'r') as f:
-            data = yaml.load(f, Loader=yaml.FullLoader)
-            id_router = data.get('router_id')
-
-        _url = url + '/routers/disable'
-        params = {
-            'accessKeyId': self.accessKey,
-            'signatureNonce': self.signatureNonce
-        }
-        body = {
-            "list": [id_router]
-        }
-        signature = getSignature.get_signature(params, body, self.accessKeySecret, 'PUT')
-        params['signature'] = signature
-        r = requests.put(url=_url, params=params, data=json.dumps(body), headers=self.headers, verify=False)
-        # success = r.json()['success']
-        # 对响应的结果进行断言
-        print(_url)
-        print(r.json())
-        self.assertIn('true', r.text.lower())
-
-        logging.info(f"case:批量禁用路由实例-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n"
-                     f"请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
-
-    def test_07(self):  # 执行逻辑::设置入参，参数正确填写
         """批量启用路由实例-成功"""
         with open(assist_file, 'r') as f:
             data = yaml.load(f, Loader=yaml.FullLoader)
@@ -338,6 +314,31 @@ class Test_Router(unittest.TestCase):
         logging.info(f"case:批量启用路由实例-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n"
                      f"请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
 
+    def test_07(self):  # 执行逻辑::设置入参，参数正确填写
+        """批量禁用路由实例-成功"""
+        with open(assist_file, 'r') as f:
+            data = yaml.load(f, Loader=yaml.FullLoader)
+            id_router = data.get('router_id')
+
+        _url = url + '/routers/disable'
+        params = {
+            'accessKeyId': self.accessKey,
+            'signatureNonce': self.signatureNonce
+        }
+        body = {
+            "list": [id_router]
+        }
+        signature = getSignature.get_signature(params, body, self.accessKeySecret, 'PUT')
+        params['signature'] = signature
+        r = requests.put(url=_url, params=params, data=json.dumps(body), headers=self.headers, verify=False)
+        # success = r.json()['success']
+        # 对响应的结果进行断言
+        print(_url)
+        print(r.json())
+        self.assertIn('true', r.text.lower())
+
+        logging.info(f"case:批量禁用路由实例-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n"
+                     f"请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
 
 if __name__ == '__main__':
     unittest.main()
