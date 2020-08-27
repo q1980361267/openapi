@@ -90,6 +90,109 @@ class Test_Channel(unittest.TestCase):
             }
             yaml.dump(_data, f)
 
+    def test_00_00(self):  # 执行逻辑::设置入参，参数改变
+        """创建Modbus通道-成功"""
+        with open(assist_file, 'r') as f:
+            data = yaml.load(f, Loader=yaml.FullLoader)
+            id_dev = data.get('ecp_node_deviceId')
+
+        _url = self.url + '/gateway/channels'
+
+        params = {
+            'accessKeyId': self.accessKey,
+            'signatureNonce': self.signatureNonce,
+            'gatewayId': id_dev
+        }
+        body = {
+            "name": "name_" + ''.join(random.sample('12345abcde', 5)),
+            "model": "0",
+            "serialPort": int(time.time()) * 1000,
+            "baudRate": 1200,
+            "dataBits": 8,
+            "checkBits": 0,
+            "stopBits": 2
+
+        }
+        signature = getSignature.get_signature(params, body, self.accessKeySecret, 'POST')
+        params['signature'] = signature
+        r = requests.post(url=_url, params=params, data=json.dumps(body), headers=self.headers, verify=False)
+        # success = r.json()['success']
+        # 断言success字段中的值
+        try:
+            result = r.json()
+            id = result.get('data').get('id')
+            with open(assist_file, 'a') as f:
+                _data = {
+                    "channel_id_modbus": id
+                }
+                yaml.dump(_data, f)
+        except Exception:
+            pass
+        print(_url)
+        print(r.json())
+        self.assertIn('true', r.text.lower())
+
+        logging.info(
+            f"case:创建Modbus通道-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n"
+            f"请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
+
+    def test_00_01(self):  # 执行逻辑::设置入参，参数改变
+        """创建OPCUA通道-成功"""
+        with open(assist_file, 'r') as f:
+            data = yaml.load(f, Loader=yaml.FullLoader)
+            id_dev = data.get('ecp_node_deviceId')
+
+        _url = self.url + '/device/5/channel'
+
+        params = {
+            'accessKeyId': self.accessKey,
+            'signatureNonce': self.signatureNonce,
+            'gatewayId': id_dev
+        }
+        body = {
+            "name": "name_" + ''.join(random.sample('12345abcde', 5)),
+            "model": "0",
+            "serialPort": int(time.time()) * 1000,
+            "baudRate": 1200,
+            "dataBits": 8,
+            "checkBits": 0,
+            "stopBits": 2
+
+        }
+        body = {
+            "name": "name_" + ''.join(random.sample('12345abcde', 5)),
+            "userName": "test",
+            "password": "testt01",
+            "gatewayid": id_dev,
+            "secureMode": 0,
+            "securePolicy": 0,
+            "timeout": 100,
+            "endpoint": "opc.tcp://localhost"
+        }
+
+        signature = getSignature.get_signature(params, body, self.accessKeySecret, 'POST')
+        params['signature'] = signature
+        r = requests.post(url=_url, params=params, data=json.dumps(body), headers=self.headers, verify=False)
+        # success = r.json()['success']
+        # 断言success字段中的值
+        try:
+            result = r.json()
+            id = result.get('data').get('id')
+            with open(assist_file, 'a') as f:
+                _data = {
+                    "channel_id_opcua": id
+                }
+                yaml.dump(_data, f)
+        except Exception:
+            pass
+        print(_url)
+        print(r.json())
+        self.assertIn('true', r.text.lower())
+
+        logging.info(
+            f"case:创建OPCUA通道-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n"
+            f"请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
+
     def test_01(self):  # 执行逻辑::设置入参，参数正确填写
         """修改BACnet通道-成功"""
         with open(assist_file, 'r') as f:

@@ -10,7 +10,7 @@ from assist.get_color import color
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-with open('../test_config.json') as f:
+with open('../config/test_config.json') as f:
     f_json = json.load(f)
     addr = f_json.get('baseURL')
     accessKeyId = f_json.get('accessKeyId')
@@ -140,7 +140,7 @@ def check_node_id():
         id = content[0].get('id')
         return id
     except Exception:
-        pass
+        raise
 
 
 def delete_node(id):
@@ -357,42 +357,42 @@ if __name__ == '__main__':
             break
     logging.info(color.cyan('删除规则完成'))
 
-    while True:
-        router_id = check_router_id()
-        if router_id:
-            delete_router(router_id)
-        else:
-            break
-    logging.info(color.cyan('删除路由实例完成'))
-
-    while True:
-        destination_id = check_destination_id()
-        if destination_id:
-            delete_destination(destination_id)
-        else:
-            break
-    logging.info(color.cyan('删除目的地完成'))
-
-    while True:
-        mail_id = check_mail_id()
-        if mail_id:
-            delete_router(mail_id)
-        else:
-            break
-    logging.info(color.cyan('删除邮件服务器完成'))
-
-    while True:
-        template_id = check_template_id()
-        if template_id:
-            delete_template(template_id)
-        else:
-            break
-    logging.info(color.cyan('删除邮件模板完成'))
-
-    while True:
-        node_id = check_node_id()
-        if node_id:
-            delete_node(node_id)
-        else:
-            break
-    logging.info(color.cyan('删除节点完成'))
+    # while True:
+    #     router_id = check_router_id()
+    #     if router_id:
+    #         delete_router(router_id)
+    #     else:
+    #         break
+    # logging.info(color.cyan('删除路由实例完成'))
+    #
+    # while True:
+    #     destination_id = check_destination_id()
+    #     if destination_id:
+    #         delete_destination(destination_id)
+    #     else:
+    #         break
+    # logging.info(color.cyan('删除目的地完成'))
+    #
+    # while True:
+    #     mail_id = check_mail_id()
+    #     if mail_id:
+    #         delete_router(mail_id)
+    #     else:
+    #         break
+    # logging.info(color.cyan('删除邮件服务器完成'))
+    #
+    # while True:
+    #     template_id = check_template_id()
+    #     if template_id:
+    #         delete_template(template_id)
+    #     else:
+    #         break
+    # logging.info(color.cyan('删除邮件模板完成'))
+    #
+    # while True:
+    #     node_id = check_node_id()
+    #     if node_id:
+    #         delete_node(node_id)
+    #     else:
+    #         break
+    # logging.info(color.cyan('删除节点完成'))

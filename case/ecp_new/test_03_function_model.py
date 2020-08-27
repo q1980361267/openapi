@@ -24,9 +24,6 @@ with open(config_file, 'r') as f:
     accessSecret = f_json.get("secret")
 
 
-
-
-
 class Test_FunctionModel(unittest.TestCase):
     """物模型接口"""
 
@@ -122,9 +119,94 @@ class Test_FunctionModel(unittest.TestCase):
         self.assertIn('true', r.text.lower())
 
         logging.info(
-            f"case:分页查询BACnet属性（modbus）-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n"
+            f"case:创建BACnet物模型草稿-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n"
             f"请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
 
+    def test_01_00(self):  # 执行逻辑::设置入参，入参修改
+        """新增物模型草稿（mqtt）-成功"""
+        with open(assist_file, 'r') as f:
+            data = yaml.load(f, Loader=yaml.FullLoader)
+            id_pro = data.get('ecp_productId_mqtt')
+
+        _url = self.url + '/products/{}/properties/draft'.format(id_pro)
+        params = {
+            'accessKeyId': self.accessKey,
+            'signatureNonce': self.signatureNonce
+        }
+        body = {
+            "productId": id_pro,
+            "name": "name_" + ''.join(random.sample('123450abcdef', 5)),
+            "identifier": "identifier_" + ''.join(random.sample('123450abcdef', 5)),
+            "type": 1,
+            "unit": "1",
+            "special": {
+                "length": 2048
+            },
+            "accessMode": 2,
+        }
+
+        signature = getSignature.get_signature(params, body, self.accessKeySecret, 'POST')
+        params['signature'] = signature
+        r = requests.post(url=_url, params=params, data=json.dumps(body), headers=self.headers, verify=False)
+        # success = r.json()['success']
+        # 断言success字段中的值
+        result = r.json()
+        id_property = result.get('data').get('propertyId')
+        print(_url)
+        print(r.json())
+        self.assertIn('true', r.text.lower())
+
+        logging.info(
+            f"case:新增物模型草稿（mqtt）-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n"
+            f"请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
+
+    def test_01_01(self):  # 执行逻辑::设置入参，入参修改
+        """新增物模型草稿（modbus）-成功"""
+        with open(assist_file, 'r') as f:
+            data = yaml.load(f, Loader=yaml.FullLoader)
+            id_pro = data.get('ecp_productId_modbus')
+
+        _url = self.url + '/products/{}/properties/draft/modbus'.format(id_pro)
+        params = {
+            'accessKeyId': self.accessKey,
+            'signatureNonce': self.signatureNonce
+        }
+        body = {
+            "name": "name_" + ''.join(random.sample('123450abcdef', 5)),
+            "identifier": "identifier_" + ''.join(random.sample('123450abcdef', 5)),
+            "readFlag": "0x03",
+            "writeFlag": "0x06",
+            "type": 6,
+            "unit": "C",
+            "reportMethod": 1,
+            "registerAddress": "0x0000",
+            "swapByte": 1,
+            "swapOrder": 1,
+            "scalingfactor": 2.0,
+            "registerNumber": 2,
+            "maximum":999,
+            "minimum": -999,
+            "class": 1,
+            "originDataType": 12,
+            "special": {
+                "step": 1
+            }
+
+        }
+
+        signature = getSignature.get_signature(params, body, self.accessKeySecret, 'POST')
+        params['signature'] = signature
+        r = requests.post(url=_url, params=params, data=json.dumps(body), headers=self.headers, verify=False)
+        # success = r.json()['success']
+        # 断言success字段中的值
+        result = r.json()
+        print(_url)
+        print(r.json())
+        self.assertIn('true', r.text.lower())
+
+        logging.info(
+            f"case:新增物模型草稿（modbus）-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n"
+            f"请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
 
     def test_02(self):  # 执行逻辑::设置入参，参数正确填写
         """根据BACnet产品ID查询物模型草稿（bacnet）-成功"""
@@ -207,7 +289,6 @@ class Test_FunctionModel(unittest.TestCase):
             f"case:更新BACnet物模草稿-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n"
             f"请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
 
-
     def test_04(self):  # 执行逻辑::设置入参，参数正确填写
         """根据BACnet产品ID发布物模型草稿（bacnet）-成功"""
         with open(assist_file, 'r') as f:
@@ -265,7 +346,6 @@ class Test_FunctionModel(unittest.TestCase):
         logging.info(
             f"case:分页查询BACnet物模型草稿-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n"
             f"请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
-
 
     def test_06(self):  # 执行逻辑::设置入参，参数正确填写
         """根据BACnet产品ID查询所有功能（bacnet）-成功"""

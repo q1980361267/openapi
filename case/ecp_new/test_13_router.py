@@ -340,5 +340,6 @@ class Test_Router(unittest.TestCase):
         logging.info(f"case:批量禁用路由实例-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n"
                      f"请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
 
+
 if __name__ == '__main__':
     unittest.main()

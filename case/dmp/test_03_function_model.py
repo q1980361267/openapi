@@ -97,6 +97,55 @@ class Test_FunctionModel(unittest.TestCase):
             }
             yaml.dump(_data, f)
 
+    def test_00_00(self):  # 执行逻辑::设置入参，参数正确填写
+        """新增物模板草稿(modbus)-成功"""
+        with open(assist_file, 'r') as f:
+            data = yaml.load(f, Loader=yaml.FullLoader)
+            id_pro = data.get('dmp_productId_modbus')
+
+        _url = self.url + '/products/{}/properties/draft/modbus'.format(id_pro)
+        params = {
+            'accessKeyId': self.accessKey,
+            'signatureNonce': self.signatureNonce
+        }
+        body = {
+            "name": "name_" + ''.join(random.sample("12345abcde", 5)),
+            "identifier": "identifier_" + ''.join(random.sample("12345abcde", 5)),
+            "readFlag": "0x03",
+            "writeFlag": "0x06",
+            "type": 6,
+            "unit": "C",
+            "reportMethod": 1,
+            "registerAddress": "0x0000",
+            "swapByte": 1,
+            "swapOrder": 1,
+            "scalingFactor": 2.0,
+            "registerNumber": 2,
+            "class": 1,
+            "originDataType": 12,
+            "maximum": 999,
+            "minimum": -999,
+            "special": {
+                "step": 1
+            }
+
+        }
+
+        signature = getSignature.get_signature(params, body, self.accessKeySecret, 'POST')
+        params['signature'] = signature
+        r = requests.post(url=_url, params=params, data=json.dumps(body), headers=self.headers, verify=False)
+        # success = r.json()['success']
+        # 断言success字段中的值
+        result = r.json()
+        id = result.get('data').get('id')
+        print(r.url)
+        print(r.json())
+        self.assertIn('true', r.text.lower())
+
+        logging.info(
+            f"case:新增物模板草稿 -成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n"
+            f"请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
+
     def test_01(self):  # 执行逻辑::设置入参，参数正确填写
         """根据产品ID查询所有物模板草稿 -成功"""
         with open(assist_file, 'r') as f:

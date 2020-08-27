@@ -10,8 +10,12 @@ import json
 import yaml
 
 from assist import getSignature
+from config import global_environment
 
-with open('../../test_config.json', 'r') as f:
+config_file = global_environment.configFilePath()
+assist_file = global_environment.assistFilePath()
+
+with open(config_file, 'r') as f:
     f_json = json.load(f)
     url = f_json.get("baseURL")
     accessKeyId = f_json.get("accessKeyId")
@@ -71,7 +75,6 @@ class Test_CreateNodeProduct(unittest.TestCase):
         logging.info(f"case:创建网关产品-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头："
                      f"{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
 
-
     def test_01(self):  # 执行逻辑::设置入参，参数正确填写
         """异步写命令（bacnet）-成功"""
         params = {
@@ -97,7 +100,6 @@ class Test_CreateNodeProduct(unittest.TestCase):
         self.assertIn('true', r.text)
         logging.info(f"case:创建网关产品-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头："
                      f"{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
-
 
     def test_02(self):  # 执行逻辑::设置入参，参数正确填写
         """异步读命令（bacnet - productID+deviceName）-成功"""
@@ -217,7 +219,7 @@ class Test_CreateNodeProduct(unittest.TestCase):
 
         print(result)
         self.assertIn('true', r.text)
-        logging.info(f"case:创建网关产品-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头："
+        logging.info(f"case:查询异步命令列表（bacnet）-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头："
                      f"{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
 
 

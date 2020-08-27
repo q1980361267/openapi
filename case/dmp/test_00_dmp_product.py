@@ -95,7 +95,176 @@ class Test_DmpProduct(unittest.TestCase):
         logging.info(f"case:创建产品-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头："
                      f"{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
 
+    def test_00_00(self):  # 执行逻辑::设置入参，参数正确填写, 入参改变， protocolType：2 lwm2m
+        """创建产品(LWM2M)-成功"""
+        _url = self.url + '/products'
+        params = {
+            'accessKeyId': self.accessKey,
+            'signatureNonce': self.signatureNonce
+        }
+        body = {
+            "name": "product_" + ''.join(random.sample('12345abcde', 5)),
+            "nodeType": 1,
+            "protocolType": 2,
+            "networkMethod": 1
+        }
 
+        signature = getSignature.get_signature(params, body, self.accessKeySecret, 'POST')
+        params['signature'] = signature
+        # print(signature)
+        r = requests.post(url=_url, params=params, data=json.dumps(body), headers=self.headers, verify=False)
+        # success = r.json()['success']
+        # 断言success字段中的值
+        result = r.json()
+
+        try:
+            id = result.get('data').get('id')
+            masterKey = result.get('data').get('masterKey')
+            with open(assist_file, 'a') as f:
+                _data = {
+                    "dmp_productId_lwm2m": id,
+                    "dmp_productSecret_lwm2m": masterKey
+                }
+                yaml.dump(_data, f)
+        except Exception:
+            pass
+
+        print(r.url)
+        print(r.json())
+        self.assertIn('true', r.text)
+
+        logging.info(f"case:创建产品(LWM2M)-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头："
+                     f"{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
+
+    def test_00_01(self):  # 执行逻辑::设置入参，参数正确填写, 入参改变， protocolType：3 tcp
+        """创建产品(tcp)-成功"""
+        _url = self.url + '/products'
+        params = {
+            'accessKeyId': self.accessKey,
+            'signatureNonce': self.signatureNonce
+        }
+        body = {
+            "name": "product_" + ''.join(random.sample('12345abcde', 5)),
+            "nodeType": 1,
+            "protocolType": 3,
+            "model": 1,
+            "dataFormat": 2,
+            "networkMethod": 1
+        }
+
+        signature = getSignature.get_signature(params, body, self.accessKeySecret, 'POST')
+        params['signature'] = signature
+        # print(signature)
+        r = requests.post(url=_url, params=params, data=json.dumps(body), headers=self.headers, verify=False)
+        # success = r.json()['success']
+        # 断言success字段中的值
+        result = r.json()
+
+        try:
+            id = result.get('data').get('id')
+            masterKey = result.get('data').get('masterKey')
+            with open(assist_file, 'a') as f:
+                _data = {
+                    "dmp_productId_tcp": id,
+                    "dmp_productSecret_tcp": masterKey
+                }
+                yaml.dump(_data, f)
+        except Exception:
+            pass
+
+        print(r.url)
+        print(r.json())
+        self.assertIn('true', r.text)
+
+        logging.info(f"case:创建产品(tcp)-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头："
+                     f"{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
+
+    def test_00_02(self):  # 执行逻辑::设置入参，参数正确填写, 入参改变， protocolType：4 modbus
+        """创建产品(modbus)-成功"""
+        _url = self.url + '/products'
+        params = {
+            'accessKeyId': self.accessKey,
+            'signatureNonce': self.signatureNonce
+        }
+        body = {
+            "name": "product_" + ''.join(random.sample('12345abcde', 5)),
+            "nodeType": 1,
+            "protocolType": 4,
+            "model": 1,
+            "dataFormat": 3,
+            "networkMethod": 1,
+            "authenticationMethod": 1
+        }
+
+        signature = getSignature.get_signature(params, body, self.accessKeySecret, 'POST')
+        params['signature'] = signature
+        # print(signature)
+        r = requests.post(url=_url, params=params, data=json.dumps(body), headers=self.headers, verify=False)
+        # success = r.json()['success']
+        # 断言success字段中的值
+        result = r.json()
+
+        try:
+            id = result.get('data').get('id')
+            masterKey = result.get('data').get('masterKey')
+            with open(assist_file, 'a') as f:
+                _data = {
+                    "dmp_productId_modbus": id,
+                    "dmp_productSecret_modbus": masterKey
+                }
+                yaml.dump(_data, f)
+        except Exception:
+            pass
+
+        print(r.url)
+        print(r.json())
+        self.assertIn('true', r.text)
+
+        logging.info(f"case:创建产品(modbus)-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头："
+                     f"{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
+
+    def test_00_03(self):  # 执行逻辑::设置入参，参数正确填写, 入参改变， protocolType：6 http
+        """创建产品(http)-成功"""
+        _url = self.url + '/products'
+        params = {
+            'accessKeyId': self.accessKey,
+            'signatureNonce': self.signatureNonce
+        }
+        body = {
+            "name": "product_" + ''.join(random.sample('12345abcde', 5)),
+            "nodeType": 1,
+            "protocolType": 6,
+            "model": 1,
+            "networkMethod": 1,
+            "authenticationMethod": 1
+        }
+
+        signature = getSignature.get_signature(params, body, self.accessKeySecret, 'POST')
+        params['signature'] = signature
+        # print(signature)
+        r = requests.post(url=_url, params=params, data=json.dumps(body), headers=self.headers, verify=False)
+        # success = r.json()['success']
+        # 断言success字段中的值
+        result = r.json()
+
+        try:
+            id = result.get('data').get('id')
+            masterKey = result.get('data').get('masterKey')
+            with open(assist_file, 'a') as f:
+                _data = {
+                    "dmp_productId_http": id,
+                    "dmp_productSecret_http": masterKey
+                }
+                yaml.dump(_data, f)
+        except Exception:
+            pass
+
+        print(r.url)
+        print(r.json())
+        self.assertIn('true', r.text)
+
+        logging.info(f"case:创建产品(http)-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头："
+                     f"{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
 
     def test_01(self):  # 执行逻辑::设置入参，参数正确填写
         """根据产品ID查询产品信息-成功"""
