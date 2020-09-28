@@ -2,23 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be0a31b9-6b19-478e-b63e-3941a918747b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/case/ecp_command/test_00_bacnet_command.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/guangzhou_test_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/pre_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/prod_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/xugang_test_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/dmp/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/dmp/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/dmp/test_00_dmp_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/dmp/test_00_dmp_product.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/dmp/test_03_function_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/dmp/test_03_function_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_command/test_00_bacnet_command_async.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_command/test_00_mqtt_command.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_new/test_02_ecp_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_new/test_02_ecp_product.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_new/test_03_function_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_new/test_03_function_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_new/test_06_channel.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_new/test_06_channel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/ecp_new/test_13_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/ecp_new/test_13_router.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/assist_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/assist_config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/global_environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/global_environment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/2020-08-20 09_52_35_log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/2020-08-20 09_52_35_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/2020-08-21 09_13_34_log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/2020-08-21 09_13_34_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/2020-08-21 14_03_10_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/2020-08-21 14_03_10_report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tool_script/delete_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/tool_script/delete_script.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,19 +45,26 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/case/ecp_command" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/config" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings>
+        <option name="useSoftWraps" value="true" />
+      </console-settings>
+    </option>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\work_code\openapi\openapi_python\case\ecp_command" />
       <recent name="E:\work_code\openapi\openapi_python\config" />
+      <recent name="E:\work_code\openapi\openapi_python\case\ecp_command" />
       <recent name="E:\work_code\openapi\openapi_python" />
       <recent name="E:\work_code\openapi\openapi_python\case" />
       <recent name="E:\work_code\openapi\openapi_python\case\ecp_openapi_new_bacnet" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in test_03_function_model.py">
+  <component name="RunManager" selected="Python tests.Unittests in test_00_dmp_product.py">
     <configuration name="delete_script" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="openapi" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -74,6 +78,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tool_script/delete_script.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="global_environment" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="openapi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/config" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/config/global_environment.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -96,6 +121,20 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests in test_00_ecp_node.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="openapi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case/ecp_new" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/case/ecp_new/test_00_ecp_node.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unittests in test_02_ecp_product.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="openapi" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -110,48 +149,20 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_03_function_model.py (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="openapi" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case/dmp" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/case/dmp/test_03_function_model.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests in test_03_function_model.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="openapi" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case/ecp_new" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/case/ecp_new/test_03_function_model.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Python tests.Unittests in test_03_function_model.py" />
-      <item itemvalue="Python tests.Unittests in test_00_dmp_product.py" />
+      <item itemvalue="Python.global_environment" />
       <item itemvalue="Python.delete_script" />
-      <item itemvalue="Python tests.Unittests in test_03_function_model.py (1)" />
+      <item itemvalue="Python tests.Unittests in test_00_dmp_product.py" />
       <item itemvalue="Python tests.Unittests in test_02_ecp_product.py" />
+      <item itemvalue="Python tests.Unittests in test_00_ecp_node.py" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests in test_03_function_model.py" />
-        <item itemvalue="Python tests.Unittests in test_02_ecp_product.py" />
-        <item itemvalue="Python tests.Unittests in test_03_function_model.py (1)" />
         <item itemvalue="Python tests.Unittests in test_00_dmp_product.py" />
+        <item itemvalue="Python tests.Unittests in test_00_ecp_node.py" />
+        <item itemvalue="Python tests.Unittests in test_02_ecp_product.py" />
         <item itemvalue="Python.delete_script" />
+        <item itemvalue="Python.global_environment" />
       </list>
     </recent_temporary>
   </component>
@@ -184,22 +195,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="627" y="257" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1596708822675" />
-    <state width="1894" height="318" key="GridCell.Tab.0.bottom" timestamp="1598435624951">
+    <state width="1894" height="444" key="GridCell.Tab.0.bottom" timestamp="1601326434296">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1894" height="318" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598435624951" />
-    <state width="1894" height="318" key="GridCell.Tab.0.center" timestamp="1598435624949">
+    <state width="1894" height="444" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601326434296" />
+    <state width="1894" height="444" key="GridCell.Tab.0.center" timestamp="1601326434296">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1894" height="318" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598435624949" />
-    <state width="1894" height="318" key="GridCell.Tab.0.left" timestamp="1598435624949">
+    <state width="1894" height="444" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601326434296" />
+    <state width="1894" height="444" key="GridCell.Tab.0.left" timestamp="1601326434296">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1894" height="318" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598435624949" />
-    <state width="1894" height="318" key="GridCell.Tab.0.right" timestamp="1598435624950">
+    <state width="1894" height="444" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601326434296" />
+    <state width="1894" height="444" key="GridCell.Tab.0.right" timestamp="1601326434296">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1894" height="318" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598435624950" />
+    <state width="1894" height="444" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601326434296" />
     <state width="1894" height="321" key="GridCell.Tab.1.bottom" timestamp="1597141611477">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -216,14 +227,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1894" height="321" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597141611477" />
-    <state x="253" y="69" key="SettingsEditor" timestamp="1597893909043">
+    <state x="253" y="69" key="SettingsEditor" timestamp="1598840928121">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="253" y="69" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1597893909043" />
-    <state x="577" y="303" key="com.intellij.ide.util.TipDialog" timestamp="1597999726043">
+    <state x="253" y="69" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1598840928121" />
+    <state x="577" y="303" key="com.intellij.ide.util.TipDialog" timestamp="1600937868777">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="577" y="303" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597999726043" />
+    <state x="577" y="303" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600937868777" />
     <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1597647994428">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

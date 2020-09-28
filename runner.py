@@ -20,8 +20,10 @@ report_file = report_path + time + '_report.html'  # 获得测试报告
 log_file = report_path + time + '_log.txt'  # 获得日志文件
 # filename 日志文件路径 level 日志的级别 format 格式
 
-logging.basicConfig(level=logging.INFO, filename=log_file,
-                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+# logging.basicConfig(level=logging.INFO, filename=log_file,
+#                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
+# logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 # 如果没有这个路径，就创建路径
 if not os.path.exists(report_path):

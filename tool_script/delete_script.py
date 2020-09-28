@@ -10,7 +10,7 @@ from assist.get_color import color
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-with open('../config/test_config.json') as f:
+with open('../config/pre_config.json') as f:
     f_json = json.load(f)
     addr = f_json.get('baseURL')
     accessKeyId = f_json.get('accessKeyId')
@@ -18,7 +18,7 @@ with open('../config/test_config.json') as f:
 
 headers = {
     'Content-Type': 'application/json',
-    'platform': '1'
+    'platform': '3'
 }
 
 
@@ -41,12 +41,12 @@ def check_product_id():
     signature = getSignature.get_signature(params, body, accessKeySecret, 'GET')
     params['signature'] = signature
     r = requests.get(url=url, params=params, data=json.dumps(body), headers=headers, verify=False)
-    content = r.json().get('data').get('content')
     try:
+        content = r.json().get('data').get('content')
         id = content[0].get('id')
         return id
     except Exception:
-        pass
+        print(r.text)
 
 
 def delete_product(id):
@@ -90,12 +90,13 @@ def check_rule_id():
     params['signature'] = signature
     r = requests.get(url=url, params=params, data=json.dumps(body), headers=headers, verify=False)
     # print(r.json())
-    content = r.json().get('data').get('content')
+
     try:
+        content = r.json().get('data').get('content')
         id = content[0].get('id')
         return id
     except Exception:
-        pass
+        print(r.text)
 
 
 def delete_rule(rule_id):

@@ -43,7 +43,8 @@ class Test_DmpProduct(unittest.TestCase):
         self.accessKeySecret = accessSecret
         self.headers = {
             'Content-Type': 'application/json',
-            'platform': '1'
+            'platform': '1',
+            'Debug-On': "1234"
         }
 
         self.signatureNonce = int(time.time() * 1000)
