@@ -6,7 +6,7 @@ def workdir():
     return dir
 
 
-def configFilePath(file_name='prod_config.json'):
+def configFilePath(file_name='zhaoshang_test_config.json'):
     return os.path.join(workdir(), file_name)
 
 
@@ -19,7 +19,7 @@ def routerDestination():
         "name": "mysql_" + ''.join(random.sample('abcde12345', 5)),
         "type": 4,
         "env": 1,
-        "host": "149.28.23.12",
+        "host": "100.74.171.57",
         "port": 3306,
         "username": "root",
         "password": "Iot!@10086",

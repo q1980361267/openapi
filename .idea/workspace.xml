@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be0a31b9-6b19-478e-b63e-3941a918747b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/guangzhou_test_config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/pre_config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/prod_config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/xugang_test_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/dmp/test_00_dmp_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/dmp/test_00_dmp_product.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/assist_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/assist_config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/global_environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/global_environment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/2020-08-21 14_03_10_log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/2020-08-21 14_03_10_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tool_script/delete_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/tool_script/delete_script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/zhaoshang_test_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/zhaoshang_test_config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
