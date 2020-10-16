@@ -73,11 +73,13 @@ class Test_DmpProduct(unittest.TestCase):
         params['signature'] = signature
         # print(signature)
         r = requests.post(url=_url, params=params, data=json.dumps(body), headers=self.headers, verify=False)
+        print(r.url)
         # success = r.json()['success']
         # 断言success字段中的值
-        result = r.json()
+
 
         try:
+            result = r.json()
             id = result.get('data').get('id')
             masterKey = result.get('data').get('masterKey')
             with open(assist_file, 'a') as f:
@@ -87,7 +89,7 @@ class Test_DmpProduct(unittest.TestCase):
                 }
                 yaml.dump(_data, f)
         except Exception:
-            pass
+            print(r.text)
 
         print(r.url)
         print(r.json())

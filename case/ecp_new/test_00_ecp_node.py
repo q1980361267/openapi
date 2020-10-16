@@ -80,7 +80,7 @@ class Test_CreateNodeProduct(unittest.TestCase):
                 }
                 yaml.dump(_data, f)
         except Exception:
-            pass
+            print(r.text)
 
         print(_url)
         print(r.json())
