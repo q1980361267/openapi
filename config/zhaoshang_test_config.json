@@ -1,5 +1,15 @@
 {
     "baseURL": "https://iotapi.sit.cmft.com/oes/api/v1",
     "accessKeyId": "C1PsrURGpiItNSLT",
-    "secret": "Mwfupoelon2EHL6pgNJdOo7PKdaXQKP3Hxi"
+    "secret": "Mwfupoelon2EHL6pgNJdOo7PKdaXQKP3Hxi",
+    "destination":
+        {
+    "host": "100.74.171.57",
+    "port": 3306,
+    "username": "root",
+    "password": "Iot!@10086",
+    "database": "edgetester",
+    "table": "test"
+}
+
 }

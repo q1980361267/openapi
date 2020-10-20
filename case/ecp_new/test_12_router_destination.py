@@ -21,6 +21,7 @@ with open(config_file, 'r') as f:
     url = f_json.get("baseURL")
     accessKeyId = f_json.get("accessKeyId")
     accessSecret = f_json.get("secret")
+    router_dst = f_json.get("destination")
 
 
 # with open(assist_file, 'r') as f:
@@ -65,7 +66,12 @@ class Test_RouterDestination(unittest.TestCase):
             'accessKeyId': self.accessKey,
             'signatureNonce': self.signatureNonce
         }
-        body = global_environment.routerDestination()
+        # body = global_environment.routerDestination()
+        data = router_dst
+        data["name"] = "mysql_" + ''.join(random.sample('abcde12345', 5))
+        data["type"] = 4
+        data["env"] = 1
+        body = data
         # body = {
         #     "name": "mysql",
         #     "type": 4,
@@ -96,7 +102,12 @@ class Test_RouterDestination(unittest.TestCase):
             'accessKeyId': self.accessKey,
             'signatureNonce': self.signatureNonce
         }
-        body = global_environment.routerDestination()
+        # body = global_environment.routerDestination()
+        data = router_dst
+        data["name"] = "mysql_" + ''.join(random.sample('abcde12345', 5))
+        data["type"] = 4
+        data["env"] = 1
+        body = data
         # body = {
         #     "name": "mysql_" + ''.join(random.sample('123456abcdef', 5)),
         #     "type": 4,

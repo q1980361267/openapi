@@ -14,20 +14,6 @@ def assistFilePath(file_name='assist_config.yaml'):
     # return workdir() + "\\" + file_name
     return os.path.join(workdir(), file_name)
 
-def routerDestination():
-    destination = {
-        "name": "mysql_" + ''.join(random.sample('abcde12345', 5)),
-        "type": 4,
-        "env": 1,
-        "host": "100.74.171.57",
-        "port": 3306,
-        "username": "root",
-        "password": "Iot!@10086",
-        "database": "edgetester",
-        "table": "test"
-    }
-    return destination
-
 
 if __name__ == '__main__':
     print(workdir())

@@ -269,6 +269,94 @@ class Test_DmpProduct(unittest.TestCase):
         logging.info(f"case:创建产品(http)-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头："
                      f"{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
 
+    def test_00_04(self):  # 执行逻辑::设置入参，参数正确填写, 入参改变， protocolType：6 http
+        """创建产品(gateway)-成功"""
+        _url = self.url + '/products'
+        params = {
+            'accessKeyId': self.accessKey,
+            'signatureNonce': self.signatureNonce
+        }
+        body = {
+            "name": "product_" + ''.join(random.sample('12345abcde', 5)),
+            "nodeType": 2,
+            "protocolType": 1,
+            "model": 1,
+            "networkMethod": 1,
+            "authenticationMethod": 1,
+            "dataFormat": 1
+        }
+
+        signature = getSignature.get_signature(params, body, self.accessKeySecret, 'POST')
+        params['signature'] = signature
+        # print(signature)
+        r = requests.post(url=_url, params=params, data=json.dumps(body), headers=self.headers, verify=False)
+        # success = r.json()['success']
+        # 断言success字段中的值
+        result = r.json()
+
+        try:
+            id = result.get('data').get('id')
+            masterKey = result.get('data').get('masterKey')
+            with open(assist_file, 'a') as f:
+                _data = {
+                    "dmp_productId_gateway": id,
+                    "dmp_productSecret_gateway": masterKey
+                }
+                yaml.dump(_data, f)
+        except Exception:
+            pass
+
+        print(r.url)
+        print(r.json())
+        self.assertIn('true', r.text)
+
+        logging.info(f"case:创建产品(gateway)-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头："
+                     f"{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
+
+    def test_00_05(self):  # 执行逻辑::设置入参，参数正确填写, 入参改变， protocolType：6 http
+        """创建产品(Bluetooth)-成功"""
+        _url = self.url + '/products'
+        params = {
+            'accessKeyId': self.accessKey,
+            'signatureNonce': self.signatureNonce
+        }
+        body = {
+            "name": "product_" + ''.join(random.sample('12345abcde', 5)),
+            "nodeType": 4,
+            "protocolType": 8,
+            "model": 1,
+            "networkMethod": 1,
+            "authenticationMethod": 1,
+            "dataFormat": 1
+        }
+
+        signature = getSignature.get_signature(params, body, self.accessKeySecret, 'POST')
+        params['signature'] = signature
+        # print(signature)
+        r = requests.post(url=_url, params=params, data=json.dumps(body), headers=self.headers, verify=False)
+        # success = r.json()['success']
+        # 断言success字段中的值
+        result = r.json()
+
+        try:
+            id = result.get('data').get('id')
+            masterKey = result.get('data').get('masterKey')
+            with open(assist_file, 'a') as f:
+                _data = {
+                    "dmp_productId_bluetooth": id,
+                    "dmp_productSecret_bluetooth": masterKey
+                }
+                yaml.dump(_data, f)
+        except Exception:
+            pass
+
+        print(r.url)
+        print(r.json())
+        self.assertIn('true', r.text)
+
+        logging.info(f"case:创建产品(bluetooth)-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头："
+                     f"{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
+
     def test_01(self):  # 执行逻辑::设置入参，参数正确填写
         """根据产品ID查询产品信息-成功"""
         with open(assist_file, 'r') as f:

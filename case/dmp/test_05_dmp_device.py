@@ -112,26 +112,64 @@ class Test_DmpDevice(unittest.TestCase):
         r = requests.post(url=_url, params=params, data=json.dumps(body), headers=self.headers, verify=False)
         # success = r.json()['success']
         # 断言success字段中的值
-        try:
-
-            result = r.json()
-            id = result.get('data').get('id')
-            secret = result.get('data').get('apiKey')
-            with open(assist_file, 'a') as f:
-                _data = {
-                    "dmp_deviceId_gateway": id,
-                    "dmp_deviceSecret_gateway": secret
-                }
-                yaml.dump(_data, f)
-        except Exception:
-            print(r.text)
+        result = r.json()
+        id = result.get('data').get('id')
+        secret = result.get('data').get('apiKey')
 
         print(r.url)
         print(r.json())
         self.assertIn('true', r.text.lower())
+
         logging.info(
-            f"case:注册设备-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n"
+            f"case:注册设备(gateway)-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n"
             f"请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
+
+        with open(assist_file, 'a') as f:
+            _data = {
+                "dmp_deviceId_gateway": id,
+                "dmp_deviceSecret_gateway": secret
+            }
+            yaml.dump(_data, f)
+
+    def test_00_01(self):  # 执行逻辑::设置入参，参数正确填写
+        """注册设备(bluetooth)-成功"""
+        with open(assist_file, 'r') as f:
+            data = yaml.load(f, Loader=yaml.FullLoader)
+            id_pro = data.get('dmp_productId_bluetooth')
+
+        _url = self.url + '/devices'
+
+        params = {
+            'accessKeyId': self.accessKey,
+            'signatureNonce': self.signatureNonce,
+            'productId': id_pro
+        }
+        body = {
+            'name': 'dev_' + ''.join(random.sample('012345abcde', 5))
+        }
+        signature = getSignature.get_signature(params, body, self.accessKeySecret, 'POST')
+        params['signature'] = signature
+        r = requests.post(url=_url, params=params, data=json.dumps(body), headers=self.headers, verify=False)
+        # success = r.json()['success']
+        # 断言success字段中的值
+        result = r.json()
+        id = result.get('data').get('id')
+        secret = result.get('data').get('apiKey')
+
+        print(r.url)
+        print(r.json())
+        self.assertIn('true', r.text.lower())
+
+        logging.info(
+            f"case:注册设备(gateway)-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n"
+            f"请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
+
+        with open(assist_file, 'a') as f:
+            _data = {
+                "dmp_deviceId_bluetooth": id,
+                "dmp_deviceSecret_bluetooth": secret
+            }
+            yaml.dump(_data, f)
 
     def test_01(self):  # 执行逻辑::设置入参，参数正确填写
         """获取设备详情-成功"""
