@@ -88,11 +88,10 @@ class Test_DmpProduct(unittest.TestCase):
                     "dmp_productSecret": masterKey
                 }
                 yaml.dump(_data, f)
+            print(r.json())
         except Exception:
             print(r.text)
 
-        print(r.url)
-        print(r.json())
         self.assertIn('true', r.text)
 
         logging.info(f"case:创建产品-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头："
