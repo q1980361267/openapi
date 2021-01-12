@@ -1,10 +1,10 @@
 {
     "baseURL": "https://iotapi.sit.cmft.com/oes/api/v1",
-    "accessKeyId": "C1PsrURGpiItNSLT",
+    "accessKeyId": "3VYumPb5H6eBb563",
     "secret": "Mwfupoelon2EHL6pgNJdOo7PKdaXQKP3Hxi",
     "destination":
         {
-    "host": "100.74.171.57",
+    "host": "36.155.103.69",
     "port": 3306,
     "username": "root",
     "password": "Iot!@10086",

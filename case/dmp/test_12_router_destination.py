@@ -89,6 +89,7 @@ class Test_RouterDestination(unittest.TestCase):
         # 对响应的结果进行断言
         print(r.url)
         print(r.json())
+        print(body)
         self.assertIn('true', r.text.lower())
 
         logging.info(f"case:测试路由目的地端点-成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n"

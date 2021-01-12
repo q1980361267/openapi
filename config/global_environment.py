@@ -6,7 +6,7 @@ def workdir():
     return dir
 
 
-def configFilePath(file_name='prod_config.json'):
+def configFilePath(file_name='zhaoshang_pro_config.json'):
     return os.path.join(workdir(), file_name)
 
 

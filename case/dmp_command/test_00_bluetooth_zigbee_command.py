@@ -74,7 +74,7 @@ class Test_DataCheck(unittest.TestCase):
             'signatureNonce': self.signatureNonce
         }
         body = {
-            "deviceId": 10005500,
+            "deviceId": 10005881,
             "functionType": "propertyGet",
             "identifier": "key",
         }
@@ -104,7 +104,7 @@ class Test_DataCheck(unittest.TestCase):
             'signatureNonce': self.signatureNonce
         }
         body = {
-            "deviceId": 10005500,
+            "deviceId": 10005881,
             "functionType": "propertySet",
             "identifier": "key",
             "identifierValue": 88
