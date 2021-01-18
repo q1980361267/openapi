@@ -11,6 +11,7 @@ import random
 import yaml
 from assist import getSignature
 from config import global_environment
+from assist.getProjectId import get_projectId
 
 config_file = global_environment.configFilePath()
 assist_file = global_environment.assistFilePath()
@@ -20,6 +21,8 @@ with open(config_file, 'r') as f:
     url = f_json.get("baseURL")
     accessKeyId = f_json.get("accessKeyId")
     accessSecret = f_json.get("secret")
+
+projectId = get_projectId(accessKeyId, accessSecret)
 
 
 class Test_Groups(unittest.TestCase):
@@ -42,7 +45,8 @@ class Test_Groups(unittest.TestCase):
         self.accessKeySecret = accessSecret
         self.headers = {
             'Content-Type': 'application/json',
-            'platform': '1'
+            'platform': '1',
+            'projectId': projectId
         }
         self.signatureNonce = int(time.time())
 

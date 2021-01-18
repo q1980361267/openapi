@@ -11,6 +11,7 @@ import yaml
 import random
 from assist import getSignature
 from config import global_environment
+from assist.getProjectId import get_projectId
 
 
 config_file = global_environment.configFilePath()
@@ -21,6 +22,7 @@ with open(config_file, 'r') as f:
     url = f_json.get("baseURL")
     accessKeyId = f_json.get("accessKeyId")
     accessSecret = f_json.get("secret")
+    projectId = get_projectId(accessKeyId, accessSecret)
 
 
 class Test_DmpProduct(unittest.TestCase):
@@ -44,7 +46,9 @@ class Test_DmpProduct(unittest.TestCase):
         self.headers = {
             'Content-Type': 'application/json',
             'platform': '1',
-            'Debug-On': "1234"
+            'Debug-On': "1234",
+            # 'projectId': "d1838d81a21947988c05e9c961b39027"
+            'projectId': projectId
         }
 
         self.signatureNonce = int(time.time() * 1000)

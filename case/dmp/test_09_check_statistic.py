@@ -10,7 +10,7 @@ import json
 import yaml
 
 from assist import getSignature
-
+from assist.getProjectId import get_projectId
 from config import global_environment
 
 config_file = global_environment.configFilePath()
@@ -22,7 +22,7 @@ with open(config_file, 'r') as f:
     accessKeyId = f_json.get("accessKeyId")
     accessSecret = f_json.get("secret")
 
-
+projectId = get_projectId(accessKeyId, accessSecret)
 # with open(assist_file, 'r') as f:
 #     data = yaml.load(f, Loader=yaml.FullLoader)
 #     id_gateway = data.get('ecp_node_deviceId')
@@ -51,7 +51,8 @@ class Test_Statistic(unittest.TestCase):
         self.accessKeySecret = accessSecret
         self.headers = {
             'Content-Type': 'application/json',
-            'platform': '1'
+            'platform': '1',
+            'projectId': projectId
         }
         self.signatureNonce = int(time.time())
 

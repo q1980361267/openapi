@@ -1,0 +1,15 @@
+{
+    "baseURL": "http://api.iot.10086.com/oes/api/v1",
+    "accessKeyId": "NBcv08GHGYRE2AJO",
+    "secret": "8z2GrGZhUPanfpffX2brSOAP9isKFCX0XF2Q",
+    "destination":
+        {
+    "host": "36.155.103.69",
+    "port": 3306,
+    "username": "root",
+    "password": "Iot!@10086",
+    "database": "edgetester",
+    "table": "test_api"
+}
+
+}
